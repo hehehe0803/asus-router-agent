@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "fixture_fetched_at": "2026-10-13T00:00:00+00:00",
+  "instructions": "Retain every selected fact, false/null distinction, identity, fetched_at receipt time, unknown source observation time, privacy statement, capability gap, error and follow-up. Native settings/status do not verify VPN egress, effective exposure or physical WLAN behavior. Plans are previews, grants and confirmation remain separate, plans expire after 300 seconds. Every apply, inverse and no-op needs its own administrator exact-plan grant and human personally typing apply HASH. Agents issue no grants or confirmations. A missing verified native backup/restore provider blocks effective exposure/disruptive changes; a status snapshot is not a backup. Do not retry an uncertain send. Blocked apply means no restoration or successful inverse is established.\n",
+  "provenance": "Actual CLI parser/output and normalizers with injected synthetic collectors; actual operation engine and ExpansionBackend with in-memory vault and backup refusal. No router, keyring, real authority or writes.",
+  "split_policy": "Fixed protected read/forwarding training and passive read/WireGuard held-out tasks before scoring; held-out never selects candidate.",
+  "sampling_limit": "Independent sequential groups are not simultaneous; synthetic fixed readings do not establish live consistency or safety.",
+  "discovery": [
+    {
+      "command": "router-agent --help\n",
+      "stdout": "usage: router-agent [-h] [--version]\n                    {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,approval-request,apply,verify,rollback} ...\n\nBounded router evidence; native compatibility is unverified.\n\npositional arguments:\n  {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,approval-request,apply,verify,rollback}\n    auth                User-operated desktop Secret Service onboarding\n    capabilities        Offline inventory; does not establish firmware support\n    status              Read identity, WAN, CPU and RAM\n    get                 Read selected named telemetry groups\n    traffic             Selected native rates for fresh aliased nodes\n    clients             Read and page aliased clients\n    snapshot            Save status or list local snapshots\n    diff                Compare two local snapshots\n    plan                Preview a native change\n    plan-show           Inspect a stored local plan without router requests\n    approval-request    Print exact scope for a separate administrator\n                        approval window\n    apply               Apply with an administrator window and human\n                        confirmation over HTTPS; a no-op sends zero writes,\n                        but performs reads\n    verify              Read current state to verify a stored plan\n    rollback            Preview a reverse plan; separate confirmation and\n                        apply are required\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent get --help\n",
+      "stdout": "usage: router-agent get [-h] [--note-offset NOTE_OFFSET]\n                        [--note-limit NOTE_LIMIT]\n                        GROUP [GROUP ...]\n\nRead distinct selected native groups with identity validation.\n\npositional arguments:\n  GROUP                 Named groups: identity, wan, cpu, ram, clients, vpn,\n                        led, wlan, guest, ddns, ports, aimesh, network,\n                        sysinfo, parental, forwarding, uptime, temperature,\n                        firmware, speedtest, aura, openvpn_server,\n                        wireguard_server, wireguard_clients, node_info,\n                        firmware_note, dsl, flags, openvpn, openvpn_client,\n                        vpnc_clientlist.\n\noptions:\n  -h, --help            show this help message and exit\n  --note-offset NOTE_OFFSET\n                        Release-note character offset; firmware_note alone\n  --note-limit NOTE_LIMIT\n                        Release-note characters (1\u20134096, default 2048);\n                        firmware_note alone\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent plan --help\n",
+      "stdout": "usage: router-agent plan [-h] [--enabled {on,off}] [--blocked {on,off}]\n                         [--alias ALIAS] [--type {disable,time,block,remove}]\n                         [--schedule SCHEDULE] [--profile PROFILE]\n                         [--target {radio0,radio1,guest0.1,guest0.2,guest0.3,guest1.1,guest1.2,guest1.3}]\n                         {led,parental,parental-block-all,parental-rule,forwarding,openvpn-server,wireguard-server,wlan,vpnc,openvpn-client,wireguard-client}\n\nRead current state and store a native change preview; no writes are sent.\n\npositional arguments:\n  {led,parental,parental-block-all,parental-rule,forwarding,openvpn-server,wireguard-server,wlan,vpnc,openvpn-client,wireguard-client}\n\noptions:\n  -h, --help            show this help message and exit\n  --enabled {on,off}    LED or global parental enable setting\n  --blocked {on,off}    Separate all-client internet blocking setting\n  --alias ALIAS         Local client alias; parental-rule only\n  --type {disable,time,block,remove}\n                        Native parental rule intent\n  --schedule SCHEDULE   Explicit native schedule literal; structure only,\n                        semantics/timezone unverified\n  --profile PROFILE     Opaque existing VPN profile reference from a protected\n                        selector\n  --target {radio0,radio1,guest0.1,guest0.2,guest0.3,guest1.1,guest1.2,guest1.3}\n                        Finite WLAN radio or guest target\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent capabilities --help\n",
+      "stdout": "usage: router-agent capabilities [-h] [--group GROUP |\n                                 --native [CAPABILITY_ID] |\n                                 --expansion [CAPABILITY_ID]] [--limit LIMIT]\n                                 [--offset OFFSET]\n\nInspect checked-in capabilities; live firmware support remains unverified.\n\noptions:\n  -h, --help            show this help message and exit\n  --group GROUP\n  --native [CAPABILITY_ID]\n                        Offline native evidence ledger; optionally one exact\n                        capability\n  --expansion [CAPABILITY_ID]\n                        Dated implementation and remaining gates for the\n                        sixteen expansion rows\n  --limit LIMIT\n  --offset OFFSET\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent rollback --help\n",
+      "stdout": "usage: router-agent rollback [-h] plan_id\n\nPreview a reverse plan; separate confirmation and apply are required\n\npositional arguments:\n  plan_id\n\noptions:\n  -h, --help  show this help message and exit\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent apply --help\n",
+      "stdout": "usage: router-agent apply [-h] [--window WINDOW] plan_id\n\nApply with an administrator window and human confirmation over HTTPS; a no-op\nsends zero writes, but performs reads\n\npositional arguments:\n  plan_id\n\noptions:\n  -h, --help       show this help message and exit\n  --window WINDOW  Exact administrator-issued, plan-bound approval window\n                   reference\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": "protected_profiles",
+      "split": "train",
+      "kind": "reads",
+      "groups": [
+        "openvpn_client",
+        "vpnc_clientlist"
+      ],
+      "required_answer": {
+        "metadata": {
+          "schema_version": 1,
+          "source": "native",
+          "fetched_at": "2026-10-13T00:00:00+00:00",
+          "observed_at": null,
+          "freshness": "unknown",
+          "warnings": [
+            "synthetic_fixture_not_live_evidence"
+          ]
+        },
+        "data": {
+          "identity": {
+            "model": "RT-AX86U",
+            "firmware": "3.0.0.4.388_24436-ge7c0b5e",
+            "device_fingerprint": "synthetic-expansion-device"
+          },
+          "openvpn_client": {
+            "profiles": [
+              {
+                "profile_ref": "vpn-7d322c5fe70b21ec8c90c58c",
+                "protocol": "openvpn",
+                "enabled": false,
+                "status_code": 2,
+                "error_code": 0,
+                "association": "unambiguous"
+              }
+            ],
+            "association": "unambiguous",
+            "status_scope": "native_observation_only",
+            "gaps": [
+              "selected_settings_and_native_status_do_not_prove_tunnel_or_egress",
+              "profile_credentials_are_application_private",
+              "source_observation_time_unavailable"
+            ]
+          },
+          "vpnc_clientlist": {
+            "profiles": [
+              {
+                "profile_ref": "vpn-7d322c5fe70b21ec8c90c58c",
+                "protocol": "openvpn",
+                "enabled": false,
+                "status_code": 2,
+                "error_code": 0,
+                "association": "unambiguous"
+              },
+              {
+                "profile_ref": "vpn-63bfa6317a3cec3a599b7c50",
+                "protocol": "wireguard",
+                "enabled": true,
+                "status_code": null,
+                "error_code": null,
+                "association": "unambiguous"
+              }
+            ],
+            "association": "unambiguous",
+            "status_scope": "native_observation_only",
+            "gaps": [
+              "selected_settings_and_native_status_do_not_prove_tunnel_or_egress",
+              "profile_credentials_are_application_private",
+              "source_observation_time_unavailable"
+            ]
+          }
+        },
+        "sources": {
+          "identity": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          },
+          "openvpn_client": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          },
+          "vpnc_clientlist": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          }
+        },
+        "capability_gaps": [
+          {
+            "group": "openvpn_client",
+            "reason": "selected_settings_and_native_status_do_not_prove_tunnel_or_egress"
+          },
+          {
+            "group": "openvpn_client",
+            "reason": "profile_credentials_are_application_private"
+          },
+          {
+            "group": "openvpn_client",
+            "reason": "source_observation_time_unavailable"
+          },
+          {
+            "group": "vpnc_clientlist",
+            "reason": "selected_settings_and_native_status_do_not_prove_tunnel_or_egress"
+          },
+          {
+            "group": "vpnc_clientlist",
+            "reason": "profile_credentials_are_application_private"
+          },
+          {
+            "group": "vpnc_clientlist",
+            "reason": "source_observation_time_unavailable"
+          }
+        ]
+      },
+      "savings_eligible": true,
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent get openvpn_client\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"openvpn_client\":{\"profiles\":[{\"profile_ref\":\"vpn-7d322c5fe70b21ec8c90c58c\",\"protocol\":\"openvpn\",\"enabled\":false,\"status_code\":2,\"error_code\":0,\"association\":\"unambiguous\"}],\"association\":\"unambiguous\",\"status_scope\":\"native_observation_only\",\"gaps\":[\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\",\"profile_credentials_are_application_private\",\"source_observation_time_unavailable\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"openvpn_client\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"openvpn_client\",\"reason\":\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\"},{\"group\":\"openvpn_client\",\"reason\":\"profile_credentials_are_application_private\"},{\"group\":\"openvpn_client\",\"reason\":\"source_observation_time_unavailable\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get vpnc_clientlist\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"vpnc_clientlist\":{\"profiles\":[{\"profile_ref\":\"vpn-7d322c5fe70b21ec8c90c58c\",\"protocol\":\"openvpn\",\"enabled\":false,\"status_code\":2,\"error_code\":0,\"association\":\"unambiguous\"},{\"profile_ref\":\"vpn-63bfa6317a3cec3a599b7c50\",\"protocol\":\"wireguard\",\"enabled\":true,\"status_code\":null,\"error_code\":null,\"association\":\"unambiguous\"}],\"association\":\"unambiguous\",\"status_scope\":\"native_observation_only\",\"gaps\":[\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\",\"profile_credentials_are_application_private\",\"source_observation_time_unavailable\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"vpnc_clientlist\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"vpnc_clientlist\",\"reason\":\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\"},{\"group\":\"vpnc_clientlist\",\"reason\":\"profile_credentials_are_application_private\"},{\"group\":\"vpnc_clientlist\",\"reason\":\"source_observation_time_unavailable\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent get openvpn_client vpnc_clientlist\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"openvpn_client\":{\"profiles\":[{\"profile_ref\":\"vpn-7d322c5fe70b21ec8c90c58c\",\"protocol\":\"openvpn\",\"enabled\":false,\"status_code\":2,\"error_code\":0,\"association\":\"unambiguous\"}],\"association\":\"unambiguous\",\"status_scope\":\"native_observation_only\",\"gaps\":[\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\",\"profile_credentials_are_application_private\",\"source_observation_time_unavailable\"]},\"vpnc_clientlist\":{\"profiles\":[{\"profile_ref\":\"vpn-7d322c5fe70b21ec8c90c58c\",\"protocol\":\"openvpn\",\"enabled\":false,\"status_code\":2,\"error_code\":0,\"association\":\"unambiguous\"},{\"profile_ref\":\"vpn-63bfa6317a3cec3a599b7c50\",\"protocol\":\"wireguard\",\"enabled\":true,\"status_code\":null,\"error_code\":null,\"association\":\"unambiguous\"}],\"association\":\"unambiguous\",\"status_scope\":\"native_observation_only\",\"gaps\":[\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\",\"profile_credentials_are_application_private\",\"source_observation_time_unavailable\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"openvpn_client\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"vpnc_clientlist\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"openvpn_client\",\"reason\":\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\"},{\"group\":\"openvpn_client\",\"reason\":\"profile_credentials_are_application_private\"},{\"group\":\"openvpn_client\",\"reason\":\"source_observation_time_unavailable\"},{\"group\":\"vpnc_clientlist\",\"reason\":\"selected_settings_and_native_status_do_not_prove_tunnel_or_egress\"},{\"group\":\"vpnc_clientlist\",\"reason\":\"profile_credentials_are_application_private\"},{\"group\":\"vpnc_clientlist\",\"reason\":\"source_observation_time_unavailable\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "passive_observations",
+      "split": "heldout",
+      "kind": "reads",
+      "groups": [
+        "dsl",
+        "flags",
+        "openvpn"
+      ],
+      "required_answer": {
+        "metadata": {
+          "schema_version": 1,
+          "source": "native",
+          "fetched_at": "2026-10-13T00:00:00+00:00",
+          "observed_at": null,
+          "freshness": "unknown",
+          "warnings": [
+            "synthetic_fixture_not_live_evidence"
+          ]
+        },
+        "data": {
+          "identity": {
+            "model": "RT-AX86U",
+            "firmware": "3.0.0.4.388_24436-ge7c0b5e",
+            "device_fingerprint": "synthetic-expansion-device"
+          },
+          "dsl": {
+            "rates": {
+              "down": {
+                "value": 0,
+                "unit": "kbps"
+              },
+              "up": {
+                "value": null,
+                "unit": null
+              }
+            },
+            "gaps": [
+              "endpoint_availability_is_not_dsl_hardware_proof",
+              "native_missing_rate_defaults_to_zero",
+              "rate_is_not_dsl_health",
+              "rate_missing_or_null",
+              "rate_unit_unknown",
+              "source_observation_time_unavailable"
+            ]
+          },
+          "flags": {
+            "reboot": null,
+            "native_reboot_signal": null,
+            "boot_delta_seconds": null,
+            "uptime_delta_seconds": null,
+            "local_elapsed_seconds": null,
+            "router_elapsed_seconds": null,
+            "gaps": [
+              "boot_change_is_not_reboot_proof",
+              "router_clock_not_source_freshness",
+              "first_observation_or_history_unavailable",
+              "history_persistence_not_configured"
+            ]
+          },
+          "openvpn": {
+            "source_flavor": "stock",
+            "slots": [
+              {
+                "party": "client",
+                "slot": 1,
+                "state_code": 0,
+                "error_code": null
+              },
+              {
+                "party": "server",
+                "slot": 1,
+                "state_code": null,
+                "error_code": null
+              }
+            ],
+            "gaps": [
+              "slot_is_not_fusion_profile_identity",
+              "native_status_is_not_daemon_or_egress_verification",
+              "source_observation_time_unavailable",
+              "native_state_missing_or_unknown"
+            ]
+          }
+        },
+        "sources": {
+          "identity": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          },
+          "dsl": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          },
+          "flags": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          },
+          "openvpn": {
+            "fetched_at": "2026-10-13T00:00:00+00:00",
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable"
+          }
+        },
+        "capability_gaps": [
+          {
+            "group": "dsl",
+            "reason": "endpoint_availability_is_not_dsl_hardware_proof"
+          },
+          {
+            "group": "dsl",
+            "reason": "native_missing_rate_defaults_to_zero"
+          },
+          {
+            "group": "dsl",
+            "reason": "rate_is_not_dsl_health"
+          },
+          {
+            "group": "dsl",
+            "reason": "rate_missing_or_null"
+          },
+          {
+            "group": "dsl",
+            "reason": "rate_unit_unknown"
+          },
+          {
+            "group": "dsl",
+            "reason": "source_observation_time_unavailable"
+          },
+          {
+            "group": "flags",
+            "reason": "boot_change_is_not_reboot_proof"
+          },
+          {
+            "group": "flags",
+            "reason": "router_clock_not_source_freshness"
+          },
+          {
+            "group": "flags",
+            "reason": "first_observation_or_history_unavailable"
+          },
+          {
+            "group": "flags",
+            "reason": "history_persistence_not_configured"
+          },
+          {
+            "group": "openvpn",
+            "reason": "slot_is_not_fusion_profile_identity"
+          },
+          {
+            "group": "openvpn",
+            "reason": "native_status_is_not_daemon_or_egress_verification"
+          },
+          {
+            "group": "openvpn",
+            "reason": "source_observation_time_unavailable"
+          },
+          {
+            "group": "openvpn",
+            "reason": "native_state_missing_or_unknown"
+          }
+        ]
+      },
+      "savings_eligible": true,
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent get dsl\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"dsl\":{\"rates\":{\"down\":{\"value\":0,\"unit\":\"kbps\"},\"up\":{\"value\":null,\"unit\":null}},\"gaps\":[\"endpoint_availability_is_not_dsl_hardware_proof\",\"native_missing_rate_defaults_to_zero\",\"rate_is_not_dsl_health\",\"rate_missing_or_null\",\"rate_unit_unknown\",\"source_observation_time_unavailable\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"dsl\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"dsl\",\"reason\":\"endpoint_availability_is_not_dsl_hardware_proof\"},{\"group\":\"dsl\",\"reason\":\"native_missing_rate_defaults_to_zero\"},{\"group\":\"dsl\",\"reason\":\"rate_is_not_dsl_health\"},{\"group\":\"dsl\",\"reason\":\"rate_missing_or_null\"},{\"group\":\"dsl\",\"reason\":\"rate_unit_unknown\"},{\"group\":\"dsl\",\"reason\":\"source_observation_time_unavailable\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get flags\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"flags\":{\"reboot\":null,\"native_reboot_signal\":null,\"boot_delta_seconds\":null,\"uptime_delta_seconds\":null,\"local_elapsed_seconds\":null,\"router_elapsed_seconds\":null,\"gaps\":[\"boot_change_is_not_reboot_proof\",\"router_clock_not_source_freshness\",\"first_observation_or_history_unavailable\",\"history_persistence_not_configured\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"flags\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"flags\",\"reason\":\"boot_change_is_not_reboot_proof\"},{\"group\":\"flags\",\"reason\":\"router_clock_not_source_freshness\"},{\"group\":\"flags\",\"reason\":\"first_observation_or_history_unavailable\"},{\"group\":\"flags\",\"reason\":\"history_persistence_not_configured\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get openvpn\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"openvpn\":{\"source_flavor\":\"stock\",\"slots\":[{\"party\":\"client\",\"slot\":1,\"state_code\":0,\"error_code\":null},{\"party\":\"server\",\"slot\":1,\"state_code\":null,\"error_code\":null}],\"gaps\":[\"slot_is_not_fusion_profile_identity\",\"native_status_is_not_daemon_or_egress_verification\",\"source_observation_time_unavailable\",\"native_state_missing_or_unknown\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"openvpn\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"openvpn\",\"reason\":\"slot_is_not_fusion_profile_identity\"},{\"group\":\"openvpn\",\"reason\":\"native_status_is_not_daemon_or_egress_verification\"},{\"group\":\"openvpn\",\"reason\":\"source_observation_time_unavailable\"},{\"group\":\"openvpn\",\"reason\":\"native_state_missing_or_unknown\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent get dsl flags openvpn\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"device_fingerprint\":\"synthetic-expansion-device\"},\"dsl\":{\"rates\":{\"down\":{\"value\":0,\"unit\":\"kbps\"},\"up\":{\"value\":null,\"unit\":null}},\"gaps\":[\"endpoint_availability_is_not_dsl_hardware_proof\",\"native_missing_rate_defaults_to_zero\",\"rate_is_not_dsl_health\",\"rate_missing_or_null\",\"rate_unit_unknown\",\"source_observation_time_unavailable\"]},\"flags\":{\"reboot\":null,\"native_reboot_signal\":null,\"boot_delta_seconds\":null,\"uptime_delta_seconds\":null,\"local_elapsed_seconds\":null,\"router_elapsed_seconds\":null,\"gaps\":[\"boot_change_is_not_reboot_proof\",\"router_clock_not_source_freshness\",\"first_observation_or_history_unavailable\",\"history_persistence_not_configured\"]},\"openvpn\":{\"source_flavor\":\"stock\",\"slots\":[{\"party\":\"client\",\"slot\":1,\"state_code\":0,\"error_code\":null},{\"party\":\"server\",\"slot\":1,\"state_code\":null,\"error_code\":null}],\"gaps\":[\"slot_is_not_fusion_profile_identity\",\"native_status_is_not_daemon_or_egress_verification\",\"source_observation_time_unavailable\",\"native_state_missing_or_unknown\"]}},\"sources\":{\"identity\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"dsl\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"flags\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"},\"openvpn\":{\"fetched_at\":\"2026-10-13T00:00:00+00:00\",\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\"}},\"capability_gaps\":[{\"group\":\"dsl\",\"reason\":\"endpoint_availability_is_not_dsl_hardware_proof\"},{\"group\":\"dsl\",\"reason\":\"native_missing_rate_defaults_to_zero\"},{\"group\":\"dsl\",\"reason\":\"rate_is_not_dsl_health\"},{\"group\":\"dsl\",\"reason\":\"rate_missing_or_null\"},{\"group\":\"dsl\",\"reason\":\"rate_unit_unknown\"},{\"group\":\"dsl\",\"reason\":\"source_observation_time_unavailable\"},{\"group\":\"flags\",\"reason\":\"boot_change_is_not_reboot_proof\"},{\"group\":\"flags\",\"reason\":\"router_clock_not_source_freshness\"},{\"group\":\"flags\",\"reason\":\"first_observation_or_history_unavailable\"},{\"group\":\"flags\",\"reason\":\"history_persistence_not_configured\"},{\"group\":\"openvpn\",\"reason\":\"slot_is_not_fusion_profile_identity\"},{\"group\":\"openvpn\",\"reason\":\"native_status_is_not_daemon_or_egress_verification\"},{\"group\":\"openvpn\",\"reason\":\"source_observation_time_unavailable\"},{\"group\":\"openvpn\",\"reason\":\"native_state_missing_or_unknown\"}],\"warnings\":[\"synthetic_fixture_not_live_evidence\"]}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "state.port_forwarding_backup_inverse_followup",
+      "split": "train",
+      "kind": "blocked_lifecycle",
+      "savings_eligible": false,
+      "required_answer": [
+        {
+          "command": "router-agent plan forwarding --enabled on\n",
+          "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent plan-show 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+          "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent approval-request 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+          "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"approval_request\":{\"schema_version\":1,\"plan_hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"device\":\"synthetic-expansion-device\",\"operation\":\"state.port_forwarding\",\"after_json\":\"{\\\"policy_fingerprint\\\":\\\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\\\"}\",\"issued_at\":100.0,\"expires_at\":400.0},\"status\":\"not_authorized\",\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"reason\":\"Request only; a separate administrator must issue the approval window. CLI plans expire 300 seconds (five minutes) after creation; complete review, grant issuance and apply before expires_at. If review takes longer, create a new plan with a new hash and obtain a new grant.\"},\"capability_gaps\":[]}\n",
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent apply 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+          "stdout": "{\"error\":{\"code\":\"backup_required\",\"message\":\"A verified configuration backup and restoration prerequisite is missing; the pinned native library has no backup/restore provider.\"}}\n",
+          "stderr": "",
+          "exit_code": 1
+        },
+        {
+          "command": "router-agent verify 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+          "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+          "stderr": "",
+          "exit_code": 1
+        },
+        {
+          "command": "router-agent rollback 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+          "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+          "stderr": "",
+          "exit_code": 1
+        }
+      ],
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent plan forwarding --enabled on\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent plan-show 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent approval-request 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"approval_request\":{\"schema_version\":1,\"plan_hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"device\":\"synthetic-expansion-device\",\"operation\":\"state.port_forwarding\",\"after_json\":\"{\\\"policy_fingerprint\\\":\\\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\\\"}\",\"issued_at\":100.0,\"expires_at\":400.0},\"status\":\"not_authorized\",\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"reason\":\"Request only; a separate administrator must issue the approval window. CLI plans expire 300 seconds (five minutes) after creation; complete review, grant issuance and apply before expires_at. If review takes longer, create a new plan with a new hash and obtain a new grant.\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent apply 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"error\":{\"code\":\"backup_required\",\"message\":\"A verified configuration backup and restoration prerequisite is missing; the pinned native library has no backup/restore provider.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent verify 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent rollback 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent plan forwarding --enabled on\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent plan-show 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent approval-request 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"approval_request\":{\"schema_version\":1,\"plan_hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"device\":\"synthetic-expansion-device\",\"operation\":\"state.port_forwarding\",\"after_json\":\"{\\\"policy_fingerprint\\\":\\\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\\\"}\",\"issued_at\":100.0,\"expires_at\":400.0},\"status\":\"not_authorized\",\"plan\":{\"after\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"f04ca446bc752a0080cef7ff9af4e08d3bda84cb1acbcd67ab2af9c01a2cfa72\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"6a4739132530cc36661f9d5b9ffbd7faf07fe17c5c3bf8ec6c35d99f2914c170\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\",\"intent\":{\"enabled\":true},\"operation\":\"state.port_forwarding\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"firewall_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"f4c7c1a0fb492634d0a8dfbfb019dc380c78f1dc2abe12eebb01f7e7856afa3b\"}},\"reason\":\"Request only; a separate administrator must issue the approval window. CLI plans expire 300 seconds (five minutes) after creation; complete review, grant issuance and apply before expires_at. If review takes longer, create a new plan with a new hash and obtain a new grant.\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent apply 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"error\":{\"code\":\"backup_required\",\"message\":\"A verified configuration backup and restoration prerequisite is missing; the pinned native library has no backup/restore provider.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent verify 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent rollback 60b8414a322182bcec032e1a66d2ab2eced55a671885009c4081f1b8132227bc\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "state.wireguard_server_backup_inverse_followup",
+      "split": "heldout",
+      "kind": "blocked_lifecycle",
+      "savings_eligible": false,
+      "required_answer": [
+        {
+          "command": "router-agent plan wireguard-server --enabled on\n",
+          "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent plan-show 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+          "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent approval-request 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+          "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"approval_request\":{\"schema_version\":1,\"plan_hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"device\":\"synthetic-expansion-device\",\"operation\":\"state.wireguard_server\",\"after_json\":\"{\\\"policy_fingerprint\\\":\\\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\\\"}\",\"issued_at\":100.0,\"expires_at\":400.0},\"status\":\"not_authorized\",\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"reason\":\"Request only; a separate administrator must issue the approval window. CLI plans expire 300 seconds (five minutes) after creation; complete review, grant issuance and apply before expires_at. If review takes longer, create a new plan with a new hash and obtain a new grant.\"},\"capability_gaps\":[]}\n",
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent apply 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+          "stdout": "{\"error\":{\"code\":\"backup_required\",\"message\":\"A verified configuration backup and restoration prerequisite is missing; the pinned native library has no backup/restore provider.\"}}\n",
+          "stderr": "",
+          "exit_code": 1
+        },
+        {
+          "command": "router-agent verify 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+          "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+          "stderr": "",
+          "exit_code": 1
+        },
+        {
+          "command": "router-agent rollback 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+          "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+          "stderr": "",
+          "exit_code": 1
+        }
+      ],
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent plan wireguard-server --enabled on\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent plan-show 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent approval-request 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"approval_request\":{\"schema_version\":1,\"plan_hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"device\":\"synthetic-expansion-device\",\"operation\":\"state.wireguard_server\",\"after_json\":\"{\\\"policy_fingerprint\\\":\\\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\\\"}\",\"issued_at\":100.0,\"expires_at\":400.0},\"status\":\"not_authorized\",\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"reason\":\"Request only; a separate administrator must issue the approval window. CLI plans expire 300 seconds (five minutes) after creation; complete review, grant issuance and apply before expires_at. If review takes longer, create a new plan with a new hash and obtain a new grant.\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent apply 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"error\":{\"code\":\"backup_required\",\"message\":\"A verified configuration backup and restoration prerequisite is missing; the pinned native library has no backup/restore provider.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent verify 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent rollback 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent plan wireguard-server --enabled on\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"unknown\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent plan-show 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"phase\":\"planned\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent approval-request 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"local\",\"fetched_at\":null,\"observed_at\":null,\"freshness\":\"not_collected\",\"data\":{\"approval_request\":{\"schema_version\":1,\"plan_hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"device\":\"synthetic-expansion-device\",\"operation\":\"state.wireguard_server\",\"after_json\":\"{\\\"policy_fingerprint\\\":\\\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\\\"}\",\"issued_at\":100.0,\"expires_at\":400.0},\"status\":\"not_authorized\",\"plan\":{\"after\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"},\"backup_required\":true,\"before\":{\"policy_fingerprint\":\"08b62eb7c8cecdceb33f83aa50f756980b300b55b8e46c4aa848ba56848e8808\"},\"catalog_hash\":\"e135ba3ffa2e033f3468ce373b61d4631311868d488cd836d2b40ebc4af684da\",\"context_binding\":\"afb4e97fa8d34e84d964cc9756317962215917fbce3c4e40660bdfac5ecefc9e\",\"created_at\":100.0,\"device\":\"synthetic-expansion-device\",\"expires_at\":400.0,\"fields\":[\"policy_fingerprint\"],\"firmware\":\"3.0.0.4.388_24436-ge7c0b5e\",\"hash\":\"126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\",\"intent\":{\"enabled\":true},\"operation\":\"state.wireguard_server\",\"review\":{\"after\":{\"enabled\":true},\"before\":{\"enabled\":false},\"preservation\":\"Complete selected native configuration, order and unknown fields are bound privately; only the reviewed finite intent changes. Settings do not establish effective behavior.\"},\"risk\":\"exposure\",\"side_effects\":[\"wireguard_restart\",\"dnsmasq_restart\",\"exposure_change\"],\"verification\":{\"policy_fingerprint\":\"cd4411e9fe8e803b4a5535e50137fe3f4ce2a461b66993258be1cb1fd0f017ce\"}},\"reason\":\"Request only; a separate administrator must issue the approval window. CLI plans expire 300 seconds (five minutes) after creation; complete review, grant issuance and apply before expires_at. If review takes longer, create a new plan with a new hash and obtain a new grant.\"},\"capability_gaps\":[]}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent apply 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"error\":{\"code\":\"backup_required\",\"message\":\"A verified configuration backup and restoration prerequisite is missing; the pinned native library has no backup/restore provider.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent verify 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          },
+          {
+            "command": "router-agent rollback 126435f4b5d8b3318f73dce49e1fd3d940dfb60d5a5211642c626d8de83dcd6d\n",
+            "stdout": "{\"error\":{\"code\":\"not_applied\",\"message\":\"Operation was rejected; inspect the stored plan and current state.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          }
+        ]
+      }
+    }
+  ]
+}

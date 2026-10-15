@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "evidence_date": "2026-10-15",
+  "upstream_version": "1.21.3",
+  "source_audit": "native_audit.json (2026-10-12 source inventory; public evidence metadata sanitized)",
+  "capabilities": [
+    {
+      "id": "read.dsl",
+      "implementation": "implemented_selected",
+      "offline": "passed",
+      "live": "not_attempted",
+      "interface": "get dsl",
+      "limits": [
+        "Selected values do not establish effective operation or source freshness.",
+        "Positive endpoint availability does not establish DSL hardware; native units and missing values remain explicit.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Run a reviewed bounded selected read and retain dated applicability or data gaps."
+    },
+    {
+      "id": "read.flags",
+      "implementation": "implemented_selected",
+      "offline": "passed",
+      "live": "not_attempted",
+      "interface": "get flags",
+      "limits": [
+        "Selected values do not establish effective operation or source freshness.",
+        "Boot-change inference depends on comparable history and clocks; no induced reboot has been tested.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Run a reviewed bounded selected read and retain dated applicability or data gaps."
+    },
+    {
+      "id": "read.openvpn",
+      "implementation": "implemented_selected",
+      "offline": "passed",
+      "live": "not_attempted",
+      "interface": "get openvpn",
+      "limits": [
+        "Selected values do not establish effective operation or source freshness.",
+        "Production dispatch is exact reviewed stock firmware; Merlin normalizer is offline-only.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Run a reviewed bounded selected read and retain dated applicability or data gaps."
+    },
+    {
+      "id": "read.openvpn_client",
+      "implementation": "implemented_selected",
+      "offline": "passed",
+      "live": "not_attempted",
+      "interface": "get openvpn_client",
+      "limits": [
+        "Selected values do not establish effective operation or source freshness.",
+        "Credentials remain transient and private; native status does not establish egress.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Run a reviewed bounded selected read and retain dated applicability or data gaps."
+    },
+    {
+      "id": "read.ping",
+      "implementation": "source_limitation",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": null,
+      "limits": [
+        "Pinned mapping is a generic netool JSON parser; no maintained finite start/result-correlation/cancel/expiry lifecycle was found.",
+        "The shared endpoint can initiate active diagnostics; it is excluded from passive reads.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Obtain a maintained finite diagnostic lifecycle with correlation, bounded execution and cancellation before implementing a separately granted job."
+    },
+    {
+      "id": "read.system",
+      "implementation": "source_limitation",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": null,
+      "limits": [
+        "Pinned SYSTEM enum has no native read mapping; identity/status/uptime are partial observations.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Assess a versioned maintained upstream migration if a real system source is needed; retain explicit partial observations."
+    },
+    {
+      "id": "read.vpnc_clientlist",
+      "implementation": "implemented_selected",
+      "offline": "passed",
+      "live": "not_attempted",
+      "interface": "get vpnc_clientlist",
+      "limits": [
+        "Selected values do not establish effective operation or source freshness.",
+        "Credentials remain transient and private; native status does not establish egress.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Run a reviewed bounded selected read and retain dated applicability or data gaps."
+    },
+    {
+      "id": "state.aura",
+      "implementation": "recovery_blocked",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": null,
+      "limits": [
+        "Capability/zone and strict intent/compiler checks exist; native setter cannot restore auxiliary scheme history exactly.",
+        "No applicable hardware or complete exact-recovery roundtrip is proven.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Obtain applicable hardware and native auxiliary-scheme restoration support; never bypass it with raw keys."
+    },
+    {
+      "id": "state.openvpn_client",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan openvpn-client --profile VPN_REF --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Native unit-index or entity serializer loss rejects mutation; complete credentials/order/unknown fields stay private.",
+        "Current selected vpnc_unit must exactly match the selected native profile unit; otherwise planning rejects exact recovery loss.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "First establish a reviewed lossless representation contract for the entity-encoded target hook and maintained native setter, preserving unit/list/unknown fields in both directions; then satisfy verified backup and review an applicable human routing pilot."
+    },
+    {
+      "id": "state.openvpn_server",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan openvpn-server --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Complete the private backup/recovery prerequisite, choose applicable existing target and review a consolidated human pilot."
+    },
+    {
+      "id": "state.port_forwarding",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan forwarding --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Complete the private backup/recovery prerequisite, choose applicable existing target and review a consolidated human pilot."
+    },
+    {
+      "id": "state.system",
+      "implementation": "source_limitation",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": null,
+      "limits": [
+        "Named restart/update-client/reboot candidates lack identity-bound completion and exact inverse contracts in the pinned integration.",
+        "No arbitrary service forwarding, firmware update or reboot interface is exposed.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Select a concrete named operation with supported completion/recovery/backup proof; review its operation authority separately."
+    },
+    {
+      "id": "state.vpnc",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan vpnc --profile VPN_REF --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Native unit-index or entity serializer loss rejects mutation; complete credentials/order/unknown fields stay private.",
+        "Current selected vpnc_unit must exactly match the selected native profile unit; otherwise planning rejects exact recovery loss.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "First establish a reviewed lossless representation contract for the entity-encoded target hook and maintained native setter, preserving unit/list/unknown fields in both directions; then satisfy verified backup and review an applicable human routing pilot."
+    },
+    {
+      "id": "state.wireguard_client",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan wireguard-client --profile VPN_REF --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Native unit-index or entity serializer loss rejects mutation; complete credentials/order/unknown fields stay private.",
+        "Current selected vpnc_unit must exactly match the selected native profile unit; otherwise planning rejects exact recovery loss.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "First establish a reviewed lossless representation contract for the entity-encoded target hook and maintained native setter, preserving unit/list/unknown fields in both directions; then satisfy verified backup and review an applicable human routing pilot."
+    },
+    {
+      "id": "state.wireguard_server",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan wireguard-server --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Existing wgs_unit must be literal 1; selected-unit drift is bound and rejected.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Complete the private backup/recovery prerequisite, choose applicable existing target and review a consolidated human pilot."
+    },
+    {
+      "id": "state.wlan",
+      "implementation": "implemented_guarded",
+      "offline": "passed",
+      "live": "blocked_prerequisite",
+      "interface": "plan wlan --target TARGET --enabled on|off",
+      "limits": [
+        "Production effective writes require verified configuration backup/recovery, exact administrator grant and human confirmation.",
+        "No live write, independent behavior or native inverse evidence exists for this control.",
+        "Nonzero or unknown guest expiry/remaining expiry is rejected in both inverse directions.",
+        "Household pilot observations are excluded; no live verification is claimed for this public export or your target."
+      ],
+      "next_action": "Complete the private backup/recovery prerequisite, choose applicable existing target and review a consolidated human pilot."
+    }
+  ],
+  "offline_evidence": {
+    "date": "2026-10-15",
+    "python_tests_passed": 1244,
+    "node_observer_test": "passed",
+    "lock_check": "passed_offline",
+    "live_settings_changed": false,
+    "note": "Synthetic fixture coverage includes source limitations; a passed rejection is not an implemented source contract."
+  },
+  "live_evidence": {
+    "date": "2026-10-15",
+    "read_cli_calls": 8,
+    "preview_cli_calls": 9,
+    "settings_writes": 0,
+    "active_jobs": 0,
+    "grants": 0,
+    "applies": 0,
+    "restoration_pending": false,
+    "read_summary_sha256": "6714659321c3de969ada1a18e575f5a586c6651109c5b5808b485d652e37d730",
+    "preview_summary_sha256": "706b26a11817bd4ecd2967963e31e2a090d5d627ac3351253338106bd8c8f054",
+    "review_closure_probes": {
+      "internal_native_reads": 1,
+      "cli_reads": 1,
+      "entity_delimiters_present": true,
+      "protected_plus_flags_passed": true,
+      "settings_writes": 0,
+      "raw_list_exported": false,
+      "summary_sha256": "7c27e5737e7aa4fdfbed700249aadae3ce07f5c0caece5abef0d4adb9707c9ea"
+    }
+  },
+  "independent_review": {
+    "model": "Fable 5.1",
+    "effort": "xhigh",
+    "report": "docs/reviews/2026-10-15-fable-16-capability-review.md",
+    "open_blockers": 0,
+    "open_majors": 0,
+    "open_minors": 0,
+    "scope": "Bounded code/source/privacy review and narrow correction closure; no independent live validation."
+  }
+}

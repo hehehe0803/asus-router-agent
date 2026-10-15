@@ -1,0 +1,2797 @@
+{
+  "schema_version": 1,
+  "pages": [
+    {
+      "group": "NetworkMap",
+      "page": "Network Map",
+      "url": "index.asp",
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "networkmap.network_map.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "networkmap.network_map.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiMesh",
+      "page": "AiMesh",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aimesh.aimesh.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aimesh.aimesh.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Guest",
+      "page": "Guest Network",
+      "url": "Guest_network.asp",
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "guest.guest_network.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "guest.guest_network.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "General",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.general.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.general.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "WPS",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.wps.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.wps.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "WDS",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.wds.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.wds.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "MAC Filter",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.mac_filter.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.mac_filter.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "RADIUS",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.radius.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.radius.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "Professional",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.professional.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.professional.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Wireless",
+      "page": "Roaming Block",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wireless.roaming_block.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wireless.roaming_block.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "LAN",
+      "page": "IP",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "lan.ip.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "lan.ip.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "LAN",
+      "page": "DHCP",
+      "url": "Advanced_DHCP_Content.asp",
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "lan.dhcp.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "lan.dhcp.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "LAN",
+      "page": "Route",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "lan.route.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "lan.route.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "LAN",
+      "page": "IPTV",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "lan.iptv.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "lan.iptv.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "LAN",
+      "page": "Switch Control",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "lan.switch_control.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "lan.switch_control.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "Internet",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.internet.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.internet.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "Dual WAN",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.dual_wan.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.dual_wan.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "Port Trigger",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.port_trigger.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.port_trigger.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "Port Forward",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.port_forward.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.port_forward.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "DMZ",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.dmz.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.dmz.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "DDNS",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.ddns.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.ddns.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "WAN",
+      "page": "NAT Passthrough",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "wan.nat_passthrough.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "wan.nat_passthrough.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Firewall",
+      "page": "General",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "firewall.general.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "firewall.general.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Firewall",
+      "page": "URL",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "firewall.url.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "firewall.url.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Firewall",
+      "page": "Keyword",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "firewall.keyword.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "firewall.keyword.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Firewall",
+      "page": "Network Services",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "firewall.network_services.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "firewall.network_services.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Tools",
+      "page": "Network Analysis",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "tools.network_analysis.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "tools.network_analysis.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Tools",
+      "page": "Netstat",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "tools.netstat.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "tools.netstat.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Tools",
+      "page": "WOL",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "tools.wol.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "tools.wol.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Tools",
+      "page": "Smart Connect",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "tools.smart_connect.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "tools.smart_connect.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "General",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.general.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.general.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "Wireless",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.wireless.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.wireless.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "DHCP",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.dhcp.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.dhcp.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "IPv6",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.ipv6.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.ipv6.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "Routing",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.routing.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.routing.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "Ports",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.ports.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.ports.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "Connections",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.connections.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.connections.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Logs",
+      "page": "Security Update",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "logs.security_update.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "logs.security_update.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiProtection",
+      "page": "Network Protection",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aiprotection.network_protection.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aiprotection.network_protection.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiProtection",
+      "page": "Malicious Sites",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aiprotection.malicious_sites.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aiprotection.malicious_sites.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiProtection",
+      "page": "IPS",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aiprotection.ips.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aiprotection.ips.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiProtection",
+      "page": "Infected",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aiprotection.infected.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aiprotection.infected.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Parental",
+      "page": "Filters",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "parental.filters.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "parental.filters.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Parental",
+      "page": "Schedules",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "parental.schedules.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "parental.schedules.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "QoS",
+      "page": "Bandwidth",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "qos.bandwidth.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "qos.bandwidth.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "QoS",
+      "page": "QoS",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "qos.qos.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "qos.qos.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "QoS",
+      "page": "History",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "qos.history.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "qos.history.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "QoS",
+      "page": "Speed",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "qos.speed.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "qos.speed.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Traffic",
+      "page": "Statistics",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "traffic.statistics.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "traffic.statistics.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Traffic",
+      "page": "Monitor",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "traffic.monitor.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "traffic.monitor.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Game",
+      "page": "Open NAT",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "game.open_nat.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "game.open_nat.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "USB",
+      "page": "USB",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "usb.usb.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "usb.usb.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiCloud",
+      "page": "Sync",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aicloud.sync.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aicloud.sync.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiCloud",
+      "page": "Server",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aicloud.server.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aicloud.server.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiCloud",
+      "page": "Settings",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aicloud.settings.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aicloud.settings.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "AiCloud",
+      "page": "Log",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "aicloud.log.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "aicloud.log.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "IPv6",
+      "page": "IPv6",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "ipv6.ipv6.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "ipv6.ipv6.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Alexa",
+      "page": "Alexa",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "alexa.alexa.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "alexa.alexa.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Admin",
+      "page": "Operation Mode",
+      "url": "Advanced_OperationMode_Content.asp",
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "admin.operation_mode.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "admin.operation_mode.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Admin",
+      "page": "System",
+      "url": "Advanced_System_Content.asp",
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "admin.system.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "admin.system.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Admin",
+      "page": "Firmware",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "admin.firmware.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "admin.firmware.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Admin",
+      "page": "Restore Save Upload",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "admin.restore_save_upload.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "admin.restore_save_upload.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Admin",
+      "page": "Feedback",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "admin.feedback.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "admin.feedback.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Admin",
+      "page": "Policy",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "admin.policy.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "admin.policy.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "VPN",
+      "page": "Server",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "vpn.server.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "vpn.server.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "VPN",
+      "page": "Fusion",
+      "url": "Advanced_VPNClient_Content.asp",
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "vpn.fusion.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "vpn.fusion.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "VPN",
+      "page": "Instant Guard",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "vpn.instant_guard.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "vpn.instant_guard.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "QuickSetup",
+      "page": "Quick Setup",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "quicksetup.quick_setup.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "quicksetup.quick_setup.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    },
+    {
+      "group": "Game",
+      "page": "Game",
+      "url": null,
+      "status": "inventory_only",
+      "actions": [
+        {
+          "name": "inspect",
+          "status": "inventory_only",
+          "id": "game.game.0",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        },
+        {
+          "name": "page-specific actions unsurveyed",
+          "status": "inventory_only",
+          "id": "game.game.1",
+          "firmware": "RT-AX86U 3.0.0.4.388_24436 (navigation only)",
+          "input_schema": null,
+          "secret_fields": null,
+          "evidence": "docs/2026-10-12-full-feature-plan.md#coverage-architecture",
+          "side_effects": null,
+          "transport": null,
+          "verification": null,
+          "recovery": null
+        }
+      ],
+      "gaps": [
+        "Exact action inventory and conditional forms remain unsurveyed",
+        "No verified read/write contract for this page"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "name": "synthetic.led",
+      "status": "implemented",
+      "source": "SYNTHETIC fixture contract; not ASUS firmware evidence",
+      "fields": {
+        "enabled": {
+          "type": "bool",
+          "secret": false
+        }
+      },
+      "risk": "low",
+      "backup_required": true,
+      "offline_only": true
+    },
+    {
+      "name": "led.set",
+      "status": "implemented",
+      "source": "asusrouter 1.21.3 modules/led.py AsusLED.ON/OFF set_state; native selected led_val read; live compatibility unverified",
+      "fields": {
+        "enabled": {
+          "type": "bool",
+          "secret": false
+        }
+      },
+      "risk": "low",
+      "backup_required": false,
+      "offline_only": false
+    },
+    {
+      "name": "parental.enable",
+      "status": "implemented",
+      "source": "asusrouter 1.21.3 parental_control.set_state/set_rule/write_pc_rules; exact reviewed target, whole-policy fingerprint and protected ordered recovery; no live writes verified",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "low",
+      "backup_required": false,
+      "offline_only": false
+    },
+    {
+      "name": "parental.rule",
+      "status": "implemented",
+      "source": "asusrouter 1.21.3 parental_control.set_state/set_rule/write_pc_rules; exact reviewed target, whole-policy fingerprint and protected ordered recovery; no live writes verified",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "low",
+      "backup_required": false,
+      "offline_only": false
+    },
+    {
+      "name": "parental.block_all",
+      "status": "implemented",
+      "source": "asusrouter 1.21.3 parental_control.AsusBlockAll dedicated flag setter; explicit all-client internet blocking scope and firewall restart; full-policy binding and faithful inverse; live writes unverified",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "low",
+      "backup_required": false,
+      "offline_only": false
+    },
+    {
+      "name": "state.port_forwarding",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "exposure",
+      "backup_required": true,
+      "offline_only": false
+    },
+    {
+      "name": "state.openvpn_server",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "exposure",
+      "backup_required": true,
+      "offline_only": false
+    },
+    {
+      "name": "state.wireguard_server",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "exposure",
+      "backup_required": true,
+      "offline_only": false
+    },
+    {
+      "name": "state.wlan",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "disruptive",
+      "backup_required": true,
+      "offline_only": false
+    },
+    {
+      "name": "state.vpnc",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "disruptive",
+      "backup_required": true,
+      "offline_only": false
+    },
+    {
+      "name": "state.openvpn_client",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "disruptive",
+      "backup_required": true,
+      "offline_only": false
+    },
+    {
+      "name": "state.wireguard_client",
+      "status": "implemented",
+      "source": "docs/2026-10-15-16-capability-plan.md",
+      "fields": {
+        "policy_fingerprint": {
+          "type": "str",
+          "secret": false
+        }
+      },
+      "risk": "disruptive",
+      "backup_required": true,
+      "offline_only": false
+    }
+  ]
+}

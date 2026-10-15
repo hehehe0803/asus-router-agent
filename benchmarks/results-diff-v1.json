@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "corpus_sha256": "2a0d13689b1ad04bd08df3b6580a8ab03bf2d169dfba1014b9cbc69a65f054f8",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "proxy only; not GPT-6/GPT-6.1 tokens or billing"
+  },
+  "selected_on_training": "table_2",
+  "heldout_gate": "passed",
+  "runtime_default": "compact_json",
+  "candidate_status": "experimental pure formatter; not public CLI output mode",
+  "browser_baseline": "unavailable; no browser savings claim",
+  "candidates": {
+    "compact_json": {
+      "tasks": [
+        {
+          "task": "all_changes_train_35",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1312,
+          "bytes": 4467,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 104,
+            "stdout": 900,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 239,
+            "stdout": 2802,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "all_changes_heldout_27",
+          "split": "heldout",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1136,
+          "bytes": 3931,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 104,
+            "stdout": 724,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 239,
+            "stdout": 2266,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "heldout_presence_null_arrays",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 526,
+          "bytes": 2173,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 52,
+            "stdout": 166,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 119,
+            "stdout": 628,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 1312,
+          "bytes": 4467,
+          "calls": 2
+        },
+        "heldout": {
+          "tokens": 1662,
+          "bytes": 6104,
+          "calls": 3
+        }
+      }
+    },
+    "table_2": {
+      "tasks": [
+        {
+          "task": "all_changes_train_35",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1175,
+          "bytes": 3934,
+          "component_tokens": {
+            "help_instructions": 51,
+            "commands": 104,
+            "stdout": 712,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 229,
+            "commands": 239,
+            "stdout": 2040,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "all_changes_heldout_27",
+          "split": "heldout",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1020,
+          "bytes": 3590,
+          "component_tokens": {
+            "help_instructions": 51,
+            "commands": 104,
+            "stdout": 557,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 229,
+            "commands": 239,
+            "stdout": 1696,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "heldout_presence_null_arrays",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 526,
+          "bytes": 2173,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 52,
+            "stdout": 166,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 119,
+            "stdout": 628,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 1175,
+          "bytes": 3934,
+          "calls": 2
+        },
+        "heldout": {
+          "tokens": 1546,
+          "bytes": 5763,
+          "calls": 3
+        }
+      }
+    },
+    "table_4": {
+      "tasks": [
+        {
+          "task": "all_changes_train_35",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1175,
+          "bytes": 3934,
+          "component_tokens": {
+            "help_instructions": 51,
+            "commands": 104,
+            "stdout": 712,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 229,
+            "commands": 239,
+            "stdout": 2040,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "all_changes_heldout_27",
+          "split": "heldout",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1020,
+          "bytes": 3590,
+          "component_tokens": {
+            "help_instructions": 51,
+            "commands": 104,
+            "stdout": 557,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 229,
+            "commands": 239,
+            "stdout": 1696,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "heldout_presence_null_arrays",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 526,
+          "bytes": 2173,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 52,
+            "stdout": 166,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 119,
+            "stdout": 628,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 1175,
+          "bytes": 3934,
+          "calls": 2
+        },
+        "heldout": {
+          "tokens": 1546,
+          "bytes": 5763,
+          "calls": 3
+        }
+      }
+    },
+    "table_8": {
+      "tasks": [
+        {
+          "task": "all_changes_train_35",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1175,
+          "bytes": 3934,
+          "component_tokens": {
+            "help_instructions": 51,
+            "commands": 104,
+            "stdout": 712,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 229,
+            "commands": 239,
+            "stdout": 2040,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "all_changes_heldout_27",
+          "split": "heldout",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1058,
+          "bytes": 3719,
+          "component_tokens": {
+            "help_instructions": 51,
+            "commands": 104,
+            "stdout": 595,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 229,
+            "commands": 239,
+            "stdout": 1825,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "heldout_presence_null_arrays",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 526,
+          "bytes": 2173,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 52,
+            "stdout": 166,
+            "stderr": 0,
+            "discovery": 280,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 119,
+            "stdout": 628,
+            "stderr": 0,
+            "discovery": 1243,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 1175,
+          "bytes": 3934,
+          "calls": 2
+        },
+        "heldout": {
+          "tokens": 1584,
+          "bytes": 5892,
+          "calls": 3
+        }
+      }
+    }
+  },
+  "savings_vs_compact_json": {
+    "train": {
+      "tokens": 137,
+      "percent": 10.44
+    },
+    "heldout": {
+      "tokens": 116,
+      "percent": 6.98
+    }
+  }
+}

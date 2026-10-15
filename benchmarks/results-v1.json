@@ -1,0 +1,1607 @@
+{
+  "schema_version": 1,
+  "corpus_sha256": "147bc2e0b17d17be45a3e67136669564601ed5c24d0119655ba9dd959ad2ffac",
+  "help_sha256": "f0c6562bea28cca0bd65d594bd535eef3405aee1222b3e7ecd931eee841d1956",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "proxy only; not GPT-6/GPT-6.1 tokens or billing"
+  },
+  "browser_baseline": "unavailable; no browser savings claim",
+  "selected_on_training": "table_8",
+  "retained": "compact_json",
+  "heldout_gate": "rejected_token_regression",
+  "savings_vs_compact_json": {
+    "train": {
+      "tokens": 141,
+      "percent": 4.43
+    },
+    "heldout": {
+      "tokens": -62,
+      "percent": -6.69
+    }
+  },
+  "candidates": {
+    "readable_json": {
+      "tasks": [
+        {
+          "task": "status",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 537,
+          "bytes": 1965,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 442,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 1486,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "specific_client",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1320,
+          "bytes": 4715,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 20,
+            "stdout": 1209,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 76,
+            "stdout": 4180,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "ten_clients",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 703,
+          "bytes": 2582,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 8,
+            "stdout": 604,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 32,
+            "stdout": 2091,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "wan_diagnosis",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 300,
+          "bytes": 1154,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 204,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 674,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "dhcp_dns",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 375,
+          "bytes": 1524,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 16,
+            "stdout": 268,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 72,
+            "stdout": 993,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "vpn_state",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 292,
+          "bytes": 1135,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 196,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 655,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "change_preview",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 129,
+          "bytes": 614,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 7,
+            "stdout": 31,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 40,
+            "stdout": 115,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "verification",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 128,
+          "bytes": 609,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 6,
+            "stdout": 31,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 35,
+            "stdout": 115,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "snapshot_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 226,
+          "bytes": 889,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 103,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 333,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "unchanged_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 199,
+          "bytes": 788,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 76,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 232,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "auth_error",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 125,
+          "bytes": 589,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 30,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 110,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_clients_with_warning",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 595,
+          "bytes": 2193,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 8,
+            "stdout": 496,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 32,
+            "stdout": 1702,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_unknown_vpn",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 305,
+          "bytes": 1181,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 209,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 701,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_timeout",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 130,
+          "bytes": 622,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 26,
+            "stderr": 9
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 95,
+            "stderr": 48
+          }
+        },
+        {
+          "task": "heldout_nested_rows",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 219,
+          "bytes": 963,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 123,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 26,
+            "stdout": 478,
+            "stderr": 0
+          }
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 4334,
+          "bytes": 16564,
+          "calls": 13
+        },
+        "heldout": {
+          "tokens": 1249,
+          "bytes": 4959,
+          "calls": 4
+        }
+      }
+    },
+    "compact_json": {
+      "tasks": [
+        {
+          "task": "status",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 368,
+          "bytes": 1439,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 273,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 960,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "specific_client",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 887,
+          "bytes": 3279,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 20,
+            "stdout": 776,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 76,
+            "stdout": 2744,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "ten_clients",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 487,
+          "bytes": 1864,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 8,
+            "stdout": 388,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 32,
+            "stdout": 1373,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "wan_diagnosis",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 975,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 495,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "dhcp_dns",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 284,
+          "bytes": 1232,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 16,
+            "stdout": 177,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 72,
+            "stdout": 701,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "vpn_state",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 221,
+          "bytes": 964,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 125,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 484,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "change_preview",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 118,
+          "bytes": 594,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 7,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 40,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "verification",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 117,
+          "bytes": 589,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 6,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 35,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "snapshot_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 187,
+          "bytes": 788,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 64,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 232,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "unchanged_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 171,
+          "bytes": 736,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 48,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 180,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "auth_error",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 114,
+          "bytes": 569,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 19,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 90,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_clients_with_warning",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 415,
+          "bytes": 1625,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 8,
+            "stdout": 316,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 32,
+            "stdout": 1134,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_unknown_vpn",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 998,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 518,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_timeout",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 119,
+          "bytes": 602,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 15,
+            "stderr": 9
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 75,
+            "stderr": 48
+          }
+        },
+        {
+          "task": "heldout_nested_rows",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 166,
+          "bytes": 770,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 70,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 26,
+            "stdout": 285,
+            "stderr": 0
+          }
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 3181,
+          "bytes": 13029,
+          "calls": 13
+        },
+        "heldout": {
+          "tokens": 927,
+          "bytes": 3995,
+          "calls": 4
+        }
+      }
+    },
+    "table_2": {
+      "tasks": [
+        {
+          "task": "status",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 399,
+          "bytes": 1581,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 4,
+            "stdout": 253,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 20,
+            "stdout": 873,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "specific_client",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 776,
+          "bytes": 2764,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 20,
+            "stdout": 614,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 76,
+            "stdout": 2000,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "ten_clients",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 457,
+          "bytes": 1721,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 8,
+            "stdout": 307,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 32,
+            "stdout": 1001,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "wan_diagnosis",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 975,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 495,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "dhcp_dns",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 338,
+          "bytes": 1460,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 16,
+            "stdout": 180,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 72,
+            "stdout": 700,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "vpn_state",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 221,
+          "bytes": 964,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 125,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 484,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "change_preview",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 118,
+          "bytes": 594,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 7,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 40,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "verification",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 117,
+          "bytes": 589,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 6,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 35,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "snapshot_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 187,
+          "bytes": 788,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 64,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 232,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "unchanged_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 171,
+          "bytes": 736,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 48,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 180,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "auth_error",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 114,
+          "bytes": 569,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 19,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 90,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_clients_with_warning",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 414,
+          "bytes": 1611,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 8,
+            "stdout": 264,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 32,
+            "stdout": 891,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_unknown_vpn",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 998,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 518,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_timeout",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 119,
+          "bytes": 602,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 15,
+            "stderr": 9
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 75,
+            "stderr": 48
+          }
+        },
+        {
+          "task": "heldout_nested_rows",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 231,
+          "bytes": 1015,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 5,
+            "stdout": 84,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 26,
+            "stdout": 301,
+            "stderr": 0
+          }
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 3125,
+          "bytes": 12741,
+          "calls": 13
+        },
+        "heldout": {
+          "tokens": 991,
+          "bytes": 4226,
+          "calls": 4
+        }
+      }
+    },
+    "table_4": {
+      "tasks": [
+        {
+          "task": "status",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 399,
+          "bytes": 1581,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 4,
+            "stdout": 253,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 20,
+            "stdout": 873,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "specific_client",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 776,
+          "bytes": 2764,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 20,
+            "stdout": 614,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 76,
+            "stdout": 2000,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "ten_clients",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 457,
+          "bytes": 1721,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 8,
+            "stdout": 307,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 32,
+            "stdout": 1001,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "wan_diagnosis",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 975,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 495,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "dhcp_dns",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 284,
+          "bytes": 1232,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 16,
+            "stdout": 177,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 72,
+            "stdout": 701,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "vpn_state",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 221,
+          "bytes": 964,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 125,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 484,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "change_preview",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 118,
+          "bytes": 594,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 7,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 40,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "verification",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 117,
+          "bytes": 589,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 6,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 35,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "snapshot_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 187,
+          "bytes": 788,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 64,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 232,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "unchanged_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 171,
+          "bytes": 736,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 48,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 180,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "auth_error",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 114,
+          "bytes": 569,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 19,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 90,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_clients_with_warning",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 414,
+          "bytes": 1611,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 8,
+            "stdout": 264,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 32,
+            "stdout": 891,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_unknown_vpn",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 998,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 518,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_timeout",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 119,
+          "bytes": 602,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 15,
+            "stderr": 9
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 75,
+            "stderr": 48
+          }
+        },
+        {
+          "task": "heldout_nested_rows",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 228,
+          "bytes": 1027,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 5,
+            "stdout": 81,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 26,
+            "stdout": 313,
+            "stderr": 0
+          }
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 3071,
+          "bytes": 12513,
+          "calls": 13
+        },
+        "heldout": {
+          "tokens": 988,
+          "bytes": 4238,
+          "calls": 4
+        }
+      }
+    },
+    "table_8": {
+      "tasks": [
+        {
+          "task": "status",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 368,
+          "bytes": 1439,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 273,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 960,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "specific_client",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 776,
+          "bytes": 2764,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 20,
+            "stdout": 614,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 76,
+            "stdout": 2000,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "ten_clients",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 457,
+          "bytes": 1721,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 8,
+            "stdout": 307,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 32,
+            "stdout": 1001,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "wan_diagnosis",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 975,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 495,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "dhcp_dns",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 284,
+          "bytes": 1232,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 16,
+            "stdout": 177,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 72,
+            "stdout": 701,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "vpn_state",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 221,
+          "bytes": 964,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 125,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 484,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "change_preview",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 118,
+          "bytes": 594,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 7,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 40,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "verification",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 117,
+          "bytes": 589,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 6,
+            "stdout": 20,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 35,
+            "stdout": 95,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "snapshot_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 187,
+          "bytes": 788,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 64,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 232,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "unchanged_diff",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 171,
+          "bytes": 736,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 32,
+            "stdout": 48,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 97,
+            "stdout": 180,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "auth_error",
+          "split": "train",
+          "valid": true,
+          "calls": 1,
+          "tokens": 114,
+          "bytes": 569,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 19,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 90,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_clients_with_warning",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 415,
+          "bytes": 1625,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 8,
+            "stdout": 316,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 32,
+            "stdout": 1134,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_unknown_vpn",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 227,
+          "bytes": 998,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 5,
+            "stdout": 131,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 21,
+            "stdout": 518,
+            "stderr": 0
+          }
+        },
+        {
+          "task": "heldout_timeout",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 119,
+          "bytes": 602,
+          "component_tokens": {
+            "help_instructions": 91,
+            "commands": 4,
+            "stdout": 15,
+            "stderr": 9
+          },
+          "component_bytes": {
+            "help_instructions": 459,
+            "commands": 20,
+            "stdout": 75,
+            "stderr": 48
+          }
+        },
+        {
+          "task": "heldout_nested_rows",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 228,
+          "bytes": 1027,
+          "component_tokens": {
+            "help_instructions": 142,
+            "commands": 5,
+            "stdout": 81,
+            "stderr": 0
+          },
+          "component_bytes": {
+            "help_instructions": 688,
+            "commands": 26,
+            "stdout": 313,
+            "stderr": 0
+          }
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 3040,
+          "bytes": 12371,
+          "calls": 13
+        },
+        "heldout": {
+          "tokens": 989,
+          "bytes": 4252,
+          "calls": 4
+        }
+      }
+    }
+  }
+}

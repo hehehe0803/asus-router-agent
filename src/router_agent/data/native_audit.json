@@ -1,0 +1,3425 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-10-12",
+  "upstream": {
+    "package": "asusrouter",
+    "version": "1.21.3",
+    "source_provenance": "pristine local source inspected; consumer references use pinned tag URL plus source_refs paths",
+    "tag_url": "https://github.com/Vaskivskyi/asusrouter/tree/1.21.3/asusrouter"
+  },
+  "evidence_boundary": {
+    "audit_network_calls": false,
+    "live_evidence_document": "docs/COMPATIBILITY.md",
+    "live_evidence_target": {
+      "model": "unspecified",
+      "firmware": "unspecified",
+      "date": "2026-10-12"
+    },
+    "live_evidence_meaning": "This public source inventory contains no household pilot reports. No live response, physical effect, routing outcome or compatibility with your device is established. Validate your own exact model and firmware before any operation.",
+    "source_support_meaning": "A mapped endpoint, processing path or dispatched dedicated handler; enum presence alone is explicitly weaker.",
+    "policy": "Native upstream integration only; authentication, exact identity, human authorization, drift and recovery gates remain enforced by runtime code."
+  },
+  "definitions": {
+    "cli_status": [
+      "implemented_selected",
+      "implemented",
+      "in_progress",
+      "unimplemented",
+      "not_applicable"
+    ],
+    "live_status": [
+      "recorded_response",
+      "unverified",
+      "not_applicable"
+    ],
+    "priority": "Small number means suggested earlier read integration; null means no new read priority or control remains gated.",
+    "status_encoding": "Read source_support, cli_status, live_status and blocks together. Source-supported but unimplemented is an implementation gap, not unsupported; blocks encode source, target, history, active-job, protected-design or recovery constraints. recorded_response is dated selected-read evidence, not current compatibility or live-write verification.",
+    "cli_status_meaning": {
+      "implemented_selected": "A finite positively selected read contract exists; omitted native fields and applicability limits remain explicit.",
+      "implemented": "A named contract is implemented locally; live validation and transport/authorization provisioning are separate.",
+      "in_progress": "Implementation work is recorded but not complete.",
+      "unimplemented": "No CLI integration exists for this row; source_support and blocks determine whether a source handler exists and why work remains.",
+      "not_applicable": "This source symbol does not represent an applicable dedicated CLI contract; this is not a hardware-absence finding."
+    }
+  },
+  "inventory": {
+    "asus_data": [
+      "AIMESH",
+      "AURA",
+      "BOOTTIME",
+      "CLIENTS",
+      "CPU",
+      "DDNS",
+      "DEVICEMAP",
+      "DSL",
+      "FIRMWARE",
+      "FIRMWARE_NOTE",
+      "FLAGS",
+      "GWLAN",
+      "LED",
+      "NETWORK",
+      "NODE_INFO",
+      "OPENVPN",
+      "OPENVPN_CLIENT",
+      "OPENVPN_SERVER",
+      "PARENTAL_CONTROL",
+      "PING",
+      "PORT_FORWARDING",
+      "PORTS",
+      "RAM",
+      "SPEEDTEST",
+      "SPEEDTEST_RESULT",
+      "SYSINFO",
+      "SYSTEM",
+      "TEMPERATURE",
+      "VPNC",
+      "VPNC_CLIENTLIST",
+      "WAN",
+      "WIREGUARD",
+      "WIREGUARD_CLIENT",
+      "WIREGUARD_SERVER",
+      "WLAN"
+    ],
+    "asus_state": [
+      "NONE",
+      "AURA",
+      "BLOCK_ALL",
+      "CONNECTION",
+      "DDNS",
+      "LED",
+      "OPENVPN_CLIENT",
+      "OPENVPN_SERVER",
+      "PARENTAL_CONTROL",
+      "PC_RULE",
+      "PORT_FORWARDING",
+      "SYSTEM",
+      "VPNC",
+      "WIREGUARD_CLIENT",
+      "WIREGUARD_SERVER",
+      "WLAN"
+    ],
+    "dynamic_reads": [
+      "ARTrafficSourceEthernet",
+      "ARTrafficSourceWiFi",
+      "ARTrafficSourceBackhaul"
+    ],
+    "system_service_members": [
+      {
+        "name": "AIMESH_ADD_NODE",
+        "native_value_expression": "'ob_selection'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 50,
+          "line_end": 50
+        }
+      },
+      {
+        "name": "AIMESH_ONBOARDING",
+        "native_value_expression": "'onboarding'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 51,
+          "line_end": 51
+        }
+      },
+      {
+        "name": "AIMESH_REBOOT",
+        "native_value_expression": "'device_reboot'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 54,
+          "line_end": 54
+        }
+      },
+      {
+        "name": "AIMESH_REBUILD",
+        "native_value_expression": "'re_reconnect'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 55,
+          "line_end": 55
+        }
+      },
+      {
+        "name": "NODE_CONFIG_CHANGE",
+        "native_value_expression": "'config_changed'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 56,
+          "line_end": 56
+        }
+      },
+      {
+        "name": "NODE_REBOOT",
+        "native_value_expression": "'node_reboot'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 57,
+          "line_end": 57
+        }
+      },
+      {
+        "name": "REBUILD_AIMESH",
+        "native_value_expression": "'_depr_re_reconnect'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 58,
+          "line_end": 58
+        }
+      },
+      {
+        "name": "AURA_RESTART",
+        "native_value_expression": "'restart_ledg'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 61,
+          "line_end": 61
+        }
+      },
+      {
+        "name": "DDNS_RESTART",
+        "native_value_expression": "'restart_ddns_le'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 64,
+          "line_end": 64
+        }
+      },
+      {
+        "name": "RESTART_DDNS_LE",
+        "native_value_expression": "'_depr_restart_ddns_le'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 65,
+          "line_end": 65
+        }
+      },
+      {
+        "name": "FIRMWARE_CHECK",
+        "native_value_expression": "'firmware_check'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 68,
+          "line_end": 68
+        }
+      },
+      {
+        "name": "FIRMWARE_UPGRADE",
+        "native_value_expression": "'firmware_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 72,
+          "line_end": 72
+        }
+      },
+      {
+        "name": "UPGRADE_RESTART",
+        "native_value_expression": "'restart_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 75,
+          "line_end": 75
+        }
+      },
+      {
+        "name": "UPGRADE_START",
+        "native_value_expression": "'start_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 76,
+          "line_end": 76
+        }
+      },
+      {
+        "name": "UPGRADE_STOP",
+        "native_value_expression": "'stop_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 77,
+          "line_end": 77
+        }
+      },
+      {
+        "name": "RESTART_UPGRADE",
+        "native_value_expression": "'_depr_restart_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 78,
+          "line_end": 78
+        }
+      },
+      {
+        "name": "START_UPGRADE",
+        "native_value_expression": "'_depr_start_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 79,
+          "line_end": 79
+        }
+      },
+      {
+        "name": "STOP_UPGRADE",
+        "native_value_expression": "'_depr_stop_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 80,
+          "line_end": 80
+        }
+      },
+      {
+        "name": "PREPARE_CERT",
+        "native_value_expression": "'prepare_cert'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 82,
+          "line_end": 82
+        }
+      },
+      {
+        "name": "REBOOT",
+        "native_value_expression": "'reboot'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 83,
+          "line_end": 83
+        }
+      },
+      {
+        "name": "RESTART_CHPASS",
+        "native_value_expression": "'restart_chpass'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 84,
+          "line_end": 84
+        }
+      },
+      {
+        "name": "RESTART_CLOUDSYNC",
+        "native_value_expression": "'restart_cloudsync'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 85,
+          "line_end": 85
+        }
+      },
+      {
+        "name": "RESTART_CP",
+        "native_value_expression": "'restart_CP'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 86,
+          "line_end": 86
+        }
+      },
+      {
+        "name": "RESTART_DEFAULT_WAN",
+        "native_value_expression": "'restart_default_wan'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 87,
+          "line_end": 87
+        }
+      },
+      {
+        "name": "RESTART_DISKMON",
+        "native_value_expression": "'restart_diskmon'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 88,
+          "line_end": 88
+        }
+      },
+      {
+        "name": "RESTART_DNSFILTER",
+        "native_value_expression": "'restart_dnsfilter'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 89,
+          "line_end": 89
+        }
+      },
+      {
+        "name": "RESTART_DNSMASQ",
+        "native_value_expression": "'restart_dnsmasq'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 90,
+          "line_end": 90
+        }
+      },
+      {
+        "name": "RESTART_DNSQD",
+        "native_value_expression": "'restart_dnsqd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 91,
+          "line_end": 91
+        }
+      },
+      {
+        "name": "RESTART_FIREWALL",
+        "native_value_expression": "'restart_firewall'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 92,
+          "line_end": 92
+        }
+      },
+      {
+        "name": "RESTART_FTPD",
+        "native_value_expression": "'restart_ftpd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 93,
+          "line_end": 93
+        }
+      },
+      {
+        "name": "RESTART_FTPSAMBA",
+        "native_value_expression": "'restart_ftpsamba'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 94,
+          "line_end": 94
+        }
+      },
+      {
+        "name": "RESTART_HTTPD",
+        "native_value_expression": "'restart_httpd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 95,
+          "line_end": 95
+        }
+      },
+      {
+        "name": "RESTART_KEY_GUARD",
+        "native_value_expression": "'restart_key_guard'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 96,
+          "line_end": 96
+        }
+      },
+      {
+        "name": "RESTART_LEDS",
+        "native_value_expression": "'restart_leds'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 97,
+          "line_end": 97
+        }
+      },
+      {
+        "name": "RESTART_LPD",
+        "native_value_expression": "'restart_lpd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 98,
+          "line_end": 98
+        }
+      },
+      {
+        "name": "RESTART_NASAPPS",
+        "native_value_expression": "'restart_nasapps'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 99,
+          "line_end": 99
+        }
+      },
+      {
+        "name": "RESTART_NET",
+        "native_value_expression": "'restart_net'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 100,
+          "line_end": 100
+        }
+      },
+      {
+        "name": "RESTART_NET_AND_PHY",
+        "native_value_expression": "'restart_net_and_phy'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 101,
+          "line_end": 101
+        }
+      },
+      {
+        "name": "RESTART_NFCM",
+        "native_value_expression": "'restart_nfcm'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 104,
+          "line_end": 104
+        }
+      },
+      {
+        "name": "RESTART_OAM",
+        "native_value_expression": "'restart_oam'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 105,
+          "line_end": 105
+        }
+      },
+      {
+        "name": "RESTART_OPENVPND",
+        "native_value_expression": "'restart_openvpnd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 106,
+          "line_end": 106
+        }
+      },
+      {
+        "name": "RESTART_QOS",
+        "native_value_expression": "'restart_qos'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 107,
+          "line_end": 107
+        }
+      },
+      {
+        "name": "RESTART_ROUTERBOOST",
+        "native_value_expression": "'restart_routerboost'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 108,
+          "line_end": 108
+        }
+      },
+      {
+        "name": "RESTART_SAMBA",
+        "native_value_expression": "'restart_samba'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 109,
+          "line_end": 109
+        }
+      },
+      {
+        "name": "RESTART_SETTINGS_WEBDAV",
+        "native_value_expression": "'restart_settings_webdav'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 110,
+          "line_end": 110
+        }
+      },
+      {
+        "name": "RESTART_SNMPD",
+        "native_value_expression": "'restart_snmpd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 111,
+          "line_end": 111
+        }
+      },
+      {
+        "name": "RESTART_SUBNET",
+        "native_value_expression": "'restart_subnet'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 114,
+          "line_end": 114
+        }
+      },
+      {
+        "name": "RESTART_TIME",
+        "native_value_expression": "'restart_time'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 115,
+          "line_end": 115
+        }
+      },
+      {
+        "name": "RESTART_TIMEMACHINE",
+        "native_value_expression": "'restart_timemachine'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 116,
+          "line_end": 116
+        }
+      },
+      {
+        "name": "RESTART_TOR",
+        "native_value_expression": "'restart_tor'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 117,
+          "line_end": 117
+        }
+      },
+      {
+        "name": "RESTART_TR",
+        "native_value_expression": "'restart_tr'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 118,
+          "line_end": 118
+        }
+      },
+      {
+        "name": "RESTART_U2EC",
+        "native_value_expression": "'restart_u2ec'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 119,
+          "line_end": 119
+        }
+      },
+      {
+        "name": "RESTART_UPNP",
+        "native_value_expression": "'restart_upnp'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 120,
+          "line_end": 120
+        }
+      },
+      {
+        "name": "RESTART_USB_IDLE",
+        "native_value_expression": "'restart_usb_idle'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 121,
+          "line_end": 121
+        }
+      },
+      {
+        "name": "RESTART_VPNC",
+        "native_value_expression": "'restart_vpnc'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 122,
+          "line_end": 122
+        }
+      },
+      {
+        "name": "RESTART_VPND",
+        "native_value_expression": "'restart_vpnd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 123,
+          "line_end": 123
+        }
+      },
+      {
+        "name": "RESTART_WAN",
+        "native_value_expression": "'restart_wan'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 124,
+          "line_end": 124
+        }
+      },
+      {
+        "name": "RESTART_WAN_DNS",
+        "native_value_expression": "'restart_wan_dns'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 127,
+          "line_end": 127
+        }
+      },
+      {
+        "name": "RESTART_WAN_IF",
+        "native_value_expression": "'restart_wan_if'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 128,
+          "line_end": 128
+        }
+      },
+      {
+        "name": "RESTART_WEBDAV",
+        "native_value_expression": "'restart_webdav'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 131,
+          "line_end": 131
+        }
+      },
+      {
+        "name": "RESTART_WIRELESS",
+        "native_value_expression": "'restart_wireless'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 132,
+          "line_end": 132
+        }
+      },
+      {
+        "name": "RESTART_WLCSCAN",
+        "native_value_expression": "'restart_wlcscan'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 133,
+          "line_end": 133
+        }
+      },
+      {
+        "name": "RESTART_WGS",
+        "native_value_expression": "'restart_wgs'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 134,
+          "line_end": 134
+        }
+      },
+      {
+        "name": "RESTART_WPSIE",
+        "native_value_expression": "'restart_wpsie'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 135,
+          "line_end": 135
+        }
+      },
+      {
+        "name": "RESTART_WRS",
+        "native_value_expression": "'restart_wrs'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 136,
+          "line_end": 136
+        }
+      },
+      {
+        "name": "RESTART_WTFAST_RULE",
+        "native_value_expression": "'restart_wtfast_rule'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 137,
+          "line_end": 137
+        }
+      },
+      {
+        "name": "RESET_LED",
+        "native_value_expression": "'reset_led'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 138,
+          "line_end": 138
+        }
+      },
+      {
+        "name": "START_AURARGB",
+        "native_value_expression": "'start_aurargb'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 139,
+          "line_end": 139
+        }
+      },
+      {
+        "name": "START_DISKFORMAT",
+        "native_value_expression": "'start_diskformat'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 140,
+          "line_end": 140
+        }
+      },
+      {
+        "name": "START_DISKSCAN",
+        "native_value_expression": "'start_diskscan'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 141,
+          "line_end": 141
+        }
+      },
+      {
+        "name": "START_WEBS_UPGRADE",
+        "native_value_expression": "'start_webs_upgrade'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 142,
+          "line_end": 142
+        }
+      },
+      {
+        "name": "START_WEBS_UPDATE",
+        "native_value_expression": "'start_webs_update'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 145,
+          "line_end": 145
+        }
+      },
+      {
+        "name": "START_WRS",
+        "native_value_expression": "'start_wrs'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 146,
+          "line_end": 146
+        }
+      },
+      {
+        "name": "STOP_AURARGB",
+        "native_value_expression": "'stop_aurargb'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 147,
+          "line_end": 147
+        }
+      },
+      {
+        "name": "STOP_LOGGER",
+        "native_value_expression": "'stop_logger'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 148,
+          "line_end": 148
+        }
+      },
+      {
+        "name": "STOP_OPENVPND",
+        "native_value_expression": "'stop_openvpnd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 149,
+          "line_end": 149
+        }
+      },
+      {
+        "name": "STOP_VPNC",
+        "native_value_expression": "'stop_vpnc'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 150,
+          "line_end": 150
+        }
+      },
+      {
+        "name": "STOP_VPND",
+        "native_value_expression": "'stop_vpnd'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 151,
+          "line_end": 151
+        }
+      },
+      {
+        "name": "STOP_WRS_FORCE",
+        "native_value_expression": "'stop_wrs_force'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 152,
+          "line_end": 152
+        }
+      },
+      {
+        "name": "UPDATE_CLIENTS",
+        "native_value_expression": "'update_clients'",
+        "source_ref": {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 153,
+          "line_end": 153
+        }
+      }
+    ],
+    "catalog_page_count": 69,
+    "action_denominator": "unknown; inventoried pages and placeholder actions are not feature coverage"
+  },
+  "capabilities": [
+    {
+      "id": "read.aimesh",
+      "family": "mesh",
+      "kind": "read",
+      "upstream_symbol": "AsusData.AIMESH",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.ONBOARDING)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 17,
+          "line_end": 17
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 196,
+          "line_end": 196
+        },
+        {
+          "path": "asusrouter/modules/endpoint/onboarding.py",
+          "line_start": 77,
+          "line_end": 115
+        }
+      ],
+      "contract_summary": "POST ajax_onboarding.asp; get_cfg_clientlist nodes; selected aliases/model/firmware/online/level/parent signal only",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Read only selected node fields; verify same-time UI equivalence and topology independently. Source observation time may remain unknown.",
+      "priority": 1
+    },
+    {
+      "id": "read.aura",
+      "family": "lighting",
+      "kind": "read",
+      "upstream_symbol": "AsusData.AURA",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['aura'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 18,
+          "line_end": 18
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 197,
+          "line_end": 200
+        },
+        {
+          "path": "asusrouter/modules/aura.py",
+          "line_start": 259,
+          "line_end": 315
+        }
+      ],
+      "contract_summary": "Native capability marker gate precedes selected Aura setting hook; no broad identity discovery or RGB color/zone collection.",
+      "blocks": [
+        {
+          "code": "native_capability_flag_unavailable",
+          "detail": "The native capability gate failed before the setting hook; no selected live Aura settings were collected."
+        },
+        {
+          "code": "hardware_unverified",
+          "detail": "Native marker availability does not establish physical Aura hardware absence."
+        }
+      ],
+      "next_action": "Keep state-read applicability unverified on this target; do not bypass the native marker gate or infer physical Aura absence.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.boottime",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.BOOTTIME",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.DEVICEMAP",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 19,
+          "line_end": 19
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 201,
+          "line_end": 201
+        },
+        {
+          "path": "asusrouter/modules/endpoint/devicemap.py",
+          "line_start": 233,
+          "line_end": 265
+        }
+      ],
+      "contract_summary": "POST ajax_status.xml through the unchanged native reader; selected elapsed uptime_seconds only",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Keep elapsed-time semantics; reboot history remains a separate unimplemented comparison contract.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.clients",
+      "family": "clients",
+      "kind": "read",
+      "upstream_symbol": "AsusData.CLIENTS",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder([Endpoint.ONBOARDING, Endpoint.UPDATE_CLIENTS], AsusDataMerge.ALL)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 20,
+          "line_end": 20
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 202,
+          "line_end": 204
+        },
+        {
+          "path": "asusrouter/modules/endpoint/onboarding.py",
+          "line_start": 38,
+          "line_end": 74
+        }
+      ],
+      "contract_summary": "get_clientlist selected alias/online/wired-or-wireless/signal; router cached; upstream richer onboarding/update_clients route not integrated",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Finish same-time UI equivalence and consider selected node/guest association using native onboarding data",
+      "priority": null
+    },
+    {
+      "id": "read.cpu",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.CPU",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, request=ASUSDATA_REQUEST['main'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 21,
+          "line_end": 21
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 205,
+          "line_end": 207
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 185,
+          "line_end": 207
+        }
+      ],
+      "contract_summary": "cpu_usage(appobj) cumulative per-core ticks",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Keep raw counter meaning; any utilization needs two successful observations and explicit interval",
+      "priority": null
+    },
+    {
+      "id": "read.ddns",
+      "family": "wan",
+      "kind": "read",
+      "upstream_symbol": "AsusData.DDNS",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['ddns'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 22,
+          "line_end": 22
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 208,
+          "line_end": 211
+        },
+        {
+          "path": "asusrouter/modules/ddns.py",
+          "line_start": 159,
+          "line_end": 192
+        }
+      ],
+      "contract_summary": "Selected ddns_enable_x/ddns_updated/ddns_return_code_chk finite status only",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Effective published DNS remains unverified; omitted native hostname/address fields are privacy selection, not unavailable upstream support",
+      "priority": null
+    },
+    {
+      "id": "read.devicemap",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.DEVICEMAP",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.DEVICEMAP)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 23,
+          "line_end": 23
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 212,
+          "line_end": 212
+        },
+        {
+          "path": "asusrouter/modules/endpoint/devicemap.py",
+          "line_start": 202,
+          "line_end": 230
+        }
+      ],
+      "contract_summary": "Native DEVICEMAP endpoint/reader supports selected uptime only in this CLI; other devicemap groups are not exposed",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Full DEVICEMAP status selection is optional remaining implementation work; do not dump its raw data.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.dsl",
+      "family": "wan",
+      "kind": "read",
+      "upstream_symbol": "AsusData.DSL",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['dsl'])",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 24,
+          "line_end": 24
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 278,
+          "line_end": 281
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 749,
+          "line_end": 770
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 749,
+          "line_end": 770
+        }
+      ],
+      "contract_summary": "Dedicated HOOK dsllog_dataratedown/up processor exists; upstream removes map when DSL identity endpoint availability is false. Rate units and target applicability are unverified; missing separate endpoint reader does not negate hook mapping.",
+      "blocks": [
+        {
+          "code": "hardware_unverified",
+          "detail": "Hardware/firmware capability has not been established for this source-native feature."
+        },
+        {
+          "code": "native_rate_units_unverified",
+          "detail": "The native hook processor removes units and defaults missing rates to zero; units/missing-value distinctions need selected contract evidence before exposing a diagnostic claim."
+        }
+      ],
+      "next_action": "Optional selected native hook integration on an applicable DSL target, preserving unknown units/missing values; no hardware-absence or unsupported-hook claim.",
+      "priority": 9
+    },
+    {
+      "id": "read.firmware",
+      "family": "admin",
+      "kind": "read",
+      "upstream_symbol": "AsusData.FIRMWARE",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.FIRMWARE)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 25,
+          "line_end": 25
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 213,
+          "line_end": 213
+        },
+        {
+          "path": "asusrouter/modules/endpoint/firmware.py",
+          "line_start": 22,
+          "line_end": 96
+        }
+      ],
+      "contract_summary": "Native POST detect_firmware.asp empty body/query, unchanged native assignment reader; selected existing numeric status codes and reported finite version strings. No active update check/upgrade.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Keep stored status/version semantics; active check/upgrade remains a separate unimplemented and unauthorized operation.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.firmware_note",
+      "family": "admin",
+      "kind": "read",
+      "upstream_symbol": "AsusData.FIRMWARE_NOTE",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder([Endpoint.FIRMWARE_NOTE, Endpoint.FIRMWARE_NOTE_AIMESH])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 26,
+          "line_end": 26
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 214,
+          "line_end": 216
+        },
+        {
+          "path": "asusrouter/modules/endpoint/firmware_note.py",
+          "line_start": 11,
+          "line_end": 40
+        }
+      ],
+      "contract_summary": "POST native release_note0.asp empty body/query; unchanged native reader selects bounded untrusted release_note text only, with complete-text fingerprint and character pagination.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not establish same-time UI equivalence or effective running/health behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Follow note pagination while comparing fingerprints; keep text untrusted and do not infer version/age association.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.flags",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.FLAGS",
+      "source_support": "derived_output",
+      "source_mapping": null,
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 27,
+          "line_end": 27
+        },
+        {
+          "path": "asusrouter/modules/endpoint/devicemap.py",
+          "line_start": 202,
+          "line_end": 230
+        }
+      ],
+      "contract_summary": "Derived DEVICEMAP process output marks reboot after comparison with prior boot observation; no direct map",
+      "blocks": [
+        {
+          "code": "prior_boot_history_missing",
+          "detail": "The native flag depends on a prior boot datetime; current elapsed-uptime snapshots do not retain this identity-bound history."
+        },
+        {
+          "code": "router_clock_signal_uncertain",
+          "detail": "Router-derived boot datetime can change with clock corrections; native timedelta.seconds behavior is not proof of an actual reboot."
+        }
+      ],
+      "next_action": "Design identity/firmware-bound prior boot history and honest unknown states before exposing the native derived signal; do not substitute a single uptime/healthy proxy.",
+      "priority": 7
+    },
+    {
+      "id": "read.gwlan",
+      "family": "wireless",
+      "kind": "read",
+      "upstream_symbol": "AsusData.GWLAN",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, method=gwlan_nvram_request, arguments=AsusRouterAttribute.WLAN_LIST)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 28,
+          "line_end": 28
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 217,
+          "line_end": 221
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 232,
+          "line_end": 252
+        }
+      ],
+      "contract_summary": "Six wl{0,1}.{1,2,3} guest enable, expire/expire_tmp seconds, LAN-access and raw AP-isolation settings; no SSIDs, credentials or client inventory",
+      "blocks": [
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time is unavailable; invocation time is not substituted."
+        },
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded setting does not prove same-time UI equivalence, RF/client access, isolation or expiry enforcement."
+        },
+        {
+          "code": "selection_required",
+          "detail": "Only positively selected nonsecret diagnostics are exposed; full mappings contain identities or credentials."
+        }
+      ],
+      "next_action": "Six disabled slots returned with zero configured expiry and LAN access false; remaining expiry was zero for first slot each band and null elsewhere, isolation codes one/zero. Actual isolation/access and expiry enforcement remain unverified",
+      "priority": 3
+    },
+    {
+      "id": "read.led",
+      "family": "lighting",
+      "kind": "read",
+      "upstream_symbol": "AsusData.LED",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['light'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 29,
+          "line_end": 29
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 222,
+          "line_end": 222
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 66,
+          "line_end": 182
+        }
+      ],
+      "contract_summary": "led_val setting only; no upstream keep_state/SYSINFO restoration workflow",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Physical behavior requires specific live-write authorization; read response alone is not physical evidence",
+      "priority": null
+    },
+    {
+      "id": "read.network",
+      "family": "traffic",
+      "kind": "read",
+      "upstream_symbol": "AsusData.NETWORK",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.CPU",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 30,
+          "line_end": 30
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 223,
+          "line_end": 223
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 307,
+          "line_end": 322
+        }
+      ],
+      "contract_summary": "Selected native netdev(appobj) fixed-name network groups with cumulative uint64 rx/tx counters; no interface identifiers, interval rates or egress claims",
+      "blocks": [
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time is unavailable; invocation time is not substituted."
+        },
+        {
+          "code": "interval_rate_not_collected",
+          "detail": "Cumulative rx/tx counters are not interval rates; no reset, elapsed interval or egress verification is inferred."
+        },
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or effective behavior."
+        }
+      ],
+      "next_action": "Read fixed-name interface groups; interval rates require two valid same-source observations and an explicit interval.",
+      "priority": 2
+    },
+    {
+      "id": "read.node_info",
+      "family": "mesh",
+      "kind": "read",
+      "upstream_symbol": "AsusData.NODE_INFO",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.PORT_STATUS)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 31,
+          "line_end": 31
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 224,
+          "line_end": 224
+        },
+        {
+          "path": "asusrouter/modules/endpoint/port_status.py",
+          "line_start": 67,
+          "line_end": 75
+        },
+        {
+          "path": "tests/test_data/rt_ax88u_merlin_388/port_status_001.content",
+          "line_start": 1,
+          "line_end": 1
+        }
+      ],
+      "contract_summary": "GET native PORT_STATUS with node_mac=all, sharing the bounded ports response; shared node aliases and fixture-proven nullable cd_good_to_go_code only.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not establish same-time UI equivalence or effective running/health behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Keep the raw code meaning explicit; fuller node_info is untyped native passthrough and is not exposed.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.openvpn",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.OPENVPN",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder([Endpoint.VPN, Endpoint.DEVICEMAP], AsusDataMerge.ANY)",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 32,
+          "line_end": 32
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 225,
+          "line_end": 227
+        },
+        {
+          "path": "asusrouter/modules/endpoint/vpn.py",
+          "line_start": 19,
+          "line_end": 61
+        }
+      ],
+      "contract_summary": "ajax_vpn_status.asp / ajax_status.xml aggregate processing; firmware-specific client/server aliases",
+      "blocks": [
+        {
+          "code": "implementation_gap",
+          "detail": "The source-native feature is not implemented in this CLI; it is not classified unsupported."
+        },
+        {
+          "code": "conditional_firmware",
+          "detail": "Native routing changes with stock/Merlin and firmware; do not run broad discovery merely to classify it."
+        },
+        {
+          "code": "selection_required",
+          "detail": "Select bounded nonsecret fields; do not return upstream objects or credential-bearing mappings."
+        }
+      ],
+      "next_action": "Optional bounded legacy aggregate integration on applicable firmware; current server-enable/Fusion-slot reads are not full aggregate coverage. Do not infer unsupported status or require credential association for every aggregate scalar.",
+      "priority": 5
+    },
+    {
+      "id": "read.openvpn_client",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.OPENVPN_CLIENT",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.OPENVPN",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 33,
+          "line_end": 33
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 228,
+          "line_end": 228
+        },
+        {
+          "path": "asusrouter/modules/vpnc.py",
+          "line_start": 45,
+          "line_end": 67
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "Stock newer388 alias VPNC; protocol/profile association is not known from get_vpnc_status alone",
+      "blocks": [
+        {
+          "code": "profile_credentials_coupled",
+          "detail": "Fusion profile association/mutation uses vpnc_clientlist containing login/password; no safe protected-reference design is implemented."
+        },
+        {
+          "code": "conditional_firmware",
+          "detail": "Native routing changes with stock/Merlin and firmware; do not run broad discovery merely to classify it."
+        }
+      ],
+      "next_action": "Preserve current unknown protocol until a safe protected profile-association design is reviewed",
+      "priority": 6
+    },
+    {
+      "id": "read.openvpn_server",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.OPENVPN_SERVER",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.OPENVPN",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 34,
+          "line_end": 34
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 229,
+          "line_end": 229
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 66,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "Reviewed stock 388 selected VPNServer_enable setting only through its pinned native map; no profile/keys/certificates.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not establish same-time UI equivalence or effective running/health behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Broader selected server configuration is possible native work; controls/profile editing retain recovery and authorization gaps.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.parental_control",
+      "family": "parental",
+      "kind": "read",
+      "upstream_symbol": "AsusData.PARENTAL_CONTROL",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['parental_control'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 35,
+          "line_end": 35
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 230,
+          "line_end": 232
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 346,
+          "line_end": 364
+        }
+      ],
+      "contract_summary": "Selected MULTIFILTER enable/block-all and bounded aliased rule summaries through native rule processor; names excluded",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Remaining native controls need reviewed risk, state preservation, recovery and authorization; selected settings alone do not prove client access.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.ping",
+      "family": "tools",
+      "kind": "read",
+      "upstream_symbol": "AsusData.PING",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(EndpointTools.NETWORK)",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 36,
+          "line_end": 36
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 233,
+          "line_end": 233
+        },
+        {
+          "path": "asusrouter/modules/endpoint/network.py",
+          "line_start": 13,
+          "line_end": 18
+        }
+      ],
+      "contract_summary": "EndpointTools.NETWORK=netool.cgi reader returns JSON as AsusData.PING; no typed job-initiation handler",
+      "blocks": [
+        {
+          "code": "job_contract_unverified",
+          "detail": "The reader/result route does not establish diagnostic-job initiation, payload semantics or absence of active side effects."
+        }
+      ],
+      "next_action": "Review documented finite job payload/result flow before calling; do not assume empty GET is passive ping state",
+      "priority": 8
+    },
+    {
+      "id": "read.port_forwarding",
+      "family": "wan",
+      "kind": "read",
+      "upstream_symbol": "AsusData.PORT_FORWARDING",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['port_forwarding'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 37,
+          "line_end": 37
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 234,
+          "line_end": 236
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 66,
+          "line_end": 182
+        }
+      ],
+      "contract_summary": "Selected vts_enable_x and bounded aliased rule summaries through native processor; raw names/IPs excluded",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Keep exposure limits; dedicated enable control is not implemented, and legacy rule editors remain deferred.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.ports",
+      "family": "ports",
+      "kind": "read",
+      "upstream_symbol": "AsusData.PORTS",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder([Endpoint.PORT_STATUS, Endpoint.ETHERNET_PORTS])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 38,
+          "line_end": 38
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 237,
+          "line_end": 239
+        },
+        {
+          "path": "asusrouter/modules/endpoint/port_status.py",
+          "line_start": 78,
+          "line_end": 161
+        }
+      ],
+      "contract_summary": "GET get_port_status.cgi?node_mac=all selected node alias/port/link/cap/rate fields; no USB descriptions; upstream ethernet fallback not implemented",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Same-time UI and physical applicability remain unverified; only implement ethernet fallback if evidence warrants it",
+      "priority": null
+    },
+    {
+      "id": "read.ram",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.RAM",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.CPU",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 39,
+          "line_end": 39
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 240,
+          "line_end": 240
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 401,
+          "line_end": 418
+        }
+      ],
+      "contract_summary": "memory_usage(appobj) selected total/used/free counters",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Keep successful-source semantics; selected counters do not establish memory pressure without history",
+      "priority": null
+    },
+    {
+      "id": "read.speedtest",
+      "family": "tools",
+      "kind": "read",
+      "upstream_symbol": "AsusData.SPEEDTEST",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['speedtest'], request=ASUSDATA_REQUEST['speedtest'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 40,
+          "line_end": 40
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 241,
+          "line_end": 245
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 421,
+          "line_end": 464
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "One bounded native rc_support/ss_support capability gate precedes ookla_state + ookla_speedtest_get_result; only native penultimate completed-result selection, throughput and timestamps. Alias result is not history.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        },
+        {
+          "code": "completed_result_path_unverified",
+          "detail": "The live request returned no completed native result; throughput/timestamp parsing is verified only with synthetic source-shaped fixtures."
+        }
+      ],
+      "next_action": "Preserve empty-result unknowns; verify actual completed-result compatibility only from an existing suitable result under read authority, never initiate a test to close this gap.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.speedtest_result",
+      "family": "tools",
+      "kind": "read",
+      "upstream_symbol": "AsusData.SPEEDTEST_RESULT",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.SPEEDTEST",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 42,
+          "line_end": 42
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 249,
+          "line_end": 249
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 421,
+          "line_end": 464
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "One bounded native rc_support/ss_support capability gate precedes ookla_state + ookla_speedtest_get_result; only native penultimate completed-result selection, throughput and timestamps. Alias result is not history.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        },
+        {
+          "code": "completed_result_path_unverified",
+          "detail": "The live request returned no completed native result; throughput/timestamp parsing is verified only with synthetic source-shaped fixtures."
+        }
+      ],
+      "next_action": "Preserve empty-result unknowns; verify actual completed-result compatibility only from an existing suitable result under read authority, never initiate a test to close this gap.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.sysinfo",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.SYSINFO",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.SYSINFO)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 44,
+          "line_end": 44
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 253,
+          "line_end": 253
+        },
+        {
+          "path": "asusrouter/modules/endpoint/sysinfo.py",
+          "line_start": 27,
+          "line_end": 108
+        }
+      ],
+      "contract_summary": "One bounded empty-body POST ajax_sysinfo.asp using unchanged native reader/processor; positively selected WLAN/connection counts and load averages only, without memory/process/client details",
+      "blocks": [
+        {
+          "code": "live_read_unsuccessful_http",
+          "detail": "One bounded get sysinfo attempt exited with fixed http_error; no fallback. The public error does not establish an exact HTTP status or feature absence."
+        },
+        {
+          "code": "stock_firmware_applicability_unverified",
+          "detail": "No successful SYSINFO response has been verified on the dated stock RT-AX86U firmware."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "No verified source observation timestamp is available; counts/load are not network-health evidence."
+        }
+      ],
+      "next_action": "Verify compatibility on a supported target and firmware. Preserve native failure diagnostics; do not add a custom adapter or fallback.",
+      "priority": 2
+    },
+    {
+      "id": "read.system",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.SYSTEM",
+      "source_support": "enum_only",
+      "source_mapping": null,
+      "cli_status": "unimplemented",
+      "live_status": "not_applicable",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 45,
+          "line_end": 45
+        }
+      ],
+      "contract_summary": "No read route; SYSTEM is the data slot associated with AsusSystem service setters",
+      "blocks": [
+        {
+          "code": "no_dedicated_read_route",
+          "detail": "No direct read mapping is present; enum membership does not establish a native read contract."
+        }
+      ],
+      "next_action": "Do not expose a system status reader based solely on this enum",
+      "priority": null
+    },
+    {
+      "id": "read.temperature",
+      "family": "system",
+      "kind": "read",
+      "upstream_symbol": "AsusData.TEMPERATURE",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.TEMPERATURE)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 46,
+          "line_end": 46
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 254,
+          "line_end": 254
+        },
+        {
+          "path": "asusrouter/modules/endpoint/temperature.py",
+          "line_start": 35,
+          "line_end": 110
+        }
+      ],
+      "contract_summary": "Native ajax_coretmp.asp reader with optimistic scaling disabled; selected finite sensor/celsius records",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "Recorded selected response does not establish same-time UI equivalence or effective physical/enforcement behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Keep scaling and sensor applicability explicit; broader sensor/hardware verification remains open.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.vpnc",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.VPNC",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['vpnc'], request=ASUSDATA_REQUEST['vpnc'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 47,
+          "line_end": 47
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 255,
+          "line_end": 259
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 489,
+          "line_end": 592
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "get_vpnc_status() raw Fusion slot state/error/id only; upstream full read adds credential-bearing client list and WG keys",
+      "blocks": [
+        {
+          "code": "profile_credentials_coupled",
+          "detail": "Fusion profile association/mutation uses vpnc_clientlist containing login/password; no safe protected-reference design is implemented."
+        },
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Keep slot scope honest; full profile association requires protected selection design",
+      "priority": null
+    },
+    {
+      "id": "read.vpnc_clientlist",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.VPNC_CLIENTLIST",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.VPNC",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 48,
+          "line_end": 48
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 260,
+          "line_end": 260
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 489,
+          "line_end": 592
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "Alias VPNC; raw vpnc_clientlist contains name/type/id/login/password/active/Fusion id",
+      "blocks": [
+        {
+          "code": "profile_credentials_coupled",
+          "detail": "Fusion profile association/mutation uses vpnc_clientlist containing login/password; no safe protected-reference design is implemented."
+        }
+      ],
+      "next_action": "Do not request/serialize raw list; defer association and edits until protected credential reference design exists",
+      "priority": null
+    },
+    {
+      "id": "read.wan",
+      "family": "wan",
+      "kind": "read",
+      "upstream_symbol": "AsusData.WAN",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['wan'], request=ASUSDATA_REQUEST['wan'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 49,
+          "line_end": 49
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 261,
+          "line_end": 265
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 613,
+          "line_end": 683
+        }
+      ],
+      "contract_summary": "Selected unit/link/per-slot status/primary/finite protocol/dualwan mode; excludes native address/DNS/gateway maps",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not prove same-time UI equivalence or physical/effective behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "The selected responses have no verified source observation timestamp."
+        }
+      ],
+      "next_action": "Routes/DNS/egress are still unknown; source-backed omitted config fields are not native unsupported features",
+      "priority": null
+    },
+    {
+      "id": "read.wireguard",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.WIREGUARD",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.WIREGUARD_SERVER",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 50,
+          "line_end": 50
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 266,
+          "line_end": 266
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 686,
+          "line_end": 724
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "Alias WIREGUARD_SERVER; selected wgs_enable setting only, not the full key-bearing map.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not establish same-time UI equivalence or effective running/health behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Retain the alias-to-command distinction and selected-setting scope; do not request full private/public-key maps.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.wireguard_client",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.WIREGUARD_CLIENT",
+      "source_support": "mapped_alias",
+      "source_mapping": "AsusData.VPNC",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 51,
+          "line_end": 51
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 267,
+          "line_end": 267
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 595,
+          "line_end": 610
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "Selected native wgc1..5_enable settings with stock firmware binding; no credential-bearing VPNC list or WireGuard keys.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not establish same-time UI equivalence or effective running/health behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Preserve missing/null values; do not associate slots with Fusion profile names/routes or infer actual VPN egress.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.wireguard_server",
+      "family": "vpn",
+      "kind": "read",
+      "upstream_symbol": "AsusData.WIREGUARD_SERVER",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, nvram=ASUSDATA_NVRAM['wireguard_server'], request=ASUSDATA_REQUEST['wireguard_server'])",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 52,
+          "line_end": 52
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 268,
+          "line_end": 272
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 686,
+          "line_end": 724
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 355
+        }
+      ],
+      "contract_summary": "Selected native wgs_enable setting only; no keys, peer addresses or client list.",
+      "blocks": [
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded selected response does not establish same-time UI equivalence or effective running/health behavior."
+        },
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time remains unknown; invocation time is not an observation timestamp."
+        }
+      ],
+      "next_action": "Broader native settings and existing-peer status need finite selection, while keys/profile editing remain excluded.",
+      "priority": null,
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "read.wlan",
+      "family": "wireless",
+      "kind": "read",
+      "upstream_symbol": "AsusData.WLAN",
+      "source_support": "dedicated_mapping",
+      "source_mapping": "AsusDataFinder(Endpoint.HOOK, method=wlan_nvram_request, arguments=AsusRouterAttribute.WLAN_LIST)",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 53,
+          "line_end": 53
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 273,
+          "line_end": 277
+        },
+        {
+          "path": "asusrouter/modules/endpoint/hook.py",
+          "line_start": 727,
+          "line_end": 746
+        }
+      ],
+      "contract_summary": "Selected wl0/wl1 radio enable, channel_code and bandwidth_code settings; full MAP_WLAN still includes SSIDs/security/passwords and is not exposed",
+      "blocks": [
+        {
+          "code": "raw_timestamp_unknown",
+          "detail": "Source observation time is unavailable; invocation time is not substituted."
+        },
+        {
+          "code": "ui_equivalence_pending",
+          "detail": "A recorded setting does not prove same-time UI equivalence, RF/client access, isolation or expiry enforcement."
+        },
+        {
+          "code": "selection_required",
+          "detail": "Only positively selected nonsecret diagnostics are exposed; full mappings contain identities or credentials."
+        }
+      ],
+      "next_action": "Preserve raw and unknown radio setting codes; verify RF and client behavior independently without collecting SSIDs or keys.",
+      "priority": 3
+    },
+    {
+      "id": "state.none",
+      "family": "none",
+      "kind": "state",
+      "upstream_symbol": "AsusState.NONE",
+      "source_support": "enum_only",
+      "source_mapping": "AsusStateNone",
+      "cli_status": "not_applicable",
+      "live_status": "not_applicable",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 49,
+          "line_end": 49
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        }
+      ],
+      "contract_summary": "Sentinel only; do not expose a write",
+      "blocks": [
+        {
+          "code": "no_dedicated_handler",
+          "detail": "Enum presence does not provide a dispatched executable setter."
+        }
+      ],
+      "next_action": "Sentinel only; do not expose a write",
+      "priority": null
+    },
+    {
+      "id": "state.aura",
+      "family": "lighting",
+      "kind": "state",
+      "upstream_symbol": "AsusState.AURA",
+      "source_support": "handler",
+      "source_mapping": "AsusAura",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 50,
+          "line_end": 50
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/aura.py",
+          "line_start": 180,
+          "line_end": 256
+        }
+      ],
+      "contract_summary": "Verify Aura zone capability and complete current effect/color recovery contract before any integration",
+      "blocks": [
+        {
+          "code": "hardware_unverified",
+          "detail": "Hardware/firmware capability has not been established for this source-native feature."
+        },
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        }
+      ],
+      "next_action": "Verify Aura zone capability and complete current effect/color recovery contract before any integration",
+      "priority": null
+    },
+    {
+      "id": "state.block_all",
+      "family": "parental",
+      "kind": "state",
+      "upstream_symbol": "AsusState.BLOCK_ALL",
+      "source_support": "handler",
+      "source_mapping": "AsusBlockAll",
+      "cli_status": "implemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 51,
+          "line_end": 51
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/parental_control.py",
+          "line_start": 76,
+          "line_end": 114
+        }
+      ],
+      "contract_summary": "Distinct all-client block flag compiles AsusBlockAll through set_state, changes only MULTIFILTER_BLOCK_ALL and restarts firewall; this is not one-client blocking.",
+      "blocks": [
+        {
+          "code": "live_write_unverified",
+          "detail": "No live parental write, enforcement or inverse recovery is verified; a stored preview is not authorization."
+        }
+      ],
+      "next_action": "Preserve exact target and whole-policy bindings, interactive authorization, one-write uncertainty, independent verification and separately approved inverse. Live writes/enforcement/recovery remain unverified; do not bypass native recovery-loss branches.",
+      "priority": null,
+      "operation_ids": [
+        "parental.block_all"
+      ],
+      "implementation_refs": [
+        "src/router_agent/parental_policy.py",
+        "src/router_agent/native_parental_control.py",
+        "src/router_agent/native_parental_backend.py",
+        "src/router_agent/operations.py",
+        "src/router_agent/cli.py"
+      ]
+    },
+    {
+      "id": "state.connection",
+      "family": "system",
+      "kind": "state",
+      "upstream_symbol": "AsusState.CONNECTION",
+      "source_support": "enum_only",
+      "source_mapping": "ConnectionState",
+      "cli_status": "not_applicable",
+      "live_status": "not_applicable",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 52,
+          "line_end": 52
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        }
+      ],
+      "contract_summary": "State map has no data route/module; do not advertise connection toggle support",
+      "blocks": [
+        {
+          "code": "no_dedicated_handler",
+          "detail": "Enum presence does not provide a dispatched executable setter."
+        }
+      ],
+      "next_action": "State map has no data route/module; do not advertise connection toggle support",
+      "priority": null
+    },
+    {
+      "id": "state.ddns",
+      "family": "wan",
+      "kind": "state",
+      "upstream_symbol": "AsusState.DDNS",
+      "source_support": "enum_only",
+      "source_mapping": "AsusDDNS",
+      "cli_status": "not_applicable",
+      "live_status": "not_applicable",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 53,
+          "line_end": 53
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        }
+      ],
+      "contract_summary": "No dedicated DDNS configuration setter despite enum; restart is only a system service action",
+      "blocks": [
+        {
+          "code": "no_dedicated_handler",
+          "detail": "Enum presence does not provide a dispatched executable setter."
+        }
+      ],
+      "next_action": "No dedicated DDNS configuration setter despite enum; restart is only a system service action",
+      "priority": null
+    },
+    {
+      "id": "state.led",
+      "family": "lighting",
+      "kind": "state",
+      "upstream_symbol": "AsusState.LED",
+      "source_support": "handler",
+      "source_mapping": "AsusLED",
+      "cli_status": "implemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 54,
+          "line_end": 54
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/led.py",
+          "line_start": 20,
+          "line_end": 36
+        }
+      ],
+      "contract_summary": "Only exact reviewed RT-AX86U firmware led.set exists; live writes require specific authorization and physical verification",
+      "blocks": [
+        {
+          "code": "live_verification_pending",
+          "detail": "No live response is recorded for this contract; synthetic evidence cannot close this boundary."
+        }
+      ],
+      "next_action": "Only exact reviewed RT-AX86U firmware led.set exists; live writes require specific authorization and physical verification",
+      "priority": null
+    },
+    {
+      "id": "state.openvpn_client",
+      "family": "vpn",
+      "kind": "state",
+      "upstream_symbol": "AsusState.OPENVPN_CLIENT",
+      "source_support": "handler",
+      "source_mapping": "AsusOVPNClient",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 55,
+          "line_end": 55
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/openvpn.py",
+          "line_start": 44,
+          "line_end": 118
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 325
+        },
+        {
+          "path": "asusrouter/modules/vpnc.py",
+          "line_start": 45,
+          "line_end": 67
+        }
+      ],
+      "contract_summary": "Existing profile start/stop only; stock newer388 routes through vpnc handler; protected association/recovery required",
+      "blocks": [
+        {
+          "code": "profile_credentials_coupled",
+          "detail": "Fusion profile association/mutation uses vpnc_clientlist containing login/password; no safe protected-reference design is implemented."
+        },
+        {
+          "code": "conditional_firmware",
+          "detail": "Native routing changes with stock/Merlin and firmware; do not run broad discovery merely to classify it."
+        },
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        }
+      ],
+      "next_action": "Existing profile start/stop only; stock newer388 routes through vpnc handler; protected association/recovery required",
+      "priority": null
+    },
+    {
+      "id": "state.openvpn_server",
+      "family": "vpn",
+      "kind": "state",
+      "upstream_symbol": "AsusState.OPENVPN_SERVER",
+      "source_support": "handler",
+      "source_mapping": "AsusOVPNServer",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 56,
+          "line_end": 56
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/openvpn.py",
+          "line_start": 44,
+          "line_end": 118
+        }
+      ],
+      "contract_summary": "Review exposure/disruption/recovery for existing server enable; no general profile editor",
+      "blocks": [
+        {
+          "code": "conditional_firmware",
+          "detail": "Native routing changes with stock/Merlin and firmware; do not run broad discovery merely to classify it."
+        },
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        }
+      ],
+      "next_action": "Review exposure/disruption/recovery for existing server enable; no general profile editor",
+      "priority": null
+    },
+    {
+      "id": "state.parental_control",
+      "family": "parental",
+      "kind": "state",
+      "upstream_symbol": "AsusState.PARENTAL_CONTROL",
+      "source_support": "handler",
+      "source_mapping": "AsusParentalControl",
+      "cli_status": "implemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 57,
+          "line_end": 57
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/parental_control.py",
+          "line_start": 76,
+          "line_end": 114
+        }
+      ],
+      "contract_summary": "Native global enable compiles AsusParentalControl through set_state, changes only MULTIFILTER_ALL and restarts firewall; full-policy fingerprint binds preservation and inverse.",
+      "blocks": [
+        {
+          "code": "live_write_unverified",
+          "detail": "No live parental write, enforcement or inverse recovery is verified; a stored preview is not authorization."
+        }
+      ],
+      "next_action": "Preserve exact target and whole-policy bindings, interactive authorization, one-write uncertainty, independent verification and separately approved inverse. Live writes/enforcement/recovery remain unverified; do not bypass native recovery-loss branches.",
+      "priority": null,
+      "operation_ids": [
+        "parental.enable"
+      ],
+      "implementation_refs": [
+        "src/router_agent/parental_policy.py",
+        "src/router_agent/native_parental_control.py",
+        "src/router_agent/native_parental_backend.py",
+        "src/router_agent/operations.py",
+        "src/router_agent/cli.py"
+      ]
+    },
+    {
+      "id": "state.pc_rule",
+      "family": "parental",
+      "kind": "state",
+      "upstream_symbol": "AsusState.PC_RULE",
+      "source_support": "handler",
+      "source_mapping": "ParentalControlRule",
+      "cli_status": "implemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 58,
+          "line_end": 58
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/parental_control.py",
+          "line_start": 76,
+          "line_end": 114
+        },
+        {
+          "path": "asusrouter/modules/parental_control.py",
+          "line_start": 117,
+          "line_end": 156
+        },
+        {
+          "path": "asusrouter/modules/parental_control.py",
+          "line_start": 245,
+          "line_end": 291
+        }
+      ],
+      "contract_summary": "Finite native disable/time/block/remove rules and explicit user schedule literals through set_rule with validated current rules. Existing names are preserved, new names use aliases; ordered recovery uses maintained write_pc_rules. No arbitrary display-name editor or friendly schedule/timezone encoder.",
+      "blocks": [
+        {
+          "code": "live_write_unverified",
+          "detail": "No live parental write, enforcement or inverse recovery is verified; a stored preview is not authorization."
+        },
+        {
+          "code": "target_rule_recovery_unavailable",
+          "detail": "When empty MAC/type lists coexist with an orphan timemap, native first-add/remove cannot restore it exactly. Rule edits reject that branch; single-flag changes preserve the lists."
+        },
+        {
+          "code": "schedule_semantics_unverified",
+          "detail": "Explicit user native schedule literals are structurally validated and shown in approved intent; semantic meaning and router timezone remain unverified. Existing schedules stay private and are preserved."
+        },
+        {
+          "code": "parental_ui_refinements_unimplemented",
+          "detail": "Human display-name editing, friendly schedule/timezone encoding and web filtering are not these finite native rule operations; handler coverage does not establish parental WebUI parity."
+        }
+      ],
+      "next_action": "Preserve exact target and whole-policy bindings, interactive authorization, one-write uncertainty, independent verification and separately approved inverse. Live writes/enforcement/recovery remain unverified; do not bypass native recovery-loss branches.",
+      "priority": null,
+      "operation_ids": [
+        "parental.rule"
+      ],
+      "implementation_refs": [
+        "src/router_agent/parental_policy.py",
+        "src/router_agent/native_parental_control.py",
+        "src/router_agent/native_parental_backend.py",
+        "src/router_agent/operations.py",
+        "src/router_agent/cli.py"
+      ]
+    },
+    {
+      "id": "state.port_forwarding",
+      "family": "wan",
+      "kind": "state",
+      "upstream_symbol": "AsusState.PORT_FORWARDING",
+      "source_support": "handler",
+      "source_mapping": "AsusPortForwarding",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 59,
+          "line_end": 59
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/port_forwarding.py",
+          "line_start": 35,
+          "line_end": 60
+        }
+      ],
+      "contract_summary": "Dedicated handler enables/disables vts_enable_x only; legacy apply/remove/set rule methods remain deferred",
+      "blocks": [
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        },
+        {
+          "code": "implementation_gap",
+          "detail": "The source-native feature is not implemented in this CLI; it is not classified unsupported."
+        }
+      ],
+      "next_action": "Dedicated handler enables/disables vts_enable_x only; legacy apply/remove/set rule methods remain deferred",
+      "priority": null
+    },
+    {
+      "id": "state.system",
+      "family": "system",
+      "kind": "state",
+      "upstream_symbol": "AsusState.SYSTEM",
+      "source_support": "handler",
+      "source_mapping": "AsusSystem",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 60,
+          "line_end": 60
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/system.py",
+          "line_start": 221,
+          "line_end": 273
+        }
+      ],
+      "contract_summary": "Enumerated service forwarding is not a reviewed feature contract; individual inputs/effects/recovery required; firmware/reboot remain separate authority",
+      "blocks": [
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        },
+        {
+          "code": "native_backup_missing",
+          "detail": "No dedicated configuration export/restore contract was found in 1.21.3; accepted medium-or-higher write backup gate remains."
+        }
+      ],
+      "next_action": "Enumerated service forwarding is not a reviewed feature contract; individual inputs/effects/recovery required; firmware/reboot remain separate authority",
+      "priority": null
+    },
+    {
+      "id": "state.vpnc",
+      "family": "vpn",
+      "kind": "state",
+      "upstream_symbol": "AsusState.VPNC",
+      "source_support": "handler",
+      "source_mapping": "AsusVPNC",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 61,
+          "line_end": 61
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/vpnc.py",
+          "line_start": 45,
+          "line_end": 67
+        }
+      ],
+      "contract_summary": "Start/stop requires current credential-bearing client list and whole-list update; defer until protected design",
+      "blocks": [
+        {
+          "code": "profile_credentials_coupled",
+          "detail": "Fusion profile association/mutation uses vpnc_clientlist containing login/password; no safe protected-reference design is implemented."
+        },
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        }
+      ],
+      "next_action": "Start/stop requires current credential-bearing client list and whole-list update; defer until protected design",
+      "priority": null
+    },
+    {
+      "id": "state.wireguard_client",
+      "family": "vpn",
+      "kind": "state",
+      "upstream_symbol": "AsusState.WIREGUARD_CLIENT",
+      "source_support": "handler",
+      "source_mapping": "AsusWireGuardClient",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 62,
+          "line_end": 62
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/wireguard.py",
+          "line_start": 43,
+          "line_end": 94
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 298,
+          "line_end": 325
+        },
+        {
+          "path": "asusrouter/modules/vpnc.py",
+          "line_start": 45,
+          "line_end": 67
+        }
+      ],
+      "contract_summary": "Existing client enable/start/stop only; stock newer388 dispatches through VPNC; explicit profile binding required",
+      "blocks": [
+        {
+          "code": "conditional_firmware",
+          "detail": "Native routing changes with stock/Merlin and firmware; do not run broad discovery merely to classify it."
+        },
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        }
+      ],
+      "next_action": "Existing client enable/start/stop only; stock newer388 dispatches through VPNC; explicit profile binding required",
+      "priority": null
+    },
+    {
+      "id": "state.wireguard_server",
+      "family": "vpn",
+      "kind": "state",
+      "upstream_symbol": "AsusState.WIREGUARD_SERVER",
+      "source_support": "handler",
+      "source_mapping": "AsusWireGuardServer",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 63,
+          "line_end": 63
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/wireguard.py",
+          "line_start": 43,
+          "line_end": 94
+        }
+      ],
+      "contract_summary": "Existing server on/off restarts WireGuard and dnsmasq; review exposure and independent verification",
+      "blocks": [
+        {
+          "code": "operation_recovery_unreviewed",
+          "detail": "Operation-specific risk, independent verification and faithful recovery have not been reviewed/implemented; no new policy classification is inferred."
+        }
+      ],
+      "next_action": "Existing server on/off restarts WireGuard and dnsmasq; review exposure and independent verification",
+      "priority": null
+    },
+    {
+      "id": "state.wlan",
+      "family": "wireless",
+      "kind": "state",
+      "upstream_symbol": "AsusState.WLAN",
+      "source_support": "handler",
+      "source_mapping": "AsusWLAN",
+      "cli_status": "unimplemented",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 64,
+          "line_end": 64
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 67,
+          "line_end": 84
+        },
+        {
+          "path": "asusrouter/modules/state.py",
+          "line_start": 146,
+          "line_end": 182
+        },
+        {
+          "path": "asusrouter/modules/wlan.py",
+          "line_start": 181,
+          "line_end": 223
+        },
+        {
+          "path": "asusrouter/modules/wlan.py",
+          "line_start": 195,
+          "line_end": 223
+        }
+      ],
+      "contract_summary": "Radio and guest setting toggles restart wireless; guest ON clears expire; do not unlock disruptive writes without accepted recovery gates",
+      "blocks": [
+        {
+          "code": "native_backup_missing",
+          "detail": "No dedicated configuration export/restore contract was found in 1.21.3; accepted medium-or-higher write backup gate remains."
+        },
+        {
+          "code": "nonzero_guest_expiry_not_restorable",
+          "detail": "Native guest ON resets expiry to zero and cannot restore a nonzero expiry."
+        }
+      ],
+      "next_action": "Radio and guest setting toggles restart wireless; guest ON clears expire; do not unlock disruptive writes without accepted recovery gates",
+      "priority": null
+    },
+    {
+      "id": "dynamic.artrafficsourceethernet",
+      "family": "traffic",
+      "kind": "dynamic_read",
+      "upstream_symbol": "ARTrafficSourceEthernet",
+      "source_support": "registered_handler",
+      "source_mapping": "ARCallReg.get_state + translate_state",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 115,
+          "line_end": 145
+        },
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 230,
+          "line_end": 267
+        },
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 292,
+          "line_end": 299
+        }
+      ],
+      "contract_summary": "Dedicated typed traffic CLI uses a bounded fresh same-session native onboarding lookup, opaque aliases, fixed private GET query and positively selected native-scaled current/average/physical rates. No raw MAC arguments or active diagnostic jobs.",
+      "blocks": [
+        {
+          "code": "observation_window_and_source_time_unavailable",
+          "detail": "Native scaled rate values do not establish their actual current observation time/window on this firmware."
+        },
+        {
+          "code": "egress_and_measured_throughput_unverified",
+          "detail": "Native diagnostic rates and physical values are not measured throughput or routing/egress verification."
+        },
+        {
+          "code": "other_target_or_selector_unverified",
+          "detail": "Other node/selector applicability remains unverified; zero physical rates do not establish missing hardware, throughput or health."
+        }
+      ],
+      "next_action": "Other node/selector applicability remains unverified; zero physical rates do not establish missing hardware, throughput or health.",
+      "priority": null,
+      "helper_status": "runtime_integrated_offline_tested",
+      "research_sources": [
+        {
+          "url": "https://github.com/RMerl/asuswrt-merlin.ng/blob/b053ba701af02e46a86d465d82cc2a7891a288a7/release/src/router/httpd/web.c#L26569-L26683",
+          "commit": "b053ba701af02e46a86d465d82cc2a7891a288a7",
+          "git_blob_sha": "67eabb5388f59d038677375fe3af3a8a86bdb7f4",
+          "meaning": "ASUS-derived GPL handler bodies use telemetry getters and JSON output, with no active start/service command. This is a maintained fork revision, not target-matched stock source; underlying helpers/target applicability remain unverified."
+        }
+      ],
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "dynamic.artrafficsourcewifi",
+      "family": "traffic",
+      "kind": "dynamic_read",
+      "upstream_symbol": "ARTrafficSourceWiFi",
+      "source_support": "registered_handler",
+      "source_mapping": "ARCallReg.get_state + translate_state",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 177,
+          "line_end": 188
+        },
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 230,
+          "line_end": 267
+        },
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 292,
+          "line_end": 299
+        }
+      ],
+      "contract_summary": "Dedicated typed traffic CLI uses a bounded fresh same-session native onboarding lookup, opaque aliases, fixed private GET query and positively selected native-scaled current/average/physical rates. No raw MAC arguments or active diagnostic jobs.",
+      "blocks": [
+        {
+          "code": "observation_window_and_source_time_unavailable",
+          "detail": "Native scaled rate values do not establish their actual current observation time/window on this firmware."
+        },
+        {
+          "code": "egress_and_measured_throughput_unverified",
+          "detail": "Native diagnostic rates and physical values are not measured throughput or routing/egress verification."
+        },
+        {
+          "code": "other_target_or_selector_unverified",
+          "detail": "Other bands/nodes remain unverified. Null physical rates are unknown, and source observation/window/egress limits remain."
+        }
+      ],
+      "next_action": "Other bands/nodes remain unverified. Null physical rates are unknown, and source observation/window/egress limits remain.",
+      "priority": null,
+      "helper_status": "runtime_integrated_offline_tested",
+      "research_sources": [
+        {
+          "url": "https://github.com/RMerl/asuswrt-merlin.ng/blob/b053ba701af02e46a86d465d82cc2a7891a288a7/release/src/router/httpd/web.c#L26569-L26683",
+          "commit": "b053ba701af02e46a86d465d82cc2a7891a288a7",
+          "git_blob_sha": "67eabb5388f59d038677375fe3af3a8a86bdb7f4",
+          "meaning": "ASUS-derived GPL handler bodies use telemetry getters and JSON output, with no active start/service command. This is a maintained fork revision, not target-matched stock source; underlying helpers/target applicability remain unverified."
+        }
+      ],
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    },
+    {
+      "id": "dynamic.artrafficsourcebackhaul",
+      "family": "traffic",
+      "kind": "dynamic_read",
+      "upstream_symbol": "ARTrafficSourceBackhaul",
+      "source_support": "registered_handler",
+      "source_mapping": "ARCallReg.get_state + translate_state",
+      "cli_status": "implemented_selected",
+      "live_status": "unverified",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 191,
+          "line_end": 202
+        },
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 230,
+          "line_end": 267
+        },
+        {
+          "path": "asusrouter/modules/traffic.py",
+          "line_start": 292,
+          "line_end": 299
+        }
+      ],
+      "contract_summary": "Dedicated typed traffic CLI uses a bounded fresh same-session native onboarding lookup, opaque aliases, fixed private GET query and positively selected native-scaled current/average/physical rates. No raw MAC arguments or active diagnostic jobs.",
+      "blocks": [
+        {
+          "code": "observation_window_and_source_time_unavailable",
+          "detail": "Native scaled rate values do not establish their actual current observation time/window on this firmware."
+        },
+        {
+          "code": "egress_and_measured_throughput_unverified",
+          "detail": "Native diagnostic rates and physical values are not measured throughput or routing/egress verification."
+        },
+        {
+          "code": "other_target_or_selector_unverified",
+          "detail": "Verify only with two actually observed distinct aliases and a suitable topology; pair selection does not itself prove adjacency."
+        },
+        {
+          "code": "live_verification_pending",
+          "detail": "Backhaul mode has not been exercised on a live suitable peer topology."
+        }
+      ],
+      "next_action": "Verify only with two actually observed distinct aliases and a suitable topology; pair selection does not itself prove adjacency.",
+      "priority": null,
+      "helper_status": "runtime_integrated_offline_tested",
+      "research_sources": [
+        {
+          "url": "https://github.com/RMerl/asuswrt-merlin.ng/blob/b053ba701af02e46a86d465d82cc2a7891a288a7/release/src/router/httpd/web.c#L26569-L26683",
+          "commit": "b053ba701af02e46a86d465d82cc2a7891a288a7",
+          "git_blob_sha": "67eabb5388f59d038677375fe3af3a8a86bdb7f4",
+          "meaning": "ASUS-derived GPL handler bodies use telemetry getters and JSON output, with no active start/service command. This is a maintained fork revision, not target-matched stock source; underlying helpers/target applicability remain unverified."
+        }
+      ],
+      "recorded_observation": "Household observations omitted from this public export; source support is not live verification."
+    }
+  ],
+  "extra_boundaries": [
+    {
+      "id": "legacy.port_forwarding_rules",
+      "symbols": [
+        "async_apply_port_forwarding_rules",
+        "async_remove_port_forwarding_rules",
+        "async_set_port_forwarding_rules"
+      ],
+      "source_refs": [
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 1083,
+          "line_end": 1195
+        }
+      ],
+      "cli_status": "unimplemented",
+      "blocks": [
+        {
+          "code": "legacy_untested",
+          "detail": "Upstream explicitly labels these methods legacy, untested, unused, undocumented and possibly nonworking."
+        }
+      ],
+      "next_action": "Do not enable legacy rule editing without independent contract/recovery evidence."
+    },
+    {
+      "id": "data_v2.static",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/source.py",
+          "line_start": 25,
+          "line_end": 28
+        }
+      ],
+      "contract_summary": "ARDataType only defines UNKNOWN; no additional named static read family is established."
+    },
+    {
+      "id": "commented.speedtest",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/data.py",
+          "line_start": 40,
+          "line_end": 43
+        },
+        {
+          "path": "asusrouter/modules/data_finder.py",
+          "line_start": 246,
+          "line_end": 251
+        }
+      ],
+      "symbols": [
+        "SPEEDTEST_HISTORY",
+        "SPEEDTEST_SERVERS"
+      ],
+      "contract_summary": "Commented-out names are not AsusData members or implemented native mappings."
+    },
+    {
+      "id": "backup.export",
+      "source_refs": [
+        {
+          "path": "asusrouter/modules/endpoint/__init__.py",
+          "line_start": 22,
+          "line_end": 87
+        },
+        {
+          "path": "asusrouter/asusrouter.py",
+          "line_start": 949,
+          "line_end": 973
+        }
+      ],
+      "contract_summary": "No dedicated export/restore method, endpoint or backup handler found by full asusrouter source search for backup/restore/export. Generic API/service transport does not establish backup support.",
+      "blocks": [
+        {
+          "code": "native_backup_missing",
+          "detail": "No dedicated configuration export/restore contract was found in 1.21.3; accepted medium-or-higher write backup gate remains."
+        }
+      ],
+      "accepted_policy_refs": [
+        "See docs/COMPATIBILITY.md; private validation reports are not included.",
+        "See docs/COMPATIBILITY.md; private validation reports are not included.",
+        "See docs/COMPATIBILITY.md; private validation reports are not included.",
+        "See docs/COMPATIBILITY.md; private validation reports are not included."
+      ]
+    }
+  ],
+  "webui_configuration_gaps": [
+    {
+      "family": "LAN IP/DHCP/DNS/static routes/IPTV/switch configuration",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "WAN Internet setup/Dual WAN/port trigger/DMZ/NAT passthrough configuration",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Wireless SSID/security/channel/WPS/WDS/MAC/RADIUS/professional configuration editing",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Firewall URL/keyword/network-service/IPv6 filter editing",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "AiProtection reports/content filtering",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "QoS policy editing",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Traffic Analyzer history/app classification",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Game/Open NAT game presets",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "USB applications/storage/share setup",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "AiCloud account/sync configuration",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "IPv6 configuration",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Alexa linking",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Administration account/access/operation mode/backup/restore/upload/feedback/policy",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Eight log-tab workflows",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "Quick Setup and conditional forms",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    },
+    {
+      "family": "VPN profiles/keys/certificates/Instant Guard configuration",
+      "reason": "no_dedicated_configuration_contract_verified",
+      "meaning": "Specific editing/workflow contract not established in inspected native source; overlapping native reads/restart services do not close it."
+    }
+  ],
+  "implementation_summary": {
+    "named_read_groups_implemented": 26,
+    "enum_rows_are_not_command_count": true,
+    "settings_changed": false,
+    "alias_examples": [
+      "uptime selects BOOTTIME/DEVICEMAP",
+      "speedtest selects SPEEDTEST/SPEEDTEST_RESULT",
+      "wireguard_server selects WIREGUARD/WIREGUARD_SERVER"
+    ],
+    "dynamic_traffic_runtime_integrated": true,
+    "dedicated_traffic_modes_implemented": 3,
+    "ethernet_backhaul_selector_live_verified": false,
+    "parental_live_writes_verified": false,
+    "parental_operation_ids_implemented": [
+      "parental.enable",
+      "parental.block_all",
+      "parental.rule"
+    ],
+    "native_named_operation_ids_implemented": [
+      "led.set",
+      "parental.enable",
+      "parental.block_all",
+      "parental.rule"
+    ],
+    "public_export_live_evidence": "No household live observations included; validate your own target."
+  }
+}

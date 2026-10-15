@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "corpus_sha256": "1f5d015ffcedb71fc59c176b69ec0f240abee8968a2d3ff293b7aa6b2146073c",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "proxy only; not Fable/model-native tokens, billing or browser savings"
+  },
+  "selected_on_training": "grouped_read",
+  "heldout_gate": "passed",
+  "retained": "grouped_read",
+  "errors_counted_but_excluded_from_savings": true,
+  "tasks": [
+    {
+      "task": "protected_profiles",
+      "split": "train",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 2047,
+          "bytes": 9102,
+          "response_calls": 2,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 50,
+            "stdout": 1859,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 222,
+            "stdout": 8123,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        },
+        "grouped_read": {
+          "tokens": 1891,
+          "bytes": 8608,
+          "response_calls": 1,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 46,
+            "stdout": 1707,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 205,
+            "stdout": 7646,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        }
+      },
+      "saved_tokens": 156
+    },
+    {
+      "task": "passive_observations",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 2312,
+          "bytes": 10055,
+          "response_calls": 3,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 52,
+            "stdout": 2122,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 226,
+            "stdout": 9072,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        },
+        "grouped_read": {
+          "tokens": 2000,
+          "bytes": 9067,
+          "response_calls": 1,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 44,
+            "stdout": 1818,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 192,
+            "stdout": 8118,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        }
+      },
+      "saved_tokens": 312
+    },
+    {
+      "task": "state.port_forwarding_backup_inverse_followup",
+      "split": "train",
+      "required_answer_valid": true,
+      "savings_eligible": false,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 3066,
+          "bytes": 11596,
+          "response_calls": 6,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 245,
+            "stdout": 2683,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 638,
+            "stdout": 10201,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        },
+        "grouped_read": {
+          "tokens": 3066,
+          "bytes": 11596,
+          "response_calls": 6,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 245,
+            "stdout": 2683,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 638,
+            "stdout": 10201,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        }
+      },
+      "saved_tokens": null
+    },
+    {
+      "task": "state.wireguard_server_backup_inverse_followup",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "savings_eligible": false,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 3106,
+          "bytes": 11663,
+          "response_calls": 6,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 277,
+            "stdout": 2691,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 644,
+            "stdout": 10262,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        },
+        "grouped_read": {
+          "tokens": 3106,
+          "bytes": 11663,
+          "response_calls": 6,
+          "discovery_calls": 6,
+          "component_tokens": {
+            "commands": 277,
+            "stdout": 2691,
+            "stderr": 0,
+            "task_instructions": 138
+          },
+          "component_bytes": {
+            "commands": 644,
+            "stdout": 10262,
+            "stderr": 0,
+            "task_instructions": 757
+          }
+        }
+      },
+      "saved_tokens": null
+    }
+  ]
+}

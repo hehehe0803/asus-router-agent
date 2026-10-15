@@ -1,0 +1,12 @@
+{
+  "source": "home_assistant",
+  "origin": "https://home.example.invalid",
+  "credential_file": "/absolute/private/directory/home-observation-credential.json",
+  "sensors": [
+    {
+      "alias": "metric_1",
+      "entity_id": "sensor.configure_installed_entity",
+      "unit": "ms"
+    }
+  ]
+}

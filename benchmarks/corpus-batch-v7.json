@@ -1,0 +1,444 @@
+{
+  "schema_version": 7,
+  "provenance": "Actual CLI main with current normalizers over bounded synthetic raw fields; no router, browser or credentials.",
+  "sampling_limit": "Independent sequential reads are not simultaneous; synthetic fixed observations do not prove real-time equivalence.",
+  "discovery": [
+    {
+      "command": "router-agent --help\n",
+      "stdout": "usage: router-agent [-h] [--version]\n                    {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,approval-request,apply,verify,rollback} ...\n\nBounded router evidence; native compatibility is unverified.\n\npositional arguments:\n  {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,approval-request,apply,verify,rollback}\n    auth                User-operated desktop Secret Service onboarding\n    capabilities        Offline inventory; does not establish firmware support\n    status              Read identity, WAN, CPU and RAM\n    get                 Read selected named telemetry groups\n    traffic             Selected native rates for fresh aliased nodes\n    clients             Read and page aliased clients\n    snapshot            Save status or list local snapshots\n    diff                Compare two local snapshots\n    plan                Preview a native change\n    plan-show           Inspect a stored local plan without router requests\n    approval-request    Print exact scope for a separate administrator\n                        approval window\n    apply               Apply with an administrator window and human\n                        confirmation over HTTPS; a no-op sends zero writes,\n                        but performs reads\n    verify              Read current state to verify a stored plan\n    rollback            Preview a reverse plan; separate confirmation and\n                        apply are required\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent get --help\n",
+      "stdout": "usage: router-agent get [-h] [--note-offset NOTE_OFFSET]\n                        [--note-limit NOTE_LIMIT]\n                        GROUP [GROUP ...]\n\nRead distinct selected native groups with identity validation.\n\npositional arguments:\n  GROUP                 Named groups: identity, wan, cpu, ram, clients, vpn,\n                        led, wlan, guest, ddns, ports, aimesh, network,\n                        sysinfo, parental, forwarding, uptime, temperature,\n                        firmware, speedtest, aura, openvpn_server,\n                        wireguard_server, wireguard_clients, node_info,\n                        firmware_note, dsl, flags, openvpn, openvpn_client,\n                        vpnc_clientlist.\n\noptions:\n  -h, --help            show this help message and exit\n  --note-offset NOTE_OFFSET\n                        Release-note character offset; firmware_note alone\n  --note-limit NOTE_LIMIT\n                        Release-note characters (1\u20134096, default 2048);\n                        firmware_note alone\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": "radio_guest_training",
+      "split": "train",
+      "groups": [
+        "wlan",
+        "guest"
+      ],
+      "query": "Read selected radio and guest slot settings; preserve unknown settings, identity, source metadata, all capability gaps and cleanup warnings.\n",
+      "required_answer": {
+        "metadata": {
+          "schema_version": 1,
+          "source": "native",
+          "freshness": "unknown",
+          "observed_at": null,
+          "warnings": [
+            "logout_unconfirmed"
+          ],
+          "fetched_at": "2026-10-13T00:00:00+00:00"
+        },
+        "data": {
+          "identity": {
+            "model": "RT-AX86U",
+            "firmware": "3.0.0.4.388_synthetic-batch",
+            "device_fingerprint": "033eb919d4bb2c8572fba229"
+          },
+          "wlan": {
+            "scope": "radio_state_slots",
+            "slots": [
+              {
+                "radio_index": 0,
+                "enabled": true,
+                "channel_code": 36,
+                "bandwidth_code": 1
+              },
+              {
+                "radio_index": 1,
+                "enabled": null,
+                "channel_code": 0,
+                "bandwidth_code": null
+              }
+            ],
+            "gaps": [
+              "slot_hardware_applicability_not_discovered",
+              "enabled_setting_is_not_link_or_access_verification",
+              "bandwidth_code_unavailable_in_some_slots",
+              "channel_and_bandwidth_codes_are_settings_not_measured_rf_state"
+            ]
+          },
+          "guest": {
+            "scope": "guest_bss_state_slots",
+            "slots": [
+              {
+                "radio_index": 0,
+                "enabled": false,
+                "guest_index": 1,
+                "expire_seconds": 600,
+                "expire_remaining_seconds": null,
+                "lan_access_enabled": false,
+                "ap_isolation_code": 0
+              },
+              {
+                "radio_index": 0,
+                "enabled": false,
+                "guest_index": 2,
+                "expire_seconds": 600,
+                "expire_remaining_seconds": null,
+                "lan_access_enabled": false,
+                "ap_isolation_code": 0
+              },
+              {
+                "radio_index": 0,
+                "enabled": null,
+                "guest_index": 3,
+                "expire_seconds": 600,
+                "expire_remaining_seconds": null,
+                "lan_access_enabled": false,
+                "ap_isolation_code": 0
+              },
+              {
+                "radio_index": 1,
+                "enabled": false,
+                "guest_index": 1,
+                "expire_seconds": 600,
+                "expire_remaining_seconds": null,
+                "lan_access_enabled": false,
+                "ap_isolation_code": 0
+              },
+              {
+                "radio_index": 1,
+                "enabled": false,
+                "guest_index": 2,
+                "expire_seconds": 600,
+                "expire_remaining_seconds": null,
+                "lan_access_enabled": false,
+                "ap_isolation_code": 0
+              },
+              {
+                "radio_index": 1,
+                "enabled": null,
+                "guest_index": 3,
+                "expire_seconds": 600,
+                "expire_remaining_seconds": null,
+                "lan_access_enabled": false,
+                "ap_isolation_code": 0
+              }
+            ],
+            "gaps": [
+              "slot_hardware_applicability_not_discovered",
+              "enabled_setting_is_not_link_or_access_verification",
+              "expire_remaining_seconds_unavailable_in_some_slots",
+              "guest_settings_do_not_verify_access_or_expiry_enforcement"
+            ]
+          }
+        },
+        "sources": {
+          "identity": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "wlan": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "guest": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          }
+        },
+        "capability_gaps": [
+          {
+            "group": "wlan",
+            "reason": "slot_hardware_applicability_not_discovered"
+          },
+          {
+            "group": "wlan",
+            "reason": "enabled_setting_is_not_link_or_access_verification"
+          },
+          {
+            "group": "wlan",
+            "reason": "bandwidth_code_unavailable_in_some_slots"
+          },
+          {
+            "group": "wlan",
+            "reason": "channel_and_bandwidth_codes_are_settings_not_measured_rf_state"
+          },
+          {
+            "group": "guest",
+            "reason": "slot_hardware_applicability_not_discovered"
+          },
+          {
+            "group": "guest",
+            "reason": "enabled_setting_is_not_link_or_access_verification"
+          },
+          {
+            "group": "guest",
+            "reason": "expire_remaining_seconds_unavailable_in_some_slots"
+          },
+          {
+            "group": "guest",
+            "reason": "guest_settings_do_not_verify_access_or_expiry_enforcement"
+          }
+        ]
+      },
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent get wlan\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"wlan\":{\"scope\":\"radio_state_slots\",\"slots\":[{\"radio_index\":0,\"enabled\":true,\"channel_code\":36,\"bandwidth_code\":1},{\"radio_index\":1,\"enabled\":null,\"channel_code\":0,\"bandwidth_code\":null}],\"gaps\":[\"slot_hardware_applicability_not_discovered\",\"enabled_setting_is_not_link_or_access_verification\",\"bandwidth_code_unavailable_in_some_slots\",\"channel_and_bandwidth_codes_are_settings_not_measured_rf_state\"]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"wlan\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"wlan\",\"reason\":\"slot_hardware_applicability_not_discovered\"},{\"group\":\"wlan\",\"reason\":\"enabled_setting_is_not_link_or_access_verification\"},{\"group\":\"wlan\",\"reason\":\"bandwidth_code_unavailable_in_some_slots\"},{\"group\":\"wlan\",\"reason\":\"channel_and_bandwidth_codes_are_settings_not_measured_rf_state\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get guest\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"guest\":{\"scope\":\"guest_bss_state_slots\",\"slots\":[{\"radio_index\":0,\"enabled\":false,\"guest_index\":1,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":0,\"enabled\":false,\"guest_index\":2,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":0,\"enabled\":null,\"guest_index\":3,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":1,\"enabled\":false,\"guest_index\":1,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":1,\"enabled\":false,\"guest_index\":2,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":1,\"enabled\":null,\"guest_index\":3,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0}],\"gaps\":[\"slot_hardware_applicability_not_discovered\",\"enabled_setting_is_not_link_or_access_verification\",\"expire_remaining_seconds_unavailable_in_some_slots\",\"guest_settings_do_not_verify_access_or_expiry_enforcement\"]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"guest\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"guest\",\"reason\":\"slot_hardware_applicability_not_discovered\"},{\"group\":\"guest\",\"reason\":\"enabled_setting_is_not_link_or_access_verification\"},{\"group\":\"guest\",\"reason\":\"expire_remaining_seconds_unavailable_in_some_slots\"},{\"group\":\"guest\",\"reason\":\"guest_settings_do_not_verify_access_or_expiry_enforcement\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent get wlan guest\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"wlan\":{\"scope\":\"radio_state_slots\",\"slots\":[{\"radio_index\":0,\"enabled\":true,\"channel_code\":36,\"bandwidth_code\":1},{\"radio_index\":1,\"enabled\":null,\"channel_code\":0,\"bandwidth_code\":null}],\"gaps\":[\"slot_hardware_applicability_not_discovered\",\"enabled_setting_is_not_link_or_access_verification\",\"bandwidth_code_unavailable_in_some_slots\",\"channel_and_bandwidth_codes_are_settings_not_measured_rf_state\"]},\"guest\":{\"scope\":\"guest_bss_state_slots\",\"slots\":[{\"radio_index\":0,\"enabled\":false,\"guest_index\":1,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":0,\"enabled\":false,\"guest_index\":2,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":0,\"enabled\":null,\"guest_index\":3,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":1,\"enabled\":false,\"guest_index\":1,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":1,\"enabled\":false,\"guest_index\":2,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0},{\"radio_index\":1,\"enabled\":null,\"guest_index\":3,\"expire_seconds\":600,\"expire_remaining_seconds\":null,\"lan_access_enabled\":false,\"ap_isolation_code\":0}],\"gaps\":[\"slot_hardware_applicability_not_discovered\",\"enabled_setting_is_not_link_or_access_verification\",\"expire_remaining_seconds_unavailable_in_some_slots\",\"guest_settings_do_not_verify_access_or_expiry_enforcement\"]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"wlan\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"guest\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"wlan\",\"reason\":\"slot_hardware_applicability_not_discovered\"},{\"group\":\"wlan\",\"reason\":\"enabled_setting_is_not_link_or_access_verification\"},{\"group\":\"wlan\",\"reason\":\"bandwidth_code_unavailable_in_some_slots\"},{\"group\":\"wlan\",\"reason\":\"channel_and_bandwidth_codes_are_settings_not_measured_rf_state\"},{\"group\":\"guest\",\"reason\":\"slot_hardware_applicability_not_discovered\"},{\"group\":\"guest\",\"reason\":\"enabled_setting_is_not_link_or_access_verification\"},{\"group\":\"guest\",\"reason\":\"expire_remaining_seconds_unavailable_in_some_slots\"},{\"group\":\"guest\",\"reason\":\"guest_settings_do_not_verify_access_or_expiry_enforcement\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "traffic_wan_cpu_heldout",
+      "split": "heldout",
+      "groups": [
+        "network",
+        "wan",
+        "cpu"
+      ],
+      "query": "Read selected cumulative interface counters, WAN state and CPU counters; preserve null counters, unknown freshness, identity, source metadata, gaps and cleanup warnings without claiming rates or verified egress.\n",
+      "required_answer": {
+        "metadata": {
+          "schema_version": 1,
+          "source": "native",
+          "freshness": "unknown",
+          "observed_at": null,
+          "warnings": [
+            "logout_unconfirmed"
+          ],
+          "fetched_at": "2026-10-13T00:00:00+00:00"
+        },
+        "data": {
+          "identity": {
+            "model": "RT-AX86U",
+            "firmware": "3.0.0.4.388_synthetic-batch",
+            "device_fingerprint": "033eb919d4bb2c8572fba229"
+          },
+          "network": {
+            "scope": "native_cumulative_byte_counters",
+            "interfaces": [
+              {
+                "interface": "wan",
+                "rx_bytes": 123456,
+                "tx_bytes": null
+              },
+              {
+                "interface": "wired",
+                "rx_bytes": 0,
+                "tx_bytes": 654321
+              }
+            ],
+            "gaps": [
+              "cumulative_counters_are_not_rates",
+              "effective_egress_not_verified",
+              "missing_groups_do_not_establish_hardware_absence",
+              "native_groups_do_not_establish_device_routing",
+              "selected_counter_missing_or_unknown"
+            ]
+          },
+          "wan": {
+            "unit": 0,
+            "link_code": 2,
+            "slots": [
+              {
+                "unit": 0,
+                "link_code": 1,
+                "state_code": 2,
+                "sbstate_code": null,
+                "auxstate_code": 0,
+                "primary": true,
+                "protocol": "dhcp"
+              },
+              {
+                "unit": 1,
+                "link_code": 0,
+                "state_code": 4,
+                "sbstate_code": 0,
+                "auxstate_code": null,
+                "primary": false,
+                "protocol": "dhcp"
+              }
+            ],
+            "dualwan_mode": "fb",
+            "gaps": [
+              "wan0_sbstate_t_unavailable",
+              "wan1_auxstate_t_unavailable",
+              "addresses_dns_and_gateway_not_collected",
+              "route_and_egress_not_verified",
+              "slot_hardware_applicability_not_discovered"
+            ]
+          },
+          "cpu": {
+            "cores": [
+              {
+                "core": 1,
+                "total_ticks": 1000,
+                "used_ticks": 20
+              },
+              {
+                "core": 2,
+                "total_ticks": 900,
+                "used_ticks": 10
+              }
+            ]
+          }
+        },
+        "sources": {
+          "identity": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "network": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "wan": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "cpu": {
+            "observed_at": null,
+            "freshness": "unknown",
+            "reason": "source_observation_time_unavailable",
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          }
+        },
+        "capability_gaps": [
+          {
+            "group": "network",
+            "reason": "cumulative_counters_are_not_rates"
+          },
+          {
+            "group": "network",
+            "reason": "effective_egress_not_verified"
+          },
+          {
+            "group": "network",
+            "reason": "missing_groups_do_not_establish_hardware_absence"
+          },
+          {
+            "group": "network",
+            "reason": "native_groups_do_not_establish_device_routing"
+          },
+          {
+            "group": "network",
+            "reason": "selected_counter_missing_or_unknown"
+          },
+          {
+            "group": "wan",
+            "reason": "wan0_sbstate_t_unavailable"
+          },
+          {
+            "group": "wan",
+            "reason": "wan1_auxstate_t_unavailable"
+          },
+          {
+            "group": "wan",
+            "reason": "addresses_dns_and_gateway_not_collected"
+          },
+          {
+            "group": "wan",
+            "reason": "route_and_egress_not_verified"
+          },
+          {
+            "group": "wan",
+            "reason": "slot_hardware_applicability_not_discovered"
+          }
+        ]
+      },
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent get network\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"network\":{\"scope\":\"native_cumulative_byte_counters\",\"interfaces\":[{\"interface\":\"wan\",\"rx_bytes\":123456,\"tx_bytes\":null},{\"interface\":\"wired\",\"rx_bytes\":0,\"tx_bytes\":654321}],\"gaps\":[\"cumulative_counters_are_not_rates\",\"effective_egress_not_verified\",\"missing_groups_do_not_establish_hardware_absence\",\"native_groups_do_not_establish_device_routing\",\"selected_counter_missing_or_unknown\"]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"network\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"network\",\"reason\":\"cumulative_counters_are_not_rates\"},{\"group\":\"network\",\"reason\":\"effective_egress_not_verified\"},{\"group\":\"network\",\"reason\":\"missing_groups_do_not_establish_hardware_absence\"},{\"group\":\"network\",\"reason\":\"native_groups_do_not_establish_device_routing\"},{\"group\":\"network\",\"reason\":\"selected_counter_missing_or_unknown\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get wan\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"wan\":{\"unit\":0,\"link_code\":2,\"slots\":[{\"unit\":0,\"link_code\":1,\"state_code\":2,\"sbstate_code\":null,\"auxstate_code\":0,\"primary\":true,\"protocol\":\"dhcp\"},{\"unit\":1,\"link_code\":0,\"state_code\":4,\"sbstate_code\":0,\"auxstate_code\":null,\"primary\":false,\"protocol\":\"dhcp\"}],\"dualwan_mode\":\"fb\",\"gaps\":[\"wan0_sbstate_t_unavailable\",\"wan1_auxstate_t_unavailable\",\"addresses_dns_and_gateway_not_collected\",\"route_and_egress_not_verified\",\"slot_hardware_applicability_not_discovered\"]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"wan\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"wan\",\"reason\":\"wan0_sbstate_t_unavailable\"},{\"group\":\"wan\",\"reason\":\"wan1_auxstate_t_unavailable\"},{\"group\":\"wan\",\"reason\":\"addresses_dns_and_gateway_not_collected\"},{\"group\":\"wan\",\"reason\":\"route_and_egress_not_verified\"},{\"group\":\"wan\",\"reason\":\"slot_hardware_applicability_not_discovered\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get cpu\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"cpu\":{\"cores\":[{\"core\":1,\"total_ticks\":1000,\"used_ticks\":20},{\"core\":2,\"total_ticks\":900,\"used_ticks\":10}]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"cpu\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent get network wan cpu\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"network\":{\"scope\":\"native_cumulative_byte_counters\",\"interfaces\":[{\"interface\":\"wan\",\"rx_bytes\":123456,\"tx_bytes\":null},{\"interface\":\"wired\",\"rx_bytes\":0,\"tx_bytes\":654321}],\"gaps\":[\"cumulative_counters_are_not_rates\",\"effective_egress_not_verified\",\"missing_groups_do_not_establish_hardware_absence\",\"native_groups_do_not_establish_device_routing\",\"selected_counter_missing_or_unknown\"]},\"wan\":{\"unit\":0,\"link_code\":2,\"slots\":[{\"unit\":0,\"link_code\":1,\"state_code\":2,\"sbstate_code\":null,\"auxstate_code\":0,\"primary\":true,\"protocol\":\"dhcp\"},{\"unit\":1,\"link_code\":0,\"state_code\":4,\"sbstate_code\":0,\"auxstate_code\":null,\"primary\":false,\"protocol\":\"dhcp\"}],\"dualwan_mode\":\"fb\",\"gaps\":[\"wan0_sbstate_t_unavailable\",\"wan1_auxstate_t_unavailable\",\"addresses_dns_and_gateway_not_collected\",\"route_and_egress_not_verified\",\"slot_hardware_applicability_not_discovered\"]},\"cpu\":{\"cores\":[{\"core\":1,\"total_ticks\":1000,\"used_ticks\":20},{\"core\":2,\"total_ticks\":900,\"used_ticks\":10}]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"network\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"wan\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"cpu\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"network\",\"reason\":\"cumulative_counters_are_not_rates\"},{\"group\":\"network\",\"reason\":\"effective_egress_not_verified\"},{\"group\":\"network\",\"reason\":\"missing_groups_do_not_establish_hardware_absence\"},{\"group\":\"network\",\"reason\":\"native_groups_do_not_establish_device_routing\"},{\"group\":\"network\",\"reason\":\"selected_counter_missing_or_unknown\"},{\"group\":\"wan\",\"reason\":\"wan0_sbstate_t_unavailable\"},{\"group\":\"wan\",\"reason\":\"wan1_auxstate_t_unavailable\"},{\"group\":\"wan\",\"reason\":\"addresses_dns_and_gateway_not_collected\"},{\"group\":\"wan\",\"reason\":\"route_and_egress_not_verified\"},{\"group\":\"wan\",\"reason\":\"slot_hardware_applicability_not_discovered\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          }
+        ]
+      }
+    }
+  ],
+  "failure_cases": [
+    {
+      "id": "second_group_timeout",
+      "groups": [
+        "wlan",
+        "guest"
+      ],
+      "equivalence_claim": false,
+      "transcripts": {
+        "separate_reads": [
+          {
+            "command": "router-agent get wlan\n",
+            "stdout": "{\"schema_version\":1,\"source\":\"native\",\"freshness\":\"unknown\",\"observed_at\":null,\"data\":{\"identity\":{\"model\":\"RT-AX86U\",\"firmware\":\"3.0.0.4.388_synthetic-batch\",\"device_fingerprint\":\"033eb919d4bb2c8572fba229\"},\"wlan\":{\"scope\":\"radio_state_slots\",\"slots\":[{\"radio_index\":0,\"enabled\":true,\"channel_code\":36,\"bandwidth_code\":1},{\"radio_index\":1,\"enabled\":null,\"channel_code\":0,\"bandwidth_code\":null}],\"gaps\":[\"slot_hardware_applicability_not_discovered\",\"enabled_setting_is_not_link_or_access_verification\",\"bandwidth_code_unavailable_in_some_slots\",\"channel_and_bandwidth_codes_are_settings_not_measured_rf_state\"]}},\"sources\":{\"identity\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"},\"wlan\":{\"observed_at\":null,\"freshness\":\"unknown\",\"reason\":\"source_observation_time_unavailable\",\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}},\"capability_gaps\":[{\"group\":\"wlan\",\"reason\":\"slot_hardware_applicability_not_discovered\"},{\"group\":\"wlan\",\"reason\":\"enabled_setting_is_not_link_or_access_verification\"},{\"group\":\"wlan\",\"reason\":\"bandwidth_code_unavailable_in_some_slots\"},{\"group\":\"wlan\",\"reason\":\"channel_and_bandwidth_codes_are_settings_not_measured_rf_state\"}],\"warnings\":[\"logout_unconfirmed\"],\"fetched_at\":\"2026-10-13T00:00:00+00:00\"}\n",
+            "stderr": "",
+            "exit_code": 0
+          },
+          {
+            "command": "router-agent get guest\n",
+            "stdout": "{\"error\":{\"code\":\"timeout\",\"message\":\"Native command deadline exceeded.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          }
+        ],
+        "grouped_read": [
+          {
+            "command": "router-agent get wlan guest\n",
+            "stdout": "{\"error\":{\"code\":\"timeout\",\"message\":\"Native command deadline exceeded.\"}}\n",
+            "stderr": "",
+            "exit_code": 1
+          }
+        ]
+      }
+    }
+  ]
+}

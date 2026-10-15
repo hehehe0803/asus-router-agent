@@ -1,0 +1,105 @@
+{
+  "schema_version": 7,
+  "corpus_sha256": "07b71ebe3c823f2c29c04b15dd5d4a8fadd941d2728f846f1339953afd17bdf0",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "proxy only; not GPT-6/GPT-6.1 tokens or billing"
+  },
+  "selected_on_training": "exact_alias",
+  "heldout_gate": "passed",
+  "browser_baseline": "unavailable; no browser savings claim",
+  "tasks": [
+    {
+      "task": "target_client_training",
+      "split": "train",
+      "required_answer_valid": true,
+      "candidates": {
+        "paginated_search": {
+          "tokens": 1405,
+          "bytes": 5603,
+          "response_calls": 2,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 31,
+            "stdout": 1339,
+            "stderr": 0,
+            "task_instructions": 35
+          },
+          "component_bytes": {
+            "commands": 124,
+            "stdout": 5316,
+            "stderr": 0,
+            "task_instructions": 163
+          }
+        },
+        "exact_alias": {
+          "tokens": 694,
+          "bytes": 3148,
+          "response_calls": 1,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 25,
+            "stdout": 634,
+            "stderr": 0,
+            "task_instructions": 35
+          },
+          "component_bytes": {
+            "commands": 101,
+            "stdout": 2884,
+            "stderr": 0,
+            "task_instructions": 163
+          }
+        }
+      },
+      "saved_tokens": 711,
+      "saved_percent": 50.6
+    },
+    {
+      "task": "target_client_heldout",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "candidates": {
+        "paginated_search": {
+          "tokens": 2242,
+          "bytes": 8478,
+          "response_calls": 4,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 55,
+            "stdout": 2152,
+            "stderr": 0,
+            "task_instructions": 35
+          },
+          "component_bytes": {
+            "commands": 212,
+            "stdout": 8103,
+            "stderr": 0,
+            "task_instructions": 163
+          }
+        },
+        "exact_alias": {
+          "tokens": 694,
+          "bytes": 3148,
+          "response_calls": 1,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 25,
+            "stdout": 634,
+            "stderr": 0,
+            "task_instructions": 35
+          },
+          "component_bytes": {
+            "commands": 101,
+            "stdout": 2884,
+            "stderr": 0,
+            "task_instructions": 163
+          }
+        }
+      },
+      "saved_tokens": 1548,
+      "saved_percent": 69.05
+    }
+  ]
+}

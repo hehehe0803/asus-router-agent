@@ -1,0 +1,95 @@
+{
+  "contract": "2026-10-12 pre-fetched_at fixture/envelope schema; only fetched_at projection permitted. Archived help and score reports are historical, not current CLI response parity or current discovery costs. Full remaining facts/failures validated.",
+  "archives": [
+    {
+      "corpus": "benchmarks/corpus-batch-v1.json",
+      "report": "benchmarks/results-batch-v1.json",
+      "corpus_sha256": "2d233ac45780f06444a5881c46739d5ec7a6cc976500a8f3f23e411e40ca3975",
+      "report_sha256": "46b9230d744488a9082406255d20f39860228d60563b8b15a0da15ea3725bd00"
+    },
+    {
+      "corpus": "benchmarks/corpus-batch-v2.json",
+      "report": "benchmarks/results-batch-v2.json",
+      "corpus_sha256": "f532cc538dd824eeb1421f215cd0f1a0f590e818c96cd05cbb232d9cf3d55869",
+      "report_sha256": "48324f2af4ccaed357582c6c9dc448608df5d97faf703694e95da05aa8d9687a"
+    },
+    {
+      "corpus": "benchmarks/corpus-batch-v3.json",
+      "report": "benchmarks/results-batch-v3.json",
+      "corpus_sha256": "e7e39e97a31b6f19cffe61be9e50f58daea538d134ab532b160556ef971b6145",
+      "report_sha256": "110b332a4acd11ed0e7b8e2227354544ad507d37f9d44c646c4204558198e1b8"
+    },
+    {
+      "corpus": "benchmarks/corpus-batch-v4-help-baseline.json",
+      "report": "benchmarks/results-batch-v4-help-baseline.json",
+      "corpus_sha256": "6361bf7b3163da4d9d9fb9fb0c65294dbdfd87ae4d0539c8beeaa89e524d13ed",
+      "report_sha256": "3ab54803edb4f8484a9bdf5f855a09b546c41d274b0e522ee792a9c996a6c41e"
+    },
+    {
+      "corpus": "benchmarks/corpus-batch-v4.json",
+      "report": "benchmarks/results-batch-v4.json",
+      "corpus_sha256": "029ff15ab119d64d0c6ae28147f62731ab348675fbcf3646963c36f1240f099e",
+      "report_sha256": "1a8f208ff0b3d884598d52c9725ac6cfbacfbe0a2be75529ec8f661dfd1b54b4"
+    },
+    {
+      "corpus": "benchmarks/corpus-batch-v5.json",
+      "report": "benchmarks/results-batch-v5.json",
+      "corpus_sha256": "d41b586a8eca5a7297926233f7e37628268e8811944cdd9a0d482b7ab98937de",
+      "report_sha256": "1a74104a26d6936a9d1c6ccae5db131a27f5d407fba3d5d542ebeec0779d698e"
+    },
+    {
+      "corpus": "benchmarks/corpus-diff-v1.json",
+      "report": "benchmarks/results-diff-v1.json",
+      "corpus_sha256": "2a0d13689b1ad04bd08df3b6580a8ab03bf2d169dfba1014b9cbc69a65f054f8",
+      "report_sha256": "65c1670fe3313cfd5406afa5a7d45aadce297222a641ccb9100f4ad2882e5a29"
+    },
+    {
+      "corpus": "benchmarks/corpus-diff-v2.json",
+      "report": "benchmarks/results-diff-v2.json",
+      "corpus_sha256": "4cf51e67483c4dfa988c5a41278a9bbbab8fab7ba60c0ccf6227d28954dd1904",
+      "report_sha256": "1e5690d60aafc84beba92c16ddc050b78c2fe4bd54102255f053da27aaf3beb5"
+    },
+    {
+      "corpus": "benchmarks/corpus-diff-v3.json",
+      "report": "benchmarks/results-diff-v3.json",
+      "corpus_sha256": "94df2fbfc723ad18efa8e23157d19d1d10beb82d8387fd0282d5edae1736df8d",
+      "report_sha256": "b44c48702aaadbd4345c4f5d9fe807f2efc80bbdb86824a86a700187c85ef29e"
+    },
+    {
+      "corpus": "benchmarks/corpus-diff-v4.json",
+      "report": "benchmarks/results-diff-v4.json",
+      "corpus_sha256": "0d68a065e1a9bf4342da1de23cfa0cffcbe854dfee40fc11b2e1e506d59fdc67",
+      "report_sha256": "ae393ea2b57792d955d4879946244f5b519402b94cdf34ad6ca6d16f594b178a"
+    },
+    {
+      "corpus": "benchmarks/corpus-v1.json",
+      "report": "benchmarks/results-v1.json",
+      "corpus_sha256": "147bc2e0b17d17be45a3e67136669564601ed5c24d0119655ba9dd959ad2ffac",
+      "report_sha256": "707c8a1b2702d36628f1b45fee4adb2605d98c84dbe55274298a11fb7282e7f6"
+    },
+    {
+      "corpus": "benchmarks/corpus-v2-clients.json",
+      "report": "benchmarks/results-v2-clients.json",
+      "corpus_sha256": "b6c1351338f825e20fe2e7111c03afb1bda9b004ddbb7e3eeeb05398b5ba90c6",
+      "report_sha256": "da35025d25d886aaf935ef3579e686cf81784273ac0944dd3ef4b6c588465567"
+    },
+    {
+      "corpus": "benchmarks/corpus-v3-clients.json",
+      "report": "benchmarks/results-v3-clients.json",
+      "corpus_sha256": "ba67b59f6ea74fc015c0f1474a99aab441eba3c8e6c034494076fee6043ca96c",
+      "report_sha256": "3c39dc2c9ecd23bf40307fc65c542ffe548f04c59f69339374d032334d90b5d8"
+    },
+    {
+      "corpus": "benchmarks/corpus-v4-clients.json",
+      "report": "benchmarks/results-v4-clients.json",
+      "corpus_sha256": "3377e2df177a2943ace1cb6b57d302925d88298f4ff6cb7f574f246ae4aa7cb9",
+      "report_sha256": "f7cb35719c71e1dba3f92b4d6ae6a773d61e4e1db3ce203b9e783d1751ea9076"
+    },
+    {
+      "corpus": "benchmarks/corpus-v5-clients.json",
+      "report": "benchmarks/results-v5-clients.json",
+      "corpus_sha256": "f8974d5a371389e2bd8f4cd564ffca1788295db6890f2acffc9f29eac1d4dfd0",
+      "report_sha256": "a0bf1a408331a0d2da7ad3e9633432cd4d085dbe404ac0c28e599c567940c249"
+    }
+  ]
+}

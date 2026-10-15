@@ -1,0 +1,12 @@
+usage: router-agent [-h]
+                    {auth,capabilities,status,get,clients,snapshot,diff} ...
+
+Bounded router evidence; native compatibility is unverified.
+
+positional arguments:
+  {auth,capabilities,status,get,clients,snapshot,diff}
+    auth                User-operated desktop Secret Service onboarding
+    capabilities        Offline inventory; does not establish firmware support
+
+options:
+  -h, --help            show this help message and exit

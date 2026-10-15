@@ -1,0 +1,2455 @@
+{
+  "schema_version": 3,
+  "provenance": "Actual CLI JSON and public --format table outputs over real temporary SnapshotStore synthetic compatible config snapshots.",
+  "discovery": [
+    {
+      "command": "router-agent --help\n",
+      "stdout": "usage: router-agent [-h]\n                    {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,apply,verify,rollback} ...\n\nBounded router evidence; native compatibility is unverified.\n\npositional arguments:\n  {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,apply,verify,rollback}\n    auth                User-operated desktop Secret Service onboarding\n    capabilities        Offline inventory; does not establish firmware support\n    traffic             Selected native rates for fresh aliased nodes\n    plan                Read and persist an exact native LED change preview\n\noptions:\n  -h, --help            show this help message and exit\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": "router-agent diff --help\n",
+      "stdout": "usage: router-agent diff [-h] --since SINCE --to TO [--offset OFFSET]\n                         [--limit LIMIT] [--format {json,table}]\n\noptions:\n  -h, --help            show this help message and exit\n  --since SINCE\n  --to TO\n  --offset OFFSET\n  --limit LIMIT\n  --format {json,table}\n                        Lossless row encoding; decoder instructions below\n\nCompact rows: {\"$table\":[columns,rows]} represents a list of objects; zip each\nrow with columns. {\"$object\":[[key,value],...]} escapes an object containing\nreserved keys. Null, freshness, gaps and approval meaning are unchanged.\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": "all_changes_train_35",
+      "split": "train",
+      "kind": "clients",
+      "count": 35,
+      "steps": [
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/config/clients/0/signal_dbm",
+                  "before": null,
+                  "after": -50
+                },
+                {
+                  "path": "/config/clients/1/signal_dbm",
+                  "before": null,
+                  "after": -51
+                },
+                {
+                  "path": "/config/clients/2/signal_dbm",
+                  "before": null,
+                  "after": -52
+                },
+                {
+                  "path": "/config/clients/3/signal_dbm",
+                  "before": null,
+                  "after": -53
+                },
+                {
+                  "path": "/config/clients/4/signal_dbm",
+                  "before": null,
+                  "after": -54
+                },
+                {
+                  "path": "/config/clients/5/signal_dbm",
+                  "before": null,
+                  "after": -55
+                },
+                {
+                  "path": "/config/clients/6/signal_dbm",
+                  "before": null,
+                  "after": -56
+                },
+                {
+                  "path": "/config/clients/7/signal_dbm",
+                  "before": null,
+                  "after": -57
+                },
+                {
+                  "path": "/config/clients/8/signal_dbm",
+                  "before": null,
+                  "after": -58
+                },
+                {
+                  "path": "/config/clients/9/signal_dbm",
+                  "before": null,
+                  "after": -59
+                },
+                {
+                  "path": "/config/clients/10/signal_dbm",
+                  "before": null,
+                  "after": -60
+                },
+                {
+                  "path": "/config/clients/11/signal_dbm",
+                  "before": null,
+                  "after": -61
+                },
+                {
+                  "path": "/config/clients/12/signal_dbm",
+                  "before": null,
+                  "after": -62
+                },
+                {
+                  "path": "/config/clients/13/signal_dbm",
+                  "before": null,
+                  "after": -63
+                },
+                {
+                  "path": "/config/clients/14/signal_dbm",
+                  "before": null,
+                  "after": -64
+                },
+                {
+                  "path": "/config/clients/15/signal_dbm",
+                  "before": null,
+                  "after": -65
+                },
+                {
+                  "path": "/config/clients/16/signal_dbm",
+                  "before": null,
+                  "after": -66
+                },
+                {
+                  "path": "/config/clients/17/signal_dbm",
+                  "before": null,
+                  "after": -67
+                },
+                {
+                  "path": "/config/clients/18/signal_dbm",
+                  "before": null,
+                  "after": -68
+                },
+                {
+                  "path": "/config/clients/19/signal_dbm",
+                  "before": null,
+                  "after": -69
+                }
+              ],
+              "total_changes": 35,
+              "truncated": true,
+              "pagination": {
+                "offset": 0,
+                "limit": 20,
+                "next_offset": 20
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 20 --limit 20",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/config/clients/20/signal_dbm",
+                  "before": null,
+                  "after": -70
+                },
+                {
+                  "path": "/config/clients/21/signal_dbm",
+                  "before": null,
+                  "after": -71
+                },
+                {
+                  "path": "/config/clients/22/signal_dbm",
+                  "before": null,
+                  "after": -72
+                },
+                {
+                  "path": "/config/clients/23/signal_dbm",
+                  "before": null,
+                  "after": -73
+                },
+                {
+                  "path": "/config/clients/24/signal_dbm",
+                  "before": null,
+                  "after": -74
+                },
+                {
+                  "path": "/config/clients/25/signal_dbm",
+                  "before": null,
+                  "after": -75
+                },
+                {
+                  "path": "/config/clients/26/signal_dbm",
+                  "before": null,
+                  "after": -76
+                },
+                {
+                  "path": "/config/clients/27/signal_dbm",
+                  "before": null,
+                  "after": -77
+                },
+                {
+                  "path": "/config/clients/28/signal_dbm",
+                  "before": null,
+                  "after": -78
+                },
+                {
+                  "path": "/config/clients/29/signal_dbm",
+                  "before": null,
+                  "after": -79
+                },
+                {
+                  "path": "/config/clients/30/signal_dbm",
+                  "before": null,
+                  "after": -80
+                },
+                {
+                  "path": "/config/clients/31/signal_dbm",
+                  "before": null,
+                  "after": -81
+                },
+                {
+                  "path": "/config/clients/32/signal_dbm",
+                  "before": null,
+                  "after": -82
+                },
+                {
+                  "path": "/config/clients/33/signal_dbm",
+                  "before": null,
+                  "after": -83
+                },
+                {
+                  "path": "/config/clients/34/signal_dbm",
+                  "before": null,
+                  "after": -84
+                }
+              ],
+              "total_changes": 35,
+              "truncated": true,
+              "pagination": {
+                "offset": 20,
+                "limit": 20,
+                "next_offset": null
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "expected_changes": [
+        {
+          "path": "/config/clients/0/signal_dbm",
+          "before": null,
+          "after": -50
+        },
+        {
+          "path": "/config/clients/1/signal_dbm",
+          "before": null,
+          "after": -51
+        },
+        {
+          "path": "/config/clients/2/signal_dbm",
+          "before": null,
+          "after": -52
+        },
+        {
+          "path": "/config/clients/3/signal_dbm",
+          "before": null,
+          "after": -53
+        },
+        {
+          "path": "/config/clients/4/signal_dbm",
+          "before": null,
+          "after": -54
+        },
+        {
+          "path": "/config/clients/5/signal_dbm",
+          "before": null,
+          "after": -55
+        },
+        {
+          "path": "/config/clients/6/signal_dbm",
+          "before": null,
+          "after": -56
+        },
+        {
+          "path": "/config/clients/7/signal_dbm",
+          "before": null,
+          "after": -57
+        },
+        {
+          "path": "/config/clients/8/signal_dbm",
+          "before": null,
+          "after": -58
+        },
+        {
+          "path": "/config/clients/9/signal_dbm",
+          "before": null,
+          "after": -59
+        },
+        {
+          "path": "/config/clients/10/signal_dbm",
+          "before": null,
+          "after": -60
+        },
+        {
+          "path": "/config/clients/11/signal_dbm",
+          "before": null,
+          "after": -61
+        },
+        {
+          "path": "/config/clients/12/signal_dbm",
+          "before": null,
+          "after": -62
+        },
+        {
+          "path": "/config/clients/13/signal_dbm",
+          "before": null,
+          "after": -63
+        },
+        {
+          "path": "/config/clients/14/signal_dbm",
+          "before": null,
+          "after": -64
+        },
+        {
+          "path": "/config/clients/15/signal_dbm",
+          "before": null,
+          "after": -65
+        },
+        {
+          "path": "/config/clients/16/signal_dbm",
+          "before": null,
+          "after": -66
+        },
+        {
+          "path": "/config/clients/17/signal_dbm",
+          "before": null,
+          "after": -67
+        },
+        {
+          "path": "/config/clients/18/signal_dbm",
+          "before": null,
+          "after": -68
+        },
+        {
+          "path": "/config/clients/19/signal_dbm",
+          "before": null,
+          "after": -69
+        },
+        {
+          "path": "/config/clients/20/signal_dbm",
+          "before": null,
+          "after": -70
+        },
+        {
+          "path": "/config/clients/21/signal_dbm",
+          "before": null,
+          "after": -71
+        },
+        {
+          "path": "/config/clients/22/signal_dbm",
+          "before": null,
+          "after": -72
+        },
+        {
+          "path": "/config/clients/23/signal_dbm",
+          "before": null,
+          "after": -73
+        },
+        {
+          "path": "/config/clients/24/signal_dbm",
+          "before": null,
+          "after": -74
+        },
+        {
+          "path": "/config/clients/25/signal_dbm",
+          "before": null,
+          "after": -75
+        },
+        {
+          "path": "/config/clients/26/signal_dbm",
+          "before": null,
+          "after": -76
+        },
+        {
+          "path": "/config/clients/27/signal_dbm",
+          "before": null,
+          "after": -77
+        },
+        {
+          "path": "/config/clients/28/signal_dbm",
+          "before": null,
+          "after": -78
+        },
+        {
+          "path": "/config/clients/29/signal_dbm",
+          "before": null,
+          "after": -79
+        },
+        {
+          "path": "/config/clients/30/signal_dbm",
+          "before": null,
+          "after": -80
+        },
+        {
+          "path": "/config/clients/31/signal_dbm",
+          "before": null,
+          "after": -81
+        },
+        {
+          "path": "/config/clients/32/signal_dbm",
+          "before": null,
+          "after": -82
+        },
+        {
+          "path": "/config/clients/33/signal_dbm",
+          "before": null,
+          "after": -83
+        },
+        {
+          "path": "/config/clients/34/signal_dbm",
+          "before": null,
+          "after": -84
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20"
+        },
+        {
+          "path": "/0/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/0/stdout/data/changed",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/0/path",
+          "value": "/config/clients/0/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/0/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/0/after",
+          "value": -50
+        },
+        {
+          "path": "/0/stdout/data/changes/1/path",
+          "value": "/config/clients/1/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/1/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/1/after",
+          "value": -51
+        },
+        {
+          "path": "/0/stdout/data/changes/2/path",
+          "value": "/config/clients/2/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/2/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/2/after",
+          "value": -52
+        },
+        {
+          "path": "/0/stdout/data/changes/3/path",
+          "value": "/config/clients/3/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/3/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/3/after",
+          "value": -53
+        },
+        {
+          "path": "/0/stdout/data/changes/4/path",
+          "value": "/config/clients/4/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/4/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/4/after",
+          "value": -54
+        },
+        {
+          "path": "/0/stdout/data/changes/5/path",
+          "value": "/config/clients/5/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/5/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/5/after",
+          "value": -55
+        },
+        {
+          "path": "/0/stdout/data/changes/6/path",
+          "value": "/config/clients/6/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/6/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/6/after",
+          "value": -56
+        },
+        {
+          "path": "/0/stdout/data/changes/7/path",
+          "value": "/config/clients/7/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/7/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/7/after",
+          "value": -57
+        },
+        {
+          "path": "/0/stdout/data/changes/8/path",
+          "value": "/config/clients/8/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/8/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/8/after",
+          "value": -58
+        },
+        {
+          "path": "/0/stdout/data/changes/9/path",
+          "value": "/config/clients/9/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/9/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/9/after",
+          "value": -59
+        },
+        {
+          "path": "/0/stdout/data/changes/10/path",
+          "value": "/config/clients/10/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/10/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/10/after",
+          "value": -60
+        },
+        {
+          "path": "/0/stdout/data/changes/11/path",
+          "value": "/config/clients/11/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/11/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/11/after",
+          "value": -61
+        },
+        {
+          "path": "/0/stdout/data/changes/12/path",
+          "value": "/config/clients/12/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/12/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/12/after",
+          "value": -62
+        },
+        {
+          "path": "/0/stdout/data/changes/13/path",
+          "value": "/config/clients/13/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/13/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/13/after",
+          "value": -63
+        },
+        {
+          "path": "/0/stdout/data/changes/14/path",
+          "value": "/config/clients/14/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/14/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/14/after",
+          "value": -64
+        },
+        {
+          "path": "/0/stdout/data/changes/15/path",
+          "value": "/config/clients/15/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/15/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/15/after",
+          "value": -65
+        },
+        {
+          "path": "/0/stdout/data/changes/16/path",
+          "value": "/config/clients/16/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/16/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/16/after",
+          "value": -66
+        },
+        {
+          "path": "/0/stdout/data/changes/17/path",
+          "value": "/config/clients/17/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/17/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/17/after",
+          "value": -67
+        },
+        {
+          "path": "/0/stdout/data/changes/18/path",
+          "value": "/config/clients/18/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/18/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/18/after",
+          "value": -68
+        },
+        {
+          "path": "/0/stdout/data/changes/19/path",
+          "value": "/config/clients/19/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/19/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/19/after",
+          "value": -69
+        },
+        {
+          "path": "/0/stdout/data/total_changes",
+          "value": 35
+        },
+        {
+          "path": "/0/stdout/data/truncated",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/pagination/offset",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/data/pagination/limit",
+          "value": 20
+        },
+        {
+          "path": "/0/stdout/data/pagination/next_offset",
+          "value": 20
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        },
+        {
+          "path": "/1/command",
+          "value": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 20 --limit 20"
+        },
+        {
+          "path": "/1/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/1/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/1/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/1/stdout/data/changed",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/changes/0/path",
+          "value": "/config/clients/20/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/0/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/0/after",
+          "value": -70
+        },
+        {
+          "path": "/1/stdout/data/changes/1/path",
+          "value": "/config/clients/21/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/1/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/1/after",
+          "value": -71
+        },
+        {
+          "path": "/1/stdout/data/changes/2/path",
+          "value": "/config/clients/22/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/2/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/2/after",
+          "value": -72
+        },
+        {
+          "path": "/1/stdout/data/changes/3/path",
+          "value": "/config/clients/23/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/3/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/3/after",
+          "value": -73
+        },
+        {
+          "path": "/1/stdout/data/changes/4/path",
+          "value": "/config/clients/24/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/4/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/4/after",
+          "value": -74
+        },
+        {
+          "path": "/1/stdout/data/changes/5/path",
+          "value": "/config/clients/25/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/5/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/5/after",
+          "value": -75
+        },
+        {
+          "path": "/1/stdout/data/changes/6/path",
+          "value": "/config/clients/26/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/6/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/6/after",
+          "value": -76
+        },
+        {
+          "path": "/1/stdout/data/changes/7/path",
+          "value": "/config/clients/27/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/7/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/7/after",
+          "value": -77
+        },
+        {
+          "path": "/1/stdout/data/changes/8/path",
+          "value": "/config/clients/28/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/8/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/8/after",
+          "value": -78
+        },
+        {
+          "path": "/1/stdout/data/changes/9/path",
+          "value": "/config/clients/29/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/9/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/9/after",
+          "value": -79
+        },
+        {
+          "path": "/1/stdout/data/changes/10/path",
+          "value": "/config/clients/30/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/10/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/10/after",
+          "value": -80
+        },
+        {
+          "path": "/1/stdout/data/changes/11/path",
+          "value": "/config/clients/31/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/11/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/11/after",
+          "value": -81
+        },
+        {
+          "path": "/1/stdout/data/changes/12/path",
+          "value": "/config/clients/32/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/12/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/12/after",
+          "value": -82
+        },
+        {
+          "path": "/1/stdout/data/changes/13/path",
+          "value": "/config/clients/33/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/13/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/13/after",
+          "value": -83
+        },
+        {
+          "path": "/1/stdout/data/changes/14/path",
+          "value": "/config/clients/34/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/14/before",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/14/after",
+          "value": -84
+        },
+        {
+          "path": "/1/stdout/data/total_changes",
+          "value": 35
+        },
+        {
+          "path": "/1/stdout/data/truncated",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/pagination/offset",
+          "value": 20
+        },
+        {
+          "path": "/1/stdout/data/pagination/limit",
+          "value": 20
+        },
+        {
+          "path": "/1/stdout/data/pagination/next_offset",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/1/stderr",
+          "value": ""
+        },
+        {
+          "path": "/1/exit_code",
+          "value": 0
+        }
+      ],
+      "table_steps": [
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20 --format table",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": {
+                "$table": [
+                  [
+                    "path",
+                    "before",
+                    "after"
+                  ],
+                  [
+                    [
+                      "/config/clients/0/signal_dbm",
+                      null,
+                      -50
+                    ],
+                    [
+                      "/config/clients/1/signal_dbm",
+                      null,
+                      -51
+                    ],
+                    [
+                      "/config/clients/2/signal_dbm",
+                      null,
+                      -52
+                    ],
+                    [
+                      "/config/clients/3/signal_dbm",
+                      null,
+                      -53
+                    ],
+                    [
+                      "/config/clients/4/signal_dbm",
+                      null,
+                      -54
+                    ],
+                    [
+                      "/config/clients/5/signal_dbm",
+                      null,
+                      -55
+                    ],
+                    [
+                      "/config/clients/6/signal_dbm",
+                      null,
+                      -56
+                    ],
+                    [
+                      "/config/clients/7/signal_dbm",
+                      null,
+                      -57
+                    ],
+                    [
+                      "/config/clients/8/signal_dbm",
+                      null,
+                      -58
+                    ],
+                    [
+                      "/config/clients/9/signal_dbm",
+                      null,
+                      -59
+                    ],
+                    [
+                      "/config/clients/10/signal_dbm",
+                      null,
+                      -60
+                    ],
+                    [
+                      "/config/clients/11/signal_dbm",
+                      null,
+                      -61
+                    ],
+                    [
+                      "/config/clients/12/signal_dbm",
+                      null,
+                      -62
+                    ],
+                    [
+                      "/config/clients/13/signal_dbm",
+                      null,
+                      -63
+                    ],
+                    [
+                      "/config/clients/14/signal_dbm",
+                      null,
+                      -64
+                    ],
+                    [
+                      "/config/clients/15/signal_dbm",
+                      null,
+                      -65
+                    ],
+                    [
+                      "/config/clients/16/signal_dbm",
+                      null,
+                      -66
+                    ],
+                    [
+                      "/config/clients/17/signal_dbm",
+                      null,
+                      -67
+                    ],
+                    [
+                      "/config/clients/18/signal_dbm",
+                      null,
+                      -68
+                    ],
+                    [
+                      "/config/clients/19/signal_dbm",
+                      null,
+                      -69
+                    ]
+                  ]
+                ]
+              },
+              "total_changes": 35,
+              "truncated": true,
+              "pagination": {
+                "offset": 0,
+                "limit": 20,
+                "next_offset": 20
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 20 --limit 20 --format table",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": {
+                "$table": [
+                  [
+                    "path",
+                    "before",
+                    "after"
+                  ],
+                  [
+                    [
+                      "/config/clients/20/signal_dbm",
+                      null,
+                      -70
+                    ],
+                    [
+                      "/config/clients/21/signal_dbm",
+                      null,
+                      -71
+                    ],
+                    [
+                      "/config/clients/22/signal_dbm",
+                      null,
+                      -72
+                    ],
+                    [
+                      "/config/clients/23/signal_dbm",
+                      null,
+                      -73
+                    ],
+                    [
+                      "/config/clients/24/signal_dbm",
+                      null,
+                      -74
+                    ],
+                    [
+                      "/config/clients/25/signal_dbm",
+                      null,
+                      -75
+                    ],
+                    [
+                      "/config/clients/26/signal_dbm",
+                      null,
+                      -76
+                    ],
+                    [
+                      "/config/clients/27/signal_dbm",
+                      null,
+                      -77
+                    ],
+                    [
+                      "/config/clients/28/signal_dbm",
+                      null,
+                      -78
+                    ],
+                    [
+                      "/config/clients/29/signal_dbm",
+                      null,
+                      -79
+                    ],
+                    [
+                      "/config/clients/30/signal_dbm",
+                      null,
+                      -80
+                    ],
+                    [
+                      "/config/clients/31/signal_dbm",
+                      null,
+                      -81
+                    ],
+                    [
+                      "/config/clients/32/signal_dbm",
+                      null,
+                      -82
+                    ],
+                    [
+                      "/config/clients/33/signal_dbm",
+                      null,
+                      -83
+                    ],
+                    [
+                      "/config/clients/34/signal_dbm",
+                      null,
+                      -84
+                    ]
+                  ]
+                ]
+              },
+              "total_changes": 35,
+              "truncated": true,
+              "pagination": {
+                "offset": 20,
+                "limit": 20,
+                "next_offset": null
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "all_changes_heldout_27",
+      "split": "heldout",
+      "kind": "clients",
+      "count": 27,
+      "steps": [
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/config/clients/0/signal_dbm",
+                  "before": -60,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/1/signal_dbm",
+                  "before": -61,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/2/signal_dbm",
+                  "before": -62,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/3/signal_dbm",
+                  "before": -63,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/4/signal_dbm",
+                  "before": -64,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/5/signal_dbm",
+                  "before": -65,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/6/signal_dbm",
+                  "before": -66,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/7/signal_dbm",
+                  "before": -67,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/8/signal_dbm",
+                  "before": -68,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/9/signal_dbm",
+                  "before": -69,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/10/signal_dbm",
+                  "before": -70,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/11/signal_dbm",
+                  "before": -71,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/12/signal_dbm",
+                  "before": -72,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/13/signal_dbm",
+                  "before": -73,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/14/signal_dbm",
+                  "before": -74,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/15/signal_dbm",
+                  "before": -75,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/16/signal_dbm",
+                  "before": -76,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/17/signal_dbm",
+                  "before": -77,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/18/signal_dbm",
+                  "before": -78,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/19/signal_dbm",
+                  "before": -79,
+                  "after": null
+                }
+              ],
+              "total_changes": 27,
+              "truncated": true,
+              "pagination": {
+                "offset": 0,
+                "limit": 20,
+                "next_offset": 20
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 20 --limit 20",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/config/clients/20/signal_dbm",
+                  "before": -80,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/21/signal_dbm",
+                  "before": -81,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/22/signal_dbm",
+                  "before": -82,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/23/signal_dbm",
+                  "before": -83,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/24/signal_dbm",
+                  "before": -84,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/25/signal_dbm",
+                  "before": -85,
+                  "after": null
+                },
+                {
+                  "path": "/config/clients/26/signal_dbm",
+                  "before": -86,
+                  "after": null
+                }
+              ],
+              "total_changes": 27,
+              "truncated": true,
+              "pagination": {
+                "offset": 20,
+                "limit": 20,
+                "next_offset": null
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "expected_changes": [
+        {
+          "path": "/config/clients/0/signal_dbm",
+          "before": -60,
+          "after": null
+        },
+        {
+          "path": "/config/clients/1/signal_dbm",
+          "before": -61,
+          "after": null
+        },
+        {
+          "path": "/config/clients/2/signal_dbm",
+          "before": -62,
+          "after": null
+        },
+        {
+          "path": "/config/clients/3/signal_dbm",
+          "before": -63,
+          "after": null
+        },
+        {
+          "path": "/config/clients/4/signal_dbm",
+          "before": -64,
+          "after": null
+        },
+        {
+          "path": "/config/clients/5/signal_dbm",
+          "before": -65,
+          "after": null
+        },
+        {
+          "path": "/config/clients/6/signal_dbm",
+          "before": -66,
+          "after": null
+        },
+        {
+          "path": "/config/clients/7/signal_dbm",
+          "before": -67,
+          "after": null
+        },
+        {
+          "path": "/config/clients/8/signal_dbm",
+          "before": -68,
+          "after": null
+        },
+        {
+          "path": "/config/clients/9/signal_dbm",
+          "before": -69,
+          "after": null
+        },
+        {
+          "path": "/config/clients/10/signal_dbm",
+          "before": -70,
+          "after": null
+        },
+        {
+          "path": "/config/clients/11/signal_dbm",
+          "before": -71,
+          "after": null
+        },
+        {
+          "path": "/config/clients/12/signal_dbm",
+          "before": -72,
+          "after": null
+        },
+        {
+          "path": "/config/clients/13/signal_dbm",
+          "before": -73,
+          "after": null
+        },
+        {
+          "path": "/config/clients/14/signal_dbm",
+          "before": -74,
+          "after": null
+        },
+        {
+          "path": "/config/clients/15/signal_dbm",
+          "before": -75,
+          "after": null
+        },
+        {
+          "path": "/config/clients/16/signal_dbm",
+          "before": -76,
+          "after": null
+        },
+        {
+          "path": "/config/clients/17/signal_dbm",
+          "before": -77,
+          "after": null
+        },
+        {
+          "path": "/config/clients/18/signal_dbm",
+          "before": -78,
+          "after": null
+        },
+        {
+          "path": "/config/clients/19/signal_dbm",
+          "before": -79,
+          "after": null
+        },
+        {
+          "path": "/config/clients/20/signal_dbm",
+          "before": -80,
+          "after": null
+        },
+        {
+          "path": "/config/clients/21/signal_dbm",
+          "before": -81,
+          "after": null
+        },
+        {
+          "path": "/config/clients/22/signal_dbm",
+          "before": -82,
+          "after": null
+        },
+        {
+          "path": "/config/clients/23/signal_dbm",
+          "before": -83,
+          "after": null
+        },
+        {
+          "path": "/config/clients/24/signal_dbm",
+          "before": -84,
+          "after": null
+        },
+        {
+          "path": "/config/clients/25/signal_dbm",
+          "before": -85,
+          "after": null
+        },
+        {
+          "path": "/config/clients/26/signal_dbm",
+          "before": -86,
+          "after": null
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20"
+        },
+        {
+          "path": "/0/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/0/stdout/data/changed",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/0/path",
+          "value": "/config/clients/0/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/0/before",
+          "value": -60
+        },
+        {
+          "path": "/0/stdout/data/changes/0/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/1/path",
+          "value": "/config/clients/1/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/1/before",
+          "value": -61
+        },
+        {
+          "path": "/0/stdout/data/changes/1/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/2/path",
+          "value": "/config/clients/2/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/2/before",
+          "value": -62
+        },
+        {
+          "path": "/0/stdout/data/changes/2/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/3/path",
+          "value": "/config/clients/3/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/3/before",
+          "value": -63
+        },
+        {
+          "path": "/0/stdout/data/changes/3/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/4/path",
+          "value": "/config/clients/4/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/4/before",
+          "value": -64
+        },
+        {
+          "path": "/0/stdout/data/changes/4/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/5/path",
+          "value": "/config/clients/5/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/5/before",
+          "value": -65
+        },
+        {
+          "path": "/0/stdout/data/changes/5/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/6/path",
+          "value": "/config/clients/6/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/6/before",
+          "value": -66
+        },
+        {
+          "path": "/0/stdout/data/changes/6/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/7/path",
+          "value": "/config/clients/7/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/7/before",
+          "value": -67
+        },
+        {
+          "path": "/0/stdout/data/changes/7/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/8/path",
+          "value": "/config/clients/8/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/8/before",
+          "value": -68
+        },
+        {
+          "path": "/0/stdout/data/changes/8/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/9/path",
+          "value": "/config/clients/9/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/9/before",
+          "value": -69
+        },
+        {
+          "path": "/0/stdout/data/changes/9/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/10/path",
+          "value": "/config/clients/10/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/10/before",
+          "value": -70
+        },
+        {
+          "path": "/0/stdout/data/changes/10/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/11/path",
+          "value": "/config/clients/11/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/11/before",
+          "value": -71
+        },
+        {
+          "path": "/0/stdout/data/changes/11/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/12/path",
+          "value": "/config/clients/12/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/12/before",
+          "value": -72
+        },
+        {
+          "path": "/0/stdout/data/changes/12/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/13/path",
+          "value": "/config/clients/13/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/13/before",
+          "value": -73
+        },
+        {
+          "path": "/0/stdout/data/changes/13/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/14/path",
+          "value": "/config/clients/14/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/14/before",
+          "value": -74
+        },
+        {
+          "path": "/0/stdout/data/changes/14/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/15/path",
+          "value": "/config/clients/15/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/15/before",
+          "value": -75
+        },
+        {
+          "path": "/0/stdout/data/changes/15/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/16/path",
+          "value": "/config/clients/16/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/16/before",
+          "value": -76
+        },
+        {
+          "path": "/0/stdout/data/changes/16/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/17/path",
+          "value": "/config/clients/17/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/17/before",
+          "value": -77
+        },
+        {
+          "path": "/0/stdout/data/changes/17/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/18/path",
+          "value": "/config/clients/18/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/18/before",
+          "value": -78
+        },
+        {
+          "path": "/0/stdout/data/changes/18/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/19/path",
+          "value": "/config/clients/19/signal_dbm"
+        },
+        {
+          "path": "/0/stdout/data/changes/19/before",
+          "value": -79
+        },
+        {
+          "path": "/0/stdout/data/changes/19/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/total_changes",
+          "value": 27
+        },
+        {
+          "path": "/0/stdout/data/truncated",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/pagination/offset",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/data/pagination/limit",
+          "value": 20
+        },
+        {
+          "path": "/0/stdout/data/pagination/next_offset",
+          "value": 20
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        },
+        {
+          "path": "/1/command",
+          "value": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 20 --limit 20"
+        },
+        {
+          "path": "/1/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/1/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/1/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/1/stdout/data/changed",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/changes/0/path",
+          "value": "/config/clients/20/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/0/before",
+          "value": -80
+        },
+        {
+          "path": "/1/stdout/data/changes/0/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/1/path",
+          "value": "/config/clients/21/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/1/before",
+          "value": -81
+        },
+        {
+          "path": "/1/stdout/data/changes/1/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/2/path",
+          "value": "/config/clients/22/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/2/before",
+          "value": -82
+        },
+        {
+          "path": "/1/stdout/data/changes/2/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/3/path",
+          "value": "/config/clients/23/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/3/before",
+          "value": -83
+        },
+        {
+          "path": "/1/stdout/data/changes/3/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/4/path",
+          "value": "/config/clients/24/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/4/before",
+          "value": -84
+        },
+        {
+          "path": "/1/stdout/data/changes/4/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/5/path",
+          "value": "/config/clients/25/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/5/before",
+          "value": -85
+        },
+        {
+          "path": "/1/stdout/data/changes/5/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/changes/6/path",
+          "value": "/config/clients/26/signal_dbm"
+        },
+        {
+          "path": "/1/stdout/data/changes/6/before",
+          "value": -86
+        },
+        {
+          "path": "/1/stdout/data/changes/6/after",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/total_changes",
+          "value": 27
+        },
+        {
+          "path": "/1/stdout/data/truncated",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/pagination/offset",
+          "value": 20
+        },
+        {
+          "path": "/1/stdout/data/pagination/limit",
+          "value": 20
+        },
+        {
+          "path": "/1/stdout/data/pagination/next_offset",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/1/stderr",
+          "value": ""
+        },
+        {
+          "path": "/1/exit_code",
+          "value": 0
+        }
+      ],
+      "table_steps": [
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20 --format table",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": {
+                "$table": [
+                  [
+                    "path",
+                    "before",
+                    "after"
+                  ],
+                  [
+                    [
+                      "/config/clients/0/signal_dbm",
+                      -60,
+                      null
+                    ],
+                    [
+                      "/config/clients/1/signal_dbm",
+                      -61,
+                      null
+                    ],
+                    [
+                      "/config/clients/2/signal_dbm",
+                      -62,
+                      null
+                    ],
+                    [
+                      "/config/clients/3/signal_dbm",
+                      -63,
+                      null
+                    ],
+                    [
+                      "/config/clients/4/signal_dbm",
+                      -64,
+                      null
+                    ],
+                    [
+                      "/config/clients/5/signal_dbm",
+                      -65,
+                      null
+                    ],
+                    [
+                      "/config/clients/6/signal_dbm",
+                      -66,
+                      null
+                    ],
+                    [
+                      "/config/clients/7/signal_dbm",
+                      -67,
+                      null
+                    ],
+                    [
+                      "/config/clients/8/signal_dbm",
+                      -68,
+                      null
+                    ],
+                    [
+                      "/config/clients/9/signal_dbm",
+                      -69,
+                      null
+                    ],
+                    [
+                      "/config/clients/10/signal_dbm",
+                      -70,
+                      null
+                    ],
+                    [
+                      "/config/clients/11/signal_dbm",
+                      -71,
+                      null
+                    ],
+                    [
+                      "/config/clients/12/signal_dbm",
+                      -72,
+                      null
+                    ],
+                    [
+                      "/config/clients/13/signal_dbm",
+                      -73,
+                      null
+                    ],
+                    [
+                      "/config/clients/14/signal_dbm",
+                      -74,
+                      null
+                    ],
+                    [
+                      "/config/clients/15/signal_dbm",
+                      -75,
+                      null
+                    ],
+                    [
+                      "/config/clients/16/signal_dbm",
+                      -76,
+                      null
+                    ],
+                    [
+                      "/config/clients/17/signal_dbm",
+                      -77,
+                      null
+                    ],
+                    [
+                      "/config/clients/18/signal_dbm",
+                      -78,
+                      null
+                    ],
+                    [
+                      "/config/clients/19/signal_dbm",
+                      -79,
+                      null
+                    ]
+                  ]
+                ]
+              },
+              "total_changes": 27,
+              "truncated": true,
+              "pagination": {
+                "offset": 0,
+                "limit": 20,
+                "next_offset": 20
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 20 --limit 20 --format table",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": {
+                "$table": [
+                  [
+                    "path",
+                    "before",
+                    "after"
+                  ],
+                  [
+                    [
+                      "/config/clients/20/signal_dbm",
+                      -80,
+                      null
+                    ],
+                    [
+                      "/config/clients/21/signal_dbm",
+                      -81,
+                      null
+                    ],
+                    [
+                      "/config/clients/22/signal_dbm",
+                      -82,
+                      null
+                    ],
+                    [
+                      "/config/clients/23/signal_dbm",
+                      -83,
+                      null
+                    ],
+                    [
+                      "/config/clients/24/signal_dbm",
+                      -84,
+                      null
+                    ],
+                    [
+                      "/config/clients/25/signal_dbm",
+                      -85,
+                      null
+                    ],
+                    [
+                      "/config/clients/26/signal_dbm",
+                      -86,
+                      null
+                    ]
+                  ]
+                ]
+              },
+              "total_changes": 27,
+              "truncated": true,
+              "pagination": {
+                "offset": 20,
+                "limit": 20,
+                "next_offset": null
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "id": "heldout_presence_null_arrays",
+      "split": "heldout",
+      "kind": "presence",
+      "count": 5,
+      "steps": [
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/config/default_route",
+                  "before": false,
+                  "after": null
+                },
+                {
+                  "path": "/config/enabled",
+                  "before": null,
+                  "after": null,
+                  "before_present": true,
+                  "after_present": false
+                },
+                {
+                  "path": "/config/hostname",
+                  "before": null,
+                  "after": null,
+                  "before_present": false,
+                  "after_present": true
+                },
+                {
+                  "path": "/config/sources/0",
+                  "before": "unknown",
+                  "after": "synthetic"
+                },
+                {
+                  "path": "/config/sources/1",
+                  "before": "synthetic",
+                  "after": "unknown"
+                }
+              ],
+              "total_changes": 5,
+              "truncated": false,
+              "pagination": {
+                "offset": 0,
+                "limit": 20,
+                "next_offset": null
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "expected_changes": [
+        {
+          "path": "/config/default_route",
+          "before": false,
+          "after": null
+        },
+        {
+          "path": "/config/enabled",
+          "before": null,
+          "after": null,
+          "before_present": true,
+          "after_present": false
+        },
+        {
+          "path": "/config/hostname",
+          "before": null,
+          "after": null,
+          "before_present": false,
+          "after_present": true
+        },
+        {
+          "path": "/config/sources/0",
+          "before": "unknown",
+          "after": "synthetic"
+        },
+        {
+          "path": "/config/sources/1",
+          "before": "synthetic",
+          "after": "unknown"
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20"
+        },
+        {
+          "path": "/0/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/0/stdout/data/changed",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/0/path",
+          "value": "/config/default_route"
+        },
+        {
+          "path": "/0/stdout/data/changes/0/before",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/changes/0/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/1/path",
+          "value": "/config/enabled"
+        },
+        {
+          "path": "/0/stdout/data/changes/1/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/1/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/1/before_present",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/1/after_present",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/changes/2/path",
+          "value": "/config/hostname"
+        },
+        {
+          "path": "/0/stdout/data/changes/2/before",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/2/after",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/changes/2/before_present",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/changes/2/after_present",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/3/path",
+          "value": "/config/sources/0"
+        },
+        {
+          "path": "/0/stdout/data/changes/3/before",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/data/changes/3/after",
+          "value": "synthetic"
+        },
+        {
+          "path": "/0/stdout/data/changes/4/path",
+          "value": "/config/sources/1"
+        },
+        {
+          "path": "/0/stdout/data/changes/4/before",
+          "value": "synthetic"
+        },
+        {
+          "path": "/0/stdout/data/changes/4/after",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/data/total_changes",
+          "value": 5
+        },
+        {
+          "path": "/0/stdout/data/truncated",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/pagination/offset",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/data/pagination/limit",
+          "value": 20
+        },
+        {
+          "path": "/0/stdout/data/pagination/next_offset",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ],
+      "table_steps": [
+        {
+          "command": "router-agent diff --since 43a15c927bfd4e508693feac2170d854 --to 8e24bda4a17549c68031fc827596d0ea --offset 0 --limit 20 --format table",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/config/default_route",
+                  "before": false,
+                  "after": null
+                },
+                {
+                  "path": "/config/enabled",
+                  "before": null,
+                  "after": null,
+                  "before_present": true,
+                  "after_present": false
+                },
+                {
+                  "path": "/config/hostname",
+                  "before": null,
+                  "after": null,
+                  "before_present": false,
+                  "after_present": true
+                },
+                {
+                  "path": "/config/sources/0",
+                  "before": "unknown",
+                  "after": "synthetic"
+                },
+                {
+                  "path": "/config/sources/1",
+                  "before": "synthetic",
+                  "after": "unknown"
+                }
+              ],
+              "total_changes": 5,
+              "truncated": false,
+              "pagination": {
+                "offset": 0,
+                "limit": 20,
+                "next_offset": null
+              }
+            },
+            "capability_gaps": []
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ]
+    }
+  ]
+}

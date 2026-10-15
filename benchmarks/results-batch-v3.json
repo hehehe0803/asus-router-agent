@@ -1,0 +1,152 @@
+{
+  "schema_version": 3,
+  "corpus_sha256": "e7e39e97a31b6f19cffe61be9e50f58daea538d134ab532b160556ef971b6145",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "proxy only; not GPT-6/GPT-6.1 tokens or billing"
+  },
+  "browser_baseline": "unavailable; no browser savings claim",
+  "selected_on_training": "grouped_read",
+  "retained": "grouped_read",
+  "heldout_gate": "passed",
+  "sampling_limit": "Independent sequential reads are not simultaneous; synthetic fixed observations do not prove real-time equivalence.",
+  "tasks": [
+    {
+      "task": "radio_guest_training",
+      "split": "train",
+      "required_answer_valid": true,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 1249,
+          "bytes": 5141,
+          "response_calls": 2,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 21,
+            "stdout": 1204,
+            "stderr": 0,
+            "task_instructions": 24
+          },
+          "component_bytes": {
+            "commands": 89,
+            "stdout": 4911,
+            "stderr": 0,
+            "task_instructions": 141
+          }
+        },
+        "grouped_read": {
+          "tokens": 1137,
+          "bytes": 4747,
+          "response_calls": 1,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 17,
+            "stdout": 1096,
+            "stderr": 0,
+            "task_instructions": 24
+          },
+          "component_bytes": {
+            "commands": 72,
+            "stdout": 4534,
+            "stderr": 0,
+            "task_instructions": 141
+          }
+        }
+      },
+      "saved_tokens": 112,
+      "saved_percent": 8.97
+    },
+    {
+      "task": "traffic_wan_cpu_heldout",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 1281,
+          "bytes": 5117,
+          "response_calls": 3,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 26,
+            "stdout": 1219,
+            "stderr": 0,
+            "task_instructions": 36
+          },
+          "component_bytes": {
+            "commands": 111,
+            "stdout": 4794,
+            "stderr": 0,
+            "task_instructions": 212
+          }
+        },
+        "grouped_read": {
+          "tokens": 1058,
+          "bytes": 4328,
+          "response_calls": 1,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 18,
+            "stdout": 1004,
+            "stderr": 0,
+            "task_instructions": 36
+          },
+          "component_bytes": {
+            "commands": 77,
+            "stdout": 4039,
+            "stderr": 0,
+            "task_instructions": 212
+          }
+        }
+      },
+      "saved_tokens": 223,
+      "saved_percent": 17.41
+    }
+  ],
+  "failure_cases": [
+    {
+      "task": "second_group_timeout",
+      "equivalence_claim": false,
+      "failure_semantics_valid": true,
+      "candidates": {
+        "separate_reads": {
+          "tokens": 771,
+          "bytes": 3171,
+          "response_calls": 2,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 21,
+            "stdout": 736,
+            "stderr": 0,
+            "task_instructions": 14
+          },
+          "component_bytes": {
+            "commands": 89,
+            "stdout": 3010,
+            "stderr": 0,
+            "task_instructions": 72
+          }
+        },
+        "grouped_read": {
+          "tokens": 466,
+          "bytes": 1966,
+          "response_calls": 1,
+          "discovery_calls": 2,
+          "component_tokens": {
+            "commands": 17,
+            "stdout": 435,
+            "stderr": 0,
+            "task_instructions": 14
+          },
+          "component_bytes": {
+            "commands": 72,
+            "stdout": 1822,
+            "stderr": 0,
+            "task_instructions": 72
+          }
+        }
+      }
+    }
+  ]
+}

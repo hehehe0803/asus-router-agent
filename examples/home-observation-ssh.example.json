@@ -1,0 +1,10 @@
+{
+  "host": "home.example.invalid",
+  "user": "configure_user",
+  "keyfile": "/absolute/private/directory/existing_key",
+  "knownhostsfile": "/absolute/private/directory/existing_known_hosts",
+  "hass_env_file": "/absolute/private/directory/existing_hass_env",
+  "sensors": [
+    {"alias": "metric_1", "entity_id": "sensor.configure_installed_aggregate", "unit": "queries"}
+  ]
+}
