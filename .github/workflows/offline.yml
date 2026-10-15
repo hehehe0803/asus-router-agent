@@ -7,8 +7,6 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      TIKTOKEN_CACHE_DIR: ${{ runner.temp }}/router-agent-tiktoken
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,7 +16,10 @@ jobs:
       - name: Install locked dependencies
         run: uv sync --locked
       - name: Cache tokenizer data while network access is available
-        run: uv run python -c 'import tiktoken; tiktoken.get_encoding("o200k_base")'
+        run: |
+          export TIKTOKEN_CACHE_DIR="$RUNNER_TEMP/router-agent-tiktoken"
+          echo "TIKTOKEN_CACHE_DIR=$TIKTOKEN_CACHE_DIR" >> "$GITHUB_ENV"
+          uv run python -c 'import tiktoken; tiktoken.get_encoding("o200k_base")'
       - name: Run synthetic tests without LAN or Internet access
         run: |
           sudo unshare --net bash -c 'ip link set lo up; exec runuser -u "$1" -- env TIKTOKEN_CACHE_DIR="$2" .venv/bin/python -m pytest -q' -- "$USER" "$TIKTOKEN_CACHE_DIR"
