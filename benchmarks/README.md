@@ -28,3 +28,11 @@ With tiktoken 0.14.0 and `o200k_base`, small versus bounded-large capability
 pages total 18,996 versus 16,692 training tokens (12.13% reduction), and 12,449
 versus 12,337 held-out tokens (0.90% reduction). The held-out gate passes.
 These counts apply only to the stated synthetic transcripts and tokenizer proxy.
+
+The 2026-10-22 successor corpora retain current selected-read fields and discovery
+help costs. Superseded public corpus/report bytes remain immutable and are
+registered by exact public hashes in `history-2026-10-22.json`; historical replay
+makes no current CLI parity claim. Current public validation artifacts were
+regenerated against the sanitized public audit metadata. Metrics
+are tokenizer proxies from small synthetic fixtures, not billing, native-model
+or equivalent-browser savings.

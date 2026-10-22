@@ -29,7 +29,7 @@ def test_frozen_corpus_and_report_replay_without_credentials_or_live_state(corpu
     monkeypatch.setattr('router_agent.approval_window._read_grant', forbidden)
     assert corpus == validation.build_corpus()
     emitted = (json.dumps(validation.run(), indent=2) + '\n').encode()
-    assert emitted == (BENCHMARKS / 'results-validation-v2.json').read_bytes()
+    assert emitted == (BENCHMARKS / 'results-validation-v3.json').read_bytes()
 
 
 def test_capability_traversal_reconstructs_all_rows_and_metadata(corpus):
@@ -124,7 +124,7 @@ def test_any_heldout_regression_rejects_training_winner(monkeypatch):
 
 
 def test_four_existing_current_reports_replay_byte_identically():
-    assert set(validation.replay_current_reports()) == {'v2', 'v7-clients', 'batch-v7', 'diff-v6'}
+    assert set(validation.replay_current_reports()) == {'v3', 'v8-clients', 'batch-v8', 'diff-v7'}
 
 
 def test_original_v1_bytes_are_immutable_historical_not_current_parity():
@@ -139,11 +139,35 @@ def test_original_v1_bytes_are_immutable_historical_not_current_parity():
         validation.run(original_corpus)
 
 
-def test_v2_current_schema_binding_and_limits(corpus):
-    assert corpus['schema_version'] == 2
+def test_v3_current_schema_binding_and_limits(corpus):
+    assert corpus['schema_version'] == 3
     assert corpus['historical_v1'] == validation.HISTORICAL_V1
     report = validation.run()
-    assert report['schema_version'] == 2
+    assert report['schema_version'] == 3
     assert report['historical_v1'] == validation.HISTORICAL_V1
     assert 'Proxy only' in report['tokenizer']['claim']
     assert 'Synthetic authority never proves' in report['limits']
+
+
+@pytest.mark.parametrize('name,damage', [
+    ('discovery_train', 'missing_page'),
+    ('discovery_heldout', 'offset'),
+    ('parental_enable_inverse', 'human_input'),
+    ('unavailable_sysinfo_followup', 'error'),
+])
+def test_dated_required_evidence_validation_rejects_semantic_loss(corpus, name, damage):
+    """This gate also validates registered historical validation transcripts."""
+    case = task(corpus, name)
+    steps = copy.deepcopy(case['transcripts']['bounded_large_pages'])
+    if damage == 'missing_page':
+        steps.pop()
+    elif damage == 'offset':
+        steps[0]['command'] = steps[0]['command'].replace('--offset 0', '--offset 5')
+    elif damage == 'human_input':
+        steps[8]['human_input'] = ''
+    else:
+        payload = json.loads(steps[0]['stdout'])
+        payload['error']['code'] = 'timeout'
+        steps[0]['stdout'] = json.dumps(payload)
+    with pytest.raises(ValueError):
+        validation.validate_task(case, steps)

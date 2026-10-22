@@ -18,8 +18,8 @@ from .benchmark_contract import FETCHED_AT
 from .errors import RouterError
 
 ROOT = Path(__file__).resolve().parents[2]
-CORPUS = ROOT / 'benchmarks/corpus-validation-v2.json'
-REPORT = ROOT / 'benchmarks/results-validation-v2.json'
+CORPUS = ROOT / 'benchmarks/corpus-validation-v3.json'
+REPORT = ROOT / 'benchmarks/results-validation-v3.json'
 HISTORICAL_V1 = {
     'corpus_sha256': '6f39ef3d01c6189affdff030f9ecaf10c97bafb7b45301092dfcd924d6e5e20d',
     'report_sha256': '336c9bd2c3a6fcb580a62f95a67293e22a4a4dd3e7e3d0d0434e76a3dfa8acd1',
@@ -233,7 +233,7 @@ def build_corpus():
                       'transcripts': {candidate: copy.deepcopy(steps) for candidate in CANDIDATES},
                       'savings_eligible': not any(step['exit_code'] for step in steps)})
     helps = ['capabilities', 'traffic', 'get', 'plan', 'plan-show', 'approval-request', 'apply', 'verify', 'rollback']
-    return {'schema_version': 2, 'historical_v1': HISTORICAL_V1, 'fixture_fetched_at': FETCHED_AT, 'provenance': 'Actual CLI main, packaged offline ledgers, current selected traffic/speedtest normalizers, real operation engine/native parental backend over bounded synthetic temporary policy. Collectors and authority are synthetic, not live transport or approval validation.',
+    return {'schema_version': 3, 'historical_v1': HISTORICAL_V1, 'fixture_fetched_at': FETCHED_AT, 'provenance': 'Actual CLI main, packaged offline ledgers, current selected traffic/speedtest normalizers, real operation engine/native parental backend over bounded synthetic temporary policy. Collectors and authority are synthetic, not live transport or approval validation.',
             'split_policy': 'Fixed training and held-out selectors/traffic kinds/operations before token scoring; held-out does not select the candidate.',
             'instructions': INSTRUCTIONS, 'decoder': DECODER,
             'discovery': [capture(['--help']), *[capture([name, '--help']) for name in helps]], 'tasks': tasks}
@@ -250,18 +250,59 @@ def measure(steps, corpus, encoding):
             'discovery_calls': len(corpus['discovery'])}
 
 
-def run(path=CORPUS):
+def validate_task(task, steps):
+    """Reconstruct dated required evidence independently of token accounting."""
+    if task['kind'] == 'conversation':
+        actual = decoded(steps)
+    else:
+        field = 'capabilities' if '--native' in task['selector'] else 'pages'
+        rows, metadata, expected_offset = [], None, 0
+        for index, step in enumerate(steps):
+            if step['exit_code'] or step['stderr']:
+                raise ValueError('Capability discovery failed')
+            payload = json.loads(step['stdout'])
+            pagination = payload['data']['pagination']
+            arguments = step['command'].split()
+            offset = int(arguments[arguments.index('--offset') + 1])
+            if offset != expected_offset or pagination.get('offset', offset) != offset:
+                raise ValueError('Capability traversal offset changed')
+            current = copy.deepcopy(payload)
+            del current['data'][field]
+            del current['data']['pagination']
+            if metadata is not None and canonical(metadata) != canonical(current):
+                raise ValueError('Capability metadata changed between pages')
+            metadata = current
+            rows.extend(payload['data'][field])
+            expected_offset = pagination['next_offset']
+            if expected_offset is None:
+                if index != len(steps) - 1 or len(rows) != pagination['total']:
+                    raise ValueError('Capability traversal is incomplete')
+            elif expected_offset <= offset:
+                raise ValueError('Capability pagination did not advance')
+        if not steps or expected_offset is not None:
+            raise ValueError('Capability traversal is incomplete')
+        actual = {'metadata': metadata, field: rows}
+    if canonical(actual) != canonical(task['required_answer']):
+        raise ValueError('Required facts, prompts, human input or failure follow-ups changed')
+
+
+def run(path=CORPUS, historical_transcript=False):
     import tiktoken
+    from .benchmark_contract import validate_historical_transcript
     raw = Path(path).read_bytes()
     corpus = json.loads(raw)
-    if corpus.get('schema_version') != 2:
+    if historical_transcript:
+        validate_historical_transcript(raw)
+    elif corpus.get('schema_version') != 3:
         raise ValueError('Historical validation corpus is not current CLI replay evidence')
     # Full reconstructed answers, prompts, errors and traversal bytes must replay.
-    if canonical(corpus) != canonical(build_corpus()):
+    if not historical_transcript and canonical(corpus) != canonical(build_corpus()):
         raise ValueError('Current CLI differs from frozen validation corpus')
     encoding = tiktoken.get_encoding('o200k_base')
     rows = []
     for task in corpus['tasks']:
+        for steps in task['transcripts'].values():
+            validate_task(task, steps)
         scores = {candidate: measure(steps, corpus, encoding) for candidate, steps in task['transcripts'].items()}
         saved = scores[CANDIDATES[0]]['tokens'] - scores[CANDIDATES[1]]['tokens']
         if not task['savings_eligible'] and saved:
@@ -271,7 +312,7 @@ def run(path=CORPUS):
     totals = {split: {candidate: sum(row['candidates'][candidate]['tokens'] for row in rows if row['split'] == split) for candidate in CANDIDATES} for split in ('train', 'heldout')}
     selected = CANDIDATES[1] if totals['train'][CANDIDATES[1]] < totals['train'][CANDIDATES[0]] else CANDIDATES[0]
     passed = all(row['candidates'][selected]['tokens'] <= row['candidates'][CANDIDATES[0]]['tokens'] for row in rows if row['split'] == 'heldout')
-    return {'schema_version': 2, 'historical_v1': HISTORICAL_V1, 'corpus_sha256': hashlib.sha256(raw).hexdigest(),
+    return {'schema_version': corpus['schema_version'], 'historical_v1': HISTORICAL_V1, 'corpus_sha256': hashlib.sha256(raw).hexdigest(),
             'tokenizer': {'package': 'tiktoken', 'version': version('tiktoken'), 'encoding': 'o200k_base', 'claim': 'Proxy only; not Fable-native tokens, billing or equivalent-browser savings.'},
             'selected_on_training': selected, 'retained': selected if passed else CANDIDATES[0],
             'heldout_gate': 'passed' if passed else 'rejected_token_regression', 'totals': totals,
@@ -281,7 +322,7 @@ def run(path=CORPUS):
 
 def replay_current_reports():
     from . import benchmark, benchmark_clients, benchmark_batch, benchmark_diff
-    runners = [('v2', benchmark.run), ('v7-clients', benchmark_clients.run), ('batch-v7', benchmark_batch.run), ('diff-v6', benchmark_diff.run_actual)]
+    runners = [('v3', benchmark.run), ('v8-clients', benchmark_clients.run), ('batch-v8', benchmark_batch.run), ('diff-v7', benchmark_diff.run_actual)]
     results = {}
     for stem, runner in runners:
         report = ROOT / f'benchmarks/results-{stem}.json'

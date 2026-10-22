@@ -26,20 +26,20 @@ def _mapped_templates(name):
 def test_fixed_hook_fields_match_native_maps_and_no_private_fields():
     radio_templates = _mapped_templates("MAP_WLAN")
     guest_templates = _mapped_templates("MAP_GWLAN")
-    radio_expected = {f"wl{i}_{f}" for i in (0, 1) for f in ("radio", "channel", "bw")}
+    radio_expected = {f"wl{i}_{f}" for i in (0, 1) for f in ("radio", "channel", "bw", "closed")}
     guest_expected = {f"wl{i}.{g}_{f}" for i in (0, 1) for g in (1, 2, 3)
-                      for f in ("bss_enabled", "expire", "expire_tmp", "lanaccess", "ap_isolate")}
+                      for f in ("bss_enabled", "expire", "expire_tmp", "lanaccess", "ap_isolate", "bw_enabled", "bw_dl", "bw_ul", "bss_maxassoc", "maxassoc", "closed", "sync_node")}
     assert set(re.findall(r"nvram_get\(([^)]+)\);", WLAN_STATE_HOOK)) == radio_expected
     assert set(re.findall(r"nvram_get\(([^)]+)\);", GUEST_STATE_HOOK)) == guest_expected
-    assert {"wl{}_" + f for f in ("radio", "channel", "bw")} <= radio_templates
-    assert {"wl{}_" + f for f in ("bss_enabled", "expire", "expire_tmp", "lanaccess", "ap_isolate")} <= guest_templates
+    assert {"wl{}_" + f for f in ("radio", "channel", "bw", "closed")} <= radio_templates
+    assert {"wl{}_" + f for f in ("bss_enabled", "expire", "expire_tmp", "lanaccess", "ap_isolate", "bw_enabled", "bw_dl", "bw_ul", "bss_maxassoc", "maxassoc", "closed", "sync_node")} <= guest_templates
     assert not any(key in WLAN_STATE_HOOK + GUEST_STATE_HOOK for key in ("ssid", "psk", "key", "mac", "name", "ifname"))
 
 
 def test_radio_codes_preserve_configuration_without_claiming_channel_or_mhz():
     result = normalize_wlan_state({"wl0_radio": "1", "wl1_radio": "0", "wl0_channel": "0", "wl0_bw": "3",
                                    "wl1_channel": 149, "wl1_bw": 999, "wl0_ssid": "synthetic-private"})
-    assert result["slots"][0] == {"radio_index": 0, "enabled": True, "channel_code": 0, "bandwidth_code": 3}
+    assert result["slots"][0] == {"radio_index": 0, "enabled": True, "channel_code": 0, "bandwidth_code": 3, "hidden": None}
     assert result["slots"][1]["channel_code"] == 149 and result["slots"][1]["bandwidth_code"] == 999
     assert "synthetic-private" not in json.dumps(result)
     assert "channel_and_bandwidth_codes_are_settings_not_measured_rf_state" in result["gaps"]

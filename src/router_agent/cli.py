@@ -20,6 +20,11 @@ EXPANSION_PLAN_NAMES = {'forwarding': 'state.port_forwarding', 'openvpn-server':
 
 
 class Parser(argparse.ArgumentParser):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.add_argument("--json", action="store_true", default=argparse.SUPPRESS,
+                          help="Compatibility flag; JSON is already the default (except help/version)")
+
     def error(self, message):
         raise RouterError("invalid_arguments", "Invalid arguments; use router-agent --help.", 2)
 
@@ -42,6 +47,10 @@ def parser():
     selectors.add_argument("--group")
     selectors.add_argument("--native", nargs="?", const="all", metavar="CAPABILITY_ID", help="Offline native evidence ledger; optionally one exact capability")
     selectors.add_argument('--expansion', nargs='?', const='all', metavar='CAPABILITY_ID', help='Dated implementation and remaining gates for the sixteen expansion rows')
+    selectors.add_argument('--webui', nargs='?', const='all', metavar='OPERATION_ID', help='Offline firmware operation candidates; inventory is not WebUI parity')
+    cap.add_argument('--family', help='Exact WebUI family; requires --webui')
+    cap.add_argument('--status', choices=['unimplemented', 'partial', 'implemented'], help='WebUI implementation status; requires --webui')
+    cap.add_argument('--blocker', help='Exact WebUI blocker code; requires --webui')
     cap.add_argument("--limit", type=int, default=5)
     cap.add_argument("--offset", type=int, default=0)
     subs.add_parser("status", help="Read identity, WAN, CPU and RAM", description="Read bounded native router status; source freshness may be unknown.")
@@ -308,6 +317,13 @@ def execute(args):
     if args.command == "capabilities":
         if not 1 <= args.limit <= 20 or args.offset < 0:
             raise RouterError("invalid_arguments", "Capability limit must be 1..20 and offset nonnegative.", 2)
+        if args.webui is None and any(value is not None for value in (args.family, args.status, args.blocker)):
+            raise RouterError('invalid_arguments', 'WebUI filters require --webui.', 2)
+        if args.webui is not None:
+            from .webui_operations import load_webui_operations
+            return load_webui_operations().page(None if args.webui == 'all' else args.webui,
+                                               family=args.family, status=args.status, blocker=args.blocker,
+                                               offset=args.offset, limit=args.limit)
         if args.native is not None:
             from .native_audit import load_native_audit
             return load_native_audit().page(None if args.native == "all" else args.native, offset=args.offset, limit=args.limit)

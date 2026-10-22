@@ -7,7 +7,7 @@ import tiktoken
 
 from router_agent.benchmark_batch import answer, capture, execute_task, freeze, measure, run, validate, validate_failure
 
-CORPUS = Path(__file__).resolve().parents[1] / 'benchmarks/corpus-batch-v7.json'
+CORPUS = Path(__file__).resolve().parents[1] / 'benchmarks/corpus-batch-v8.json'
 
 
 def test_actual_grouped_cli_preserves_all_selected_facts_sources_gaps_and_unknowns():
@@ -80,7 +80,7 @@ def test_help_commands_outputs_errors_and_followups_counted_separately():
 def test_corpus_and_current_cli_replay_are_reproducible():
     result = run(CORPUS)
     assert result == run(CORPUS)
-    assert result == json.loads(CORPUS.with_name('results-batch-v7.json').read_text())
+    assert result == json.loads(CORPUS.with_name('results-batch-v8.json').read_text())
     assert result['selected_on_training'] == 'grouped_read'
     assert result['heldout_gate'] == 'passed'
     assert all(task['required_answer_valid'] for task in result['tasks'])
@@ -115,7 +115,7 @@ def test_current_normalizers_preserve_independent_synthetic_wire_facts():
     assert data['cpu']['cores'][1]['total_ticks'] == 900
 
 @pytest.mark.parametrize("archive_version",[1,2,3,4])
-def test_historical_help_is_explicit_and_does_not_waive_response_drift(tmp_path,archive_version):
+def test_registered_historical_transcripts_preserve_dated_facts_without_current_parity(tmp_path,archive_version):
     archived=CORPUS.with_name(f'corpus-batch-v{archive_version}.json')
     with pytest.raises(ValueError,match='differs from frozen'):
         run(archived)

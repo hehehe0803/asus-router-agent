@@ -63,7 +63,7 @@ def test_backup_block_inverse_followup_counted_without_claiming_restoration():
 
 def test_frozen_expansion_corpus_and_report_replay():
     result=run(CORPUS)
-    assert result==json.loads(CORPUS.with_name('results-expansion-v1.json').read_text())
+    assert result==json.loads(CORPUS.with_name('results-expansion-v2.json').read_text())
     assert result['selected_on_training']=='grouped_read'
     assert result['heldout_gate']=='passed'
     assert result['errors_counted_but_excluded_from_savings'] is True

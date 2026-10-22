@@ -88,7 +88,7 @@ def validate_answer(task, candidate, transcript):
         raise ValueError("Filtered match count is inconsistent")
 
 
-def _freeze(schema_version=7):
+def _freeze(schema_version=8):
     # Cases and required answer semantics are fixed before scoring any candidate.
     tasks = [{"id": "target_client_training", "split": "train", "count": 20, "target_index": 15},
              {"id": "target_client_heldout", "split": "heldout", "count": 35, "target_index": 31}]
@@ -106,7 +106,7 @@ def _freeze(schema_version=7):
             "discovery": discovery, "tasks": tasks}
 
 
-def freeze(schema_version=7, historical_schema=False):
+def freeze(schema_version=8, historical_schema=False):
     with archive_contract(historical_schema):
         return _freeze(schema_version)
 
@@ -127,7 +127,7 @@ def run(path, encoding_name="o200k_base", historical_help=False, historical_sche
     corpus = json.loads(raw)
     # Regenerate every transcript from actual current CLI behavior. Drift is an error,
     # rather than silently trusting archived hand-authored response counts.
-    if corpus.get("schema_version") not in {2, 3, 4, 5, 6, 7}:
+    if corpus.get("schema_version") not in {2, 3, 4, 5, 6, 7, 8}:
         raise ValueError("Unsupported client benchmark corpus")
     if historical_schema:
         validate_registered(raw)
@@ -175,13 +175,13 @@ def main(argv=None):
     if args.freeze:
         if args.historical_help:
             parser.error("--freeze cannot be combined with historical help")
-        Path(args.corpus or "benchmarks/corpus-v7-clients.json").write_text(json.dumps(freeze(schema_version=7), indent=2) + "\n")
+        Path(args.corpus or "benchmarks/corpus-v8-clients.json").write_text(json.dumps(freeze(schema_version=8), indent=2) + "\n")
     else:
         if args.historical_schema:
             print(archival_notice(), file=sys.stderr)
         elif args.historical_help:
             print("Historical replay: archived discovery help; response transcripts still verified against current CLI. Not current discovery-cost evidence.", file=sys.stderr)
-        print(json.dumps(run(args.corpus or "benchmarks/corpus-v7-clients.json", historical_help=args.historical_help, historical_schema=args.historical_schema), indent=2))
+        print(json.dumps(run(args.corpus or "benchmarks/corpus-v8-clients.json", historical_help=args.historical_help, historical_schema=args.historical_schema), indent=2))
 
 
 if __name__ == "__main__":

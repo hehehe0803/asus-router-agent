@@ -9,7 +9,7 @@ Use the installed `router-agent` command or a reviewed checkout. Start with
 `router-agent --help` and offline `router-agent capabilities`. Do not install a
 runtime fork, patch a vendor package or add a browser/MCP adapter to bypass a gap.
 
-Data and error responses are JSON by default; no `--json` flag exists. Help and
+Data and error responses are JSON by default; `--json` is an accepted compatibility flag before or after subcommands. Help and
 version use text. Follow bounded pagination and retain freshness, applicability
 and verification gaps. Inventory is source evidence, not a live health verdict.
 

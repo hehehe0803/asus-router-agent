@@ -1,0 +1,2660 @@
+{
+  "schema_version": 3,
+  "provenance": "Synthetic formatter study with full fetched_at metadata; not an actual collector or CLI task benchmark.",
+  "tasks": [
+    {
+      "id": "status",
+      "split": "train",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent status",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "wan": {
+                "connected": true,
+                "link_code": 2,
+                "connection_type": "dhcp",
+                "ip_family": "ipv4"
+              },
+              "cpu": {
+                "cores": [
+                  {
+                    "core": 0,
+                    "total_ticks": 10000,
+                    "used_ticks": 1000
+                  },
+                  {
+                    "core": 1,
+                    "total_ticks": 10000,
+                    "used_ticks": 1100
+                  },
+                  {
+                    "core": 2,
+                    "total_ticks": 10000,
+                    "used_ticks": 1200
+                  },
+                  {
+                    "core": 3,
+                    "total_ticks": 10000,
+                    "used_ticks": 1300
+                  }
+                ]
+              },
+              "ram": {
+                "total_kib": 524288,
+                "used_kib": 262144,
+                "free_kib": 262144
+              }
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "wan": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "cpu": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "ram": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [],
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent status"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/wan/connected",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/wan/link_code",
+          "value": 2
+        },
+        {
+          "path": "/0/stdout/data/wan/connection_type",
+          "value": "dhcp"
+        },
+        {
+          "path": "/0/stdout/data/wan/ip_family",
+          "value": "ipv4"
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/0/core",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/0/total_ticks",
+          "value": 10000
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/0/used_ticks",
+          "value": 1000
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/1/core",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/1/total_ticks",
+          "value": 10000
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/1/used_ticks",
+          "value": 1100
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/2/core",
+          "value": 2
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/2/total_ticks",
+          "value": 10000
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/2/used_ticks",
+          "value": 1200
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/3/core",
+          "value": 3
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/3/total_ticks",
+          "value": 10000
+        },
+        {
+          "path": "/0/stdout/data/cpu/cores/3/used_ticks",
+          "value": 1300
+        },
+        {
+          "path": "/0/stdout/data/ram/total_kib",
+          "value": 524288
+        },
+        {
+          "path": "/0/stdout/data/ram/used_kib",
+          "value": 262144
+        },
+        {
+          "path": "/0/stdout/data/ram/free_kib",
+          "value": 262144
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/wan/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/wan/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/wan/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/wan/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/cpu/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/cpu/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/cpu/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/cpu/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/ram/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/ram/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/ram/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/ram/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "specific_client",
+      "split": "train",
+      "note": "Two pages counted; requested alias client-000000000000000f is on page two.",
+      "steps": [
+        {
+          "command": "router-agent clients --limit 10",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "clients": [
+                {
+                  "alias": "client-0000000000000000",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000001",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -41
+                },
+                {
+                  "alias": "client-0000000000000002",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000003",
+                  "online": false,
+                  "connection": "wireless",
+                  "signal_dbm": -43
+                },
+                {
+                  "alias": "client-0000000000000004",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000005",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -45
+                },
+                {
+                  "alias": "client-0000000000000006",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000007",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -47
+                },
+                {
+                  "alias": "client-0000000000000008",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000009",
+                  "online": false,
+                  "connection": "wireless",
+                  "signal_dbm": -49
+                }
+              ]
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "clients": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "router_cached",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [],
+            "pagination": {
+              "offset": 0,
+              "limit": 10,
+              "total": 20,
+              "next_offset": 10
+            },
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        },
+        {
+          "command": "router-agent clients --offset 10 --limit 10",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "clients": [
+                {
+                  "alias": "client-000000000000000a",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-000000000000000b",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -51
+                },
+                {
+                  "alias": "client-000000000000000c",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-000000000000000d",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -53
+                },
+                {
+                  "alias": "client-000000000000000e",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-000000000000000f",
+                  "online": false,
+                  "connection": "wireless",
+                  "signal_dbm": -55
+                },
+                {
+                  "alias": "client-0000000000000010",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000011",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -57
+                },
+                {
+                  "alias": "client-0000000000000012",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000013",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -59
+                }
+              ]
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "clients": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "router_cached",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [],
+            "pagination": {
+              "offset": 10,
+              "limit": 10,
+              "total": 20,
+              "next_offset": null
+            },
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent clients --limit 10"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/alias",
+          "value": "client-0000000000000000"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/0/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/1/alias",
+          "value": "client-0000000000000001"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/1/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/signal_dbm",
+          "value": -41
+        },
+        {
+          "path": "/0/stdout/data/clients/2/alias",
+          "value": "client-0000000000000002"
+        },
+        {
+          "path": "/0/stdout/data/clients/2/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/2/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/2/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/3/alias",
+          "value": "client-0000000000000003"
+        },
+        {
+          "path": "/0/stdout/data/clients/3/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/3/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/3/signal_dbm",
+          "value": -43
+        },
+        {
+          "path": "/0/stdout/data/clients/4/alias",
+          "value": "client-0000000000000004"
+        },
+        {
+          "path": "/0/stdout/data/clients/4/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/4/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/4/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/5/alias",
+          "value": "client-0000000000000005"
+        },
+        {
+          "path": "/0/stdout/data/clients/5/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/5/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/5/signal_dbm",
+          "value": -45
+        },
+        {
+          "path": "/0/stdout/data/clients/6/alias",
+          "value": "client-0000000000000006"
+        },
+        {
+          "path": "/0/stdout/data/clients/6/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/6/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/6/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/7/alias",
+          "value": "client-0000000000000007"
+        },
+        {
+          "path": "/0/stdout/data/clients/7/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/7/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/7/signal_dbm",
+          "value": -47
+        },
+        {
+          "path": "/0/stdout/data/clients/8/alias",
+          "value": "client-0000000000000008"
+        },
+        {
+          "path": "/0/stdout/data/clients/8/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/8/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/8/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/9/alias",
+          "value": "client-0000000000000009"
+        },
+        {
+          "path": "/0/stdout/data/clients/9/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/9/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/9/signal_dbm",
+          "value": -49
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/clients/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/clients/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/clients/reason",
+          "value": "router_cached"
+        },
+        {
+          "path": "/0/stdout/sources/clients/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/pagination/offset",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/pagination/limit",
+          "value": 10
+        },
+        {
+          "path": "/0/stdout/pagination/total",
+          "value": 20
+        },
+        {
+          "path": "/0/stdout/pagination/next_offset",
+          "value": 10
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        },
+        {
+          "path": "/1/command",
+          "value": "router-agent clients --offset 10 --limit 10"
+        },
+        {
+          "path": "/1/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/1/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/1/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/1/stdout/data/clients/0/alias",
+          "value": "client-000000000000000a"
+        },
+        {
+          "path": "/1/stdout/data/clients/0/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/0/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/1/stdout/data/clients/0/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/clients/1/alias",
+          "value": "client-000000000000000b"
+        },
+        {
+          "path": "/1/stdout/data/clients/1/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/1/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/1/stdout/data/clients/1/signal_dbm",
+          "value": -51
+        },
+        {
+          "path": "/1/stdout/data/clients/2/alias",
+          "value": "client-000000000000000c"
+        },
+        {
+          "path": "/1/stdout/data/clients/2/online",
+          "value": false
+        },
+        {
+          "path": "/1/stdout/data/clients/2/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/1/stdout/data/clients/2/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/clients/3/alias",
+          "value": "client-000000000000000d"
+        },
+        {
+          "path": "/1/stdout/data/clients/3/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/3/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/1/stdout/data/clients/3/signal_dbm",
+          "value": -53
+        },
+        {
+          "path": "/1/stdout/data/clients/4/alias",
+          "value": "client-000000000000000e"
+        },
+        {
+          "path": "/1/stdout/data/clients/4/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/4/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/1/stdout/data/clients/4/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/clients/5/alias",
+          "value": "client-000000000000000f"
+        },
+        {
+          "path": "/1/stdout/data/clients/5/online",
+          "value": false
+        },
+        {
+          "path": "/1/stdout/data/clients/5/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/1/stdout/data/clients/5/signal_dbm",
+          "value": -55
+        },
+        {
+          "path": "/1/stdout/data/clients/6/alias",
+          "value": "client-0000000000000010"
+        },
+        {
+          "path": "/1/stdout/data/clients/6/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/6/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/1/stdout/data/clients/6/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/clients/7/alias",
+          "value": "client-0000000000000011"
+        },
+        {
+          "path": "/1/stdout/data/clients/7/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/7/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/1/stdout/data/clients/7/signal_dbm",
+          "value": -57
+        },
+        {
+          "path": "/1/stdout/data/clients/8/alias",
+          "value": "client-0000000000000012"
+        },
+        {
+          "path": "/1/stdout/data/clients/8/online",
+          "value": false
+        },
+        {
+          "path": "/1/stdout/data/clients/8/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/1/stdout/data/clients/8/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/data/clients/9/alias",
+          "value": "client-0000000000000013"
+        },
+        {
+          "path": "/1/stdout/data/clients/9/online",
+          "value": true
+        },
+        {
+          "path": "/1/stdout/data/clients/9/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/1/stdout/data/clients/9/signal_dbm",
+          "value": -59
+        },
+        {
+          "path": "/1/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/1/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/1/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/1/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/1/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/1/stdout/sources/clients/observed_at",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/sources/clients/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/1/stdout/sources/clients/reason",
+          "value": "router_cached"
+        },
+        {
+          "path": "/1/stdout/sources/clients/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/1/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/1/stdout/pagination/offset",
+          "value": 10
+        },
+        {
+          "path": "/1/stdout/pagination/limit",
+          "value": 10
+        },
+        {
+          "path": "/1/stdout/pagination/total",
+          "value": 20
+        },
+        {
+          "path": "/1/stdout/pagination/next_offset",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/1/stderr",
+          "value": ""
+        },
+        {
+          "path": "/1/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "ten_clients",
+      "split": "train",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent clients --limit 10",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "clients": [
+                {
+                  "alias": "client-0000000000000000",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000001",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -41
+                },
+                {
+                  "alias": "client-0000000000000002",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000003",
+                  "online": false,
+                  "connection": "wireless",
+                  "signal_dbm": -43
+                },
+                {
+                  "alias": "client-0000000000000004",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000005",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -45
+                },
+                {
+                  "alias": "client-0000000000000006",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000007",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -47
+                },
+                {
+                  "alias": "client-0000000000000008",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000009",
+                  "online": false,
+                  "connection": "wireless",
+                  "signal_dbm": -49
+                }
+              ]
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "clients": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "router_cached",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [],
+            "pagination": {
+              "offset": 0,
+              "limit": 10,
+              "total": 10,
+              "next_offset": null
+            },
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent clients --limit 10"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/alias",
+          "value": "client-0000000000000000"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/0/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/1/alias",
+          "value": "client-0000000000000001"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/1/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/signal_dbm",
+          "value": -41
+        },
+        {
+          "path": "/0/stdout/data/clients/2/alias",
+          "value": "client-0000000000000002"
+        },
+        {
+          "path": "/0/stdout/data/clients/2/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/2/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/2/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/3/alias",
+          "value": "client-0000000000000003"
+        },
+        {
+          "path": "/0/stdout/data/clients/3/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/3/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/3/signal_dbm",
+          "value": -43
+        },
+        {
+          "path": "/0/stdout/data/clients/4/alias",
+          "value": "client-0000000000000004"
+        },
+        {
+          "path": "/0/stdout/data/clients/4/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/4/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/4/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/5/alias",
+          "value": "client-0000000000000005"
+        },
+        {
+          "path": "/0/stdout/data/clients/5/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/5/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/5/signal_dbm",
+          "value": -45
+        },
+        {
+          "path": "/0/stdout/data/clients/6/alias",
+          "value": "client-0000000000000006"
+        },
+        {
+          "path": "/0/stdout/data/clients/6/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/6/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/6/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/7/alias",
+          "value": "client-0000000000000007"
+        },
+        {
+          "path": "/0/stdout/data/clients/7/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/7/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/7/signal_dbm",
+          "value": -47
+        },
+        {
+          "path": "/0/stdout/data/clients/8/alias",
+          "value": "client-0000000000000008"
+        },
+        {
+          "path": "/0/stdout/data/clients/8/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/8/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/8/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/9/alias",
+          "value": "client-0000000000000009"
+        },
+        {
+          "path": "/0/stdout/data/clients/9/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/9/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/9/signal_dbm",
+          "value": -49
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/clients/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/clients/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/clients/reason",
+          "value": "router_cached"
+        },
+        {
+          "path": "/0/stdout/sources/clients/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/pagination/offset",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/pagination/limit",
+          "value": 10
+        },
+        {
+          "path": "/0/stdout/pagination/total",
+          "value": 10
+        },
+        {
+          "path": "/0/stdout/pagination/next_offset",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "wan_diagnosis",
+      "split": "train",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent get wan",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "wan": {
+                "connected": false,
+                "link_code": 0,
+                "connection_type": "dhcp",
+                "ip_family": "unknown"
+              }
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "wan": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [],
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent get wan"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/wan/connected",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/wan/link_code",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/data/wan/connection_type",
+          "value": "dhcp"
+        },
+        {
+          "path": "/0/stdout/data/wan/ip_family",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/wan/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/wan/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/wan/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/wan/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "dhcp_dns",
+      "split": "train",
+      "note": "Actual offline CLI argument-error/catalog outputs. Inventory is not a DHCP DNS read or executable write contract.",
+      "steps": [
+        {
+          "command": "router-agent get config",
+          "stdout": {
+            "error": {
+              "code": "invalid_arguments",
+              "message": "Invalid arguments; use router-agent --help."
+            }
+          },
+          "stderr": "",
+          "exit_code": 2
+        },
+        {
+          "command": "router-agent capabilities --group LAN --limit 1",
+          "stdout": {
+            "schema_version": 1,
+            "source": "offline_catalog",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "catalog_hash": "1858be827bbb7bbaa19b12109dd6a9f522b7462dc82388fb37a9591481f32c98",
+            "data": {
+              "pages": [
+                {
+                  "page": "IP",
+                  "status": "inventory_only",
+                  "actions": [
+                    {
+                      "name": "inspect",
+                      "status": "inventory_only"
+                    },
+                    {
+                      "name": "page-specific actions unsurveyed",
+                      "status": "inventory_only"
+                    }
+                  ],
+                  "gaps": [
+                    "Exact action inventory and conditional forms remain unsurveyed",
+                    "No verified read/write contract for this page"
+                  ]
+                }
+              ],
+              "pagination": {
+                "total": 5,
+                "next_offset": 1
+              }
+            },
+            "capability_gaps": [
+              "Live firmware support and WebUI parity remain unverified."
+            ],
+            "fetched_at": null
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent get config"
+        },
+        {
+          "path": "/0/stdout/error/code",
+          "value": "invalid_arguments"
+        },
+        {
+          "path": "/0/stdout/error/message",
+          "value": "Invalid arguments; use router-agent --help."
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 2
+        },
+        {
+          "path": "/1/command",
+          "value": "router-agent capabilities --group LAN --limit 1"
+        },
+        {
+          "path": "/1/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/1/stdout/source",
+          "value": "offline_catalog"
+        },
+        {
+          "path": "/1/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/1/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/1/stdout/catalog_hash",
+          "value": "1858be827bbb7bbaa19b12109dd6a9f522b7462dc82388fb37a9591481f32c98"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/page",
+          "value": "IP"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/status",
+          "value": "inventory_only"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/actions/0/name",
+          "value": "inspect"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/actions/0/status",
+          "value": "inventory_only"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/actions/1/name",
+          "value": "page-specific actions unsurveyed"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/actions/1/status",
+          "value": "inventory_only"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/gaps/0",
+          "value": "Exact action inventory and conditional forms remain unsurveyed"
+        },
+        {
+          "path": "/1/stdout/data/pages/0/gaps/1",
+          "value": "No verified read/write contract for this page"
+        },
+        {
+          "path": "/1/stdout/data/pagination/total",
+          "value": 5
+        },
+        {
+          "path": "/1/stdout/data/pagination/next_offset",
+          "value": 1
+        },
+        {
+          "path": "/1/stdout/capability_gaps/0",
+          "value": "Live firmware support and WebUI parity remain unverified."
+        },
+        {
+          "path": "/1/stdout/fetched_at",
+          "value": null
+        },
+        {
+          "path": "/1/stderr",
+          "value": ""
+        },
+        {
+          "path": "/1/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "vpn_state",
+      "split": "train",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent get vpn",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "vpn": null
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "vpn": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [
+              {
+                "group": "vpn",
+                "reason": "unsupported_native_state_only_contract"
+              }
+            ],
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent get vpn"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/vpn",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/vpn/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/vpn/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/vpn/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/vpn/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps/0/group",
+          "value": "vpn"
+        },
+        {
+          "path": "/0/stdout/capability_gaps/0/reason",
+          "value": "unsupported_native_state_only_contract"
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "change_preview",
+      "split": "train",
+      "note": "Actual offline CLI refusal: public plan/apply commands do not exist.",
+      "steps": [
+        {
+          "command": "router-agent plan synthetic.unsupported",
+          "stdout": {
+            "error": {
+              "code": "invalid_arguments",
+              "message": "Invalid arguments; use router-agent --help."
+            }
+          },
+          "stderr": "",
+          "exit_code": 2
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent plan synthetic.unsupported"
+        },
+        {
+          "path": "/0/stdout/error/code",
+          "value": "invalid_arguments"
+        },
+        {
+          "path": "/0/stdout/error/message",
+          "value": "Invalid arguments; use router-agent --help."
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "verification",
+      "split": "train",
+      "note": "Actual offline CLI refusal: public verify command does not exist. No successful verification claimed.",
+      "steps": [
+        {
+          "command": "router-agent verify synthetic-plan",
+          "stdout": {
+            "error": {
+              "code": "invalid_arguments",
+              "message": "Invalid arguments; use router-agent --help."
+            }
+          },
+          "stderr": "",
+          "exit_code": 2
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent verify synthetic-plan"
+        },
+        {
+          "path": "/0/stdout/error/code",
+          "value": "invalid_arguments"
+        },
+        {
+          "path": "/0/stdout/error/message",
+          "value": "Invalid arguments; use router-agent --help."
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "snapshot_diff",
+      "split": "train",
+      "note": "Actual offline SnapshotStore synthetic diff output, with stable synthetic command IDs for counting; not a live snapshot.",
+      "steps": [
+        {
+          "command": "router-agent diff --since 00000000000000000000000000000000 --to 11111111111111111111111111111111",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": true,
+              "changes": [
+                {
+                  "path": "/wan/connected",
+                  "before": true,
+                  "after": false
+                }
+              ],
+              "total_changes": 1,
+              "truncated": false
+            },
+            "capability_gaps": [],
+            "fetched_at": null
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent diff --since 00000000000000000000000000000000 --to 11111111111111111111111111111111"
+        },
+        {
+          "path": "/0/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/0/stdout/data/changed",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/0/path",
+          "value": "/wan/connected"
+        },
+        {
+          "path": "/0/stdout/data/changes/0/before",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/changes/0/after",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/total_changes",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/data/truncated",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": null
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "unchanged_diff",
+      "split": "train",
+      "note": "Actual offline SnapshotStore synthetic diff output, with stable synthetic command IDs for counting; not a live snapshot.",
+      "steps": [
+        {
+          "command": "router-agent diff --since 00000000000000000000000000000000 --to 11111111111111111111111111111111",
+          "stdout": {
+            "schema_version": 1,
+            "source": "local",
+            "observed_at": null,
+            "freshness": "not_collected",
+            "data": {
+              "changed": false,
+              "changes": [],
+              "total_changes": 0,
+              "truncated": false
+            },
+            "capability_gaps": [],
+            "fetched_at": null
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent diff --since 00000000000000000000000000000000 --to 11111111111111111111111111111111"
+        },
+        {
+          "path": "/0/stdout/schema_version",
+          "value": 1
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "local"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "not_collected"
+        },
+        {
+          "path": "/0/stdout/data/changed",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/changes",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/data/total_changes",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/data/truncated",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": null
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "auth_error",
+      "split": "train",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent status",
+          "stdout": {
+            "error": {
+              "code": "auth_failed",
+              "message": "The router did not authenticate the session."
+            }
+          },
+          "stderr": "",
+          "exit_code": 1
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent status"
+        },
+        {
+          "path": "/0/stdout/error/code",
+          "value": "auth_failed"
+        },
+        {
+          "path": "/0/stdout/error/message",
+          "value": "The router did not authenticate the session."
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "heldout_clients_with_warning",
+      "split": "heldout",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent clients --limit 10",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "clients": [
+                {
+                  "alias": "client-000000000000001e",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-000000000000001f",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -71
+                },
+                {
+                  "alias": "client-0000000000000020",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000021",
+                  "online": false,
+                  "connection": "wireless",
+                  "signal_dbm": -73
+                },
+                {
+                  "alias": "client-0000000000000022",
+                  "online": true,
+                  "connection": "wired",
+                  "signal_dbm": null
+                },
+                {
+                  "alias": "client-0000000000000023",
+                  "online": true,
+                  "connection": "wireless",
+                  "signal_dbm": -75
+                },
+                {
+                  "alias": "client-0000000000000024",
+                  "online": false,
+                  "connection": "wired",
+                  "signal_dbm": null
+                }
+              ]
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "clients": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "router_cached",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [],
+            "warnings": [
+              "logout_unconfirmed"
+            ],
+            "pagination": {
+              "offset": 0,
+              "limit": 10,
+              "total": 7,
+              "next_offset": null
+            },
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent clients --limit 10"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/alias",
+          "value": "client-000000000000001e"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/0/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/1/alias",
+          "value": "client-000000000000001f"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/1/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/signal_dbm",
+          "value": -71
+        },
+        {
+          "path": "/0/stdout/data/clients/2/alias",
+          "value": "client-0000000000000020"
+        },
+        {
+          "path": "/0/stdout/data/clients/2/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/2/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/2/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/3/alias",
+          "value": "client-0000000000000021"
+        },
+        {
+          "path": "/0/stdout/data/clients/3/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/3/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/3/signal_dbm",
+          "value": -73
+        },
+        {
+          "path": "/0/stdout/data/clients/4/alias",
+          "value": "client-0000000000000022"
+        },
+        {
+          "path": "/0/stdout/data/clients/4/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/4/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/4/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/5/alias",
+          "value": "client-0000000000000023"
+        },
+        {
+          "path": "/0/stdout/data/clients/5/online",
+          "value": true
+        },
+        {
+          "path": "/0/stdout/data/clients/5/connection",
+          "value": "wireless"
+        },
+        {
+          "path": "/0/stdout/data/clients/5/signal_dbm",
+          "value": -75
+        },
+        {
+          "path": "/0/stdout/data/clients/6/alias",
+          "value": "client-0000000000000024"
+        },
+        {
+          "path": "/0/stdout/data/clients/6/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/6/connection",
+          "value": "wired"
+        },
+        {
+          "path": "/0/stdout/data/clients/6/signal_dbm",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/clients/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/clients/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/clients/reason",
+          "value": "router_cached"
+        },
+        {
+          "path": "/0/stdout/sources/clients/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps",
+          "value": []
+        },
+        {
+          "path": "/0/stdout/warnings/0",
+          "value": "logout_unconfirmed"
+        },
+        {
+          "path": "/0/stdout/pagination/offset",
+          "value": 0
+        },
+        {
+          "path": "/0/stdout/pagination/limit",
+          "value": 10
+        },
+        {
+          "path": "/0/stdout/pagination/total",
+          "value": 7
+        },
+        {
+          "path": "/0/stdout/pagination/next_offset",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "heldout_unknown_vpn",
+      "split": "heldout",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent get vpn",
+          "stdout": {
+            "data": {
+              "identity": {
+                "device_fingerprint": "synthetic-device-0001",
+                "model": "RT-AX86U",
+                "firmware": "synthetic-3.0.0.4"
+              },
+              "vpn": null
+            },
+            "source": "native",
+            "observed_at": null,
+            "freshness": "unknown",
+            "sources": {
+              "identity": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              },
+              "vpn": {
+                "observed_at": null,
+                "freshness": "unknown",
+                "reason": "source_observation_time_unavailable",
+                "fetched_at": "2026-10-13T00:00:00+00:00"
+              }
+            },
+            "capability_gaps": [
+              {
+                "group": "vpn",
+                "reason": "unsupported_native_state_only_contract"
+              }
+            ],
+            "warnings": [
+              "logout_unconfirmed"
+            ],
+            "fetched_at": "2026-10-13T00:00:00+00:00"
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent get vpn"
+        },
+        {
+          "path": "/0/stdout/data/identity/device_fingerprint",
+          "value": "synthetic-device-0001"
+        },
+        {
+          "path": "/0/stdout/data/identity/model",
+          "value": "RT-AX86U"
+        },
+        {
+          "path": "/0/stdout/data/identity/firmware",
+          "value": "synthetic-3.0.0.4"
+        },
+        {
+          "path": "/0/stdout/data/vpn",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/source",
+          "value": "native"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/identity/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/identity/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/identity/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/sources/vpn/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/sources/vpn/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/sources/vpn/reason",
+          "value": "source_observation_time_unavailable"
+        },
+        {
+          "path": "/0/stdout/sources/vpn/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stdout/capability_gaps/0/group",
+          "value": "vpn"
+        },
+        {
+          "path": "/0/stdout/capability_gaps/0/reason",
+          "value": "unsupported_native_state_only_contract"
+        },
+        {
+          "path": "/0/stdout/warnings/0",
+          "value": "logout_unconfirmed"
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": "2026-10-13T00:00:00+00:00"
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "heldout_timeout",
+      "split": "heldout",
+      "note": "",
+      "steps": [
+        {
+          "command": "router-agent status",
+          "stdout": {
+            "error": {
+              "code": "timeout",
+              "message": "Native command deadline exceeded."
+            }
+          },
+          "stderr": "Synthetic operator notice: do not retry writes.\n",
+          "exit_code": 1
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "router-agent status"
+        },
+        {
+          "path": "/0/stdout/error/code",
+          "value": "timeout"
+        },
+        {
+          "path": "/0/stdout/error/message",
+          "value": "Native command deadline exceeded."
+        },
+        {
+          "path": "/0/stderr",
+          "value": "Synthetic operator notice: do not retry writes.\n"
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "heldout_nested_rows",
+      "split": "heldout",
+      "note": "",
+      "steps": [
+        {
+          "command": "offline-synthetic fixture",
+          "stdout": {
+            "data": {
+              "clients": [
+                {
+                  "alias": "client-heldout-a",
+                  "online": null,
+                  "details": {
+                    "$table": "literal"
+                  }
+                },
+                {
+                  "alias": "client-heldout-b",
+                  "online": false,
+                  "details": {
+                    "$object": [
+                      "literal"
+                    ]
+                  }
+                }
+              ]
+            },
+            "observed_at": null,
+            "freshness": "unknown",
+            "capability_gaps": [
+              "Synthetic collision and unknown-state fixture."
+            ],
+            "fetched_at": null
+          },
+          "stderr": "",
+          "exit_code": 0
+        }
+      ],
+      "required_facts": [
+        {
+          "path": "/0/command",
+          "value": "offline-synthetic fixture"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/alias",
+          "value": "client-heldout-a"
+        },
+        {
+          "path": "/0/stdout/data/clients/0/online",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/data/clients/0/details/$table",
+          "value": "literal"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/alias",
+          "value": "client-heldout-b"
+        },
+        {
+          "path": "/0/stdout/data/clients/1/online",
+          "value": false
+        },
+        {
+          "path": "/0/stdout/data/clients/1/details/$object/0",
+          "value": "literal"
+        },
+        {
+          "path": "/0/stdout/observed_at",
+          "value": null
+        },
+        {
+          "path": "/0/stdout/freshness",
+          "value": "unknown"
+        },
+        {
+          "path": "/0/stdout/capability_gaps/0",
+          "value": "Synthetic collision and unknown-state fixture."
+        },
+        {
+          "path": "/0/stdout/fetched_at",
+          "value": null
+        },
+        {
+          "path": "/0/stderr",
+          "value": ""
+        },
+        {
+          "path": "/0/exit_code",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

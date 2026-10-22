@@ -7,12 +7,12 @@ import pytest
 
 from router_agent.benchmark_clients import capture, freeze, run, validate_answer
 
-CORPUS = Path(__file__).resolve().parents[1] / "benchmarks/corpus-v7-clients.json"
+CORPUS = Path(__file__).resolve().parents[1] / "benchmarks/corpus-v8-clients.json"
 
 
 def test_current_transcripts_match_actual_cli_and_heldout_passes(tmp_path):
     current = tmp_path / "current.json"
-    current.write_text(json.dumps(freeze(schema_version=7)))
+    current.write_text(json.dumps(freeze(schema_version=8)))
     result = run(current)
     assert result["selected_on_training"] == "exact_alias"
     assert result["heldout_gate"] == "passed"

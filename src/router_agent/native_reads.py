@@ -20,10 +20,14 @@ LED_STATE_HOOK = "nvram_get(led_val);"
 # are upstream native contracts; this is not a general four-radio scan.
 _RADIO_INDICES = (0, 1)
 _GUEST_IDS = tuple(range(1, 4))
-# Source MAP_WLAN lines 114/115/127; MAP_GWLAN lines 54/59/66/67/79.
-_WLAN_DIAGNOSTICS = {"channel": "channel_code", "bw": "bandwidth_code"}
+# Selected settings from MAP_WLAN lines 112-139 / MAP_GWLAN lines 52-109.
+_WLAN_DIAGNOSTICS = {"channel": "channel_code", "bw": "bandwidth_code", "closed": "hidden"}
 _GUEST_DIAGNOSTICS = {"expire": "expire_seconds", "expire_tmp": "expire_remaining_seconds",
-                      "lanaccess": "lan_access_enabled", "ap_isolate": "ap_isolation_code"}
+                      "lanaccess": "lan_access_enabled", "ap_isolate": "ap_isolation_code",
+                      "bw_enabled": "bandwidth_limit_enabled", "bw_dl": "download_limit_native",
+                      "bw_ul": "upload_limit_native", "bss_maxassoc": "bss_maxassoc_native",
+                      "maxassoc": "maxassoc_native", "closed": "hidden", "sync_node": "sync_nodes_enabled"}
+_BOOLEAN_SETTINGS = frozenset({"lanaccess", "closed", "bw_enabled", "sync_node"})
 WLAN_STATE_HOOK = "".join(f"nvram_get(wl{i}_{field});" for i in _RADIO_INDICES
                           for field in ("radio", *_WLAN_DIAGNOSTICS))
 GUEST_STATE_HOOK = "".join(f"nvram_get(wl{i}.{g}_{field});" for i in _RADIO_INDICES
@@ -134,8 +138,8 @@ def _diagnostic_number(value: Any) -> int | None:
     return number
 
 
-def _lan_access(value: Any) -> bool | None:
-    """Strict recognized native MAP_GWLAN safe_bool forms; no unknown coercion."""
+def _setting_bool(value: Any) -> bool | None:
+    """Strict recognized native safe_bool forms; no unknown coercion."""
     from asusrouter.tools.converters import false_values, safe_bool, true_values
     if value is None or value == "":
         return None
@@ -143,7 +147,7 @@ def _lan_access(value: Any) -> bool | None:
         return bool(value)
     if type(value) is str and value.strip().lower() in true_values | false_values:
         return safe_bool(value.strip().lower())
-    raise RouterError("malformed_response", "Native guest LAN access setting is malformed.")
+    raise RouterError("malformed_response", "Native selected boolean setting is malformed.")
 
 
 def _radio_slots(raw: Any, guest: bool) -> dict[str, Any]:
@@ -161,7 +165,7 @@ def _radio_slots(raw: Any, guest: bool) -> dict[str, Any]:
             prefix = f"wl{index}.{guest_id}_" if guest else f"wl{index}_"
             diagnostics = _GUEST_DIAGNOSTICS if guest else _WLAN_DIAGNOSTICS
             for native_field, output_field in diagnostics.items():
-                parser = _lan_access if native_field == "lanaccess" else _diagnostic_number
+                parser = _setting_bool if native_field in _BOOLEAN_SETTINGS else _diagnostic_number
                 slot[output_field] = parser(raw.get(prefix + native_field))
                 if slot[output_field] is None:
                     unavailable.add(output_field)
@@ -172,6 +176,10 @@ def _radio_slots(raw: Any, guest: bool) -> dict[str, Any]:
     gaps.extend(field + "_unavailable_in_some_slots" for field in sorted(unavailable))
     gaps.append("guest_settings_do_not_verify_access_or_expiry_enforcement" if guest
                 else "channel_and_bandwidth_codes_are_settings_not_measured_rf_state")
+    if guest:
+        gaps.append("bandwidth_limit_units_and_capacity_enforcement_not_established")
+    else:
+        gaps.append("security_settings_not_collected")
     return {"scope": "guest_bss_state_slots" if guest else "radio_state_slots", "slots": slots, "gaps": gaps}
 
 

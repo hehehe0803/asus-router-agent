@@ -27,7 +27,7 @@ def test_pinned_selected_hook_and_schema_omit_addresses_and_secrets():
     result = normalize_wan(raw)
     assert result["unit"] == 0 and result["link_code"] == 2
     assert result["slots"][0] == {"unit": 0, "link_code": 1, "state_code": 2,
-                                  "sbstate_code": 0, "auxstate_code": 0, "primary": True, "protocol": "dhcp"}
+                                  "sbstate_code": 0, "auxstate_code": 0, "primary": True, "protocol": "dhcp", "lease_native": None, "expires_native": None, "xlease_native": None, "xexpires_native": None}
     assert result["slots"][1]["protocol"] == "static"
     assert result["dualwan_mode"] == "fo"
     assert "synthetic-secret" not in json.dumps(result) and "192.0.2.1" not in json.dumps(result)

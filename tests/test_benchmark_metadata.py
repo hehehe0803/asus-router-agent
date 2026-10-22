@@ -6,13 +6,13 @@ from pathlib import Path
 
 import pytest
 
-from router_agent import benchmark, benchmark_clients, benchmark_batch, benchmark_diff
+from router_agent import benchmark, benchmark_clients, benchmark_batch, benchmark_diff, benchmark_expansion, benchmark_validation
 from router_agent.benchmark_contract import FETCHED_AT
 
 BENCHMARKS = Path(__file__).resolve().parents[1] / 'benchmarks'
 
 
-@pytest.mark.parametrize('module,stem',[(benchmark_clients,'v7-clients'),(benchmark_batch,'batch-v7')])
+@pytest.mark.parametrize('module,stem',[(benchmark_clients,'v8-clients'),(benchmark_batch,'batch-v8')])
 def test_current_collectors_charge_and_preserve_all_fetch_metadata(module,stem,tmp_path):
     corpus = json.loads((BENCHMARKS/f'corpus-{stem}.json').read_text())
     required = corpus['tasks'][0]['required_answer']
@@ -87,8 +87,9 @@ def test_archive_cli_reports_dated_schema_without_current_parity_claim(capsys):
 
 
 @pytest.mark.parametrize('runner,corpus_name,report_name',[
-    (benchmark_batch.run,'corpus-batch-v6.json','results-batch-v6.json'),
     (benchmark_clients.run,'corpus-v6-clients.json','results-v6-clients.json'),
+    (benchmark_clients.run,'corpus-v7-clients.json','results-v7-clients.json'),
+    (benchmark_diff.run_actual,'corpus-diff-v6.json','results-diff-v6.json'),
     (benchmark_diff.run_actual,'corpus-diff-v5.json','results-diff-v5.json'),
 ])
 def test_prior_fetch_metadata_corpora_keep_current_response_validation(runner,corpus_name,report_name):
@@ -102,10 +103,51 @@ def test_prior_fetch_metadata_corpora_keep_current_response_validation(runner,co
 
 
 @pytest.mark.parametrize('runner,corpus_name,report_name',[
-    (benchmark_batch.run,'corpus-batch-v7.json','results-batch-v7.json'),
-    (benchmark_clients.run,'corpus-v7-clients.json','results-v7-clients.json'),
-    (benchmark_diff.run_actual,'corpus-diff-v6.json','results-diff-v6.json'),
+    (benchmark_batch.run,'corpus-batch-v8.json','results-batch-v8.json'),
+    (benchmark_clients.run,'corpus-v8-clients.json','results-v8-clients.json'),
+    (benchmark_diff.run_actual,'corpus-diff-v7.json','results-diff-v7.json'),
 ])
 def test_refreshed_current_help_reports_replay_byte_exact(runner,corpus_name,report_name):
     actual=runner(BENCHMARKS/corpus_name)
     assert (json.dumps(actual,indent=2)+'\n').encode()==(BENCHMARKS/report_name).read_bytes()
+
+
+@pytest.mark.parametrize('module,stem', [
+    (benchmark_batch, 'batch-v6'), (benchmark_batch, 'batch-v7'),
+    (benchmark_expansion, 'expansion-v1'),
+    (benchmark_validation, 'validation-v2'),
+])
+def test_superseded_transcripts_are_pinned_and_scores_recomputed(module, stem, tmp_path):
+    """Historical hashes, facts and metrics are evidence about the dated CLI only."""
+    path = BENCHMARKS / f'corpus-{stem}.json'
+    kwargs = {'historical_help': True} if module is benchmark_batch else {}
+    with pytest.raises(ValueError, match='differs from frozen|Historical validation corpus'):
+        module.run(path)
+    actual = module.run(path, historical_transcript=True, **kwargs)
+    report = BENCHMARKS / f'results-{stem}.json'
+    registry = json.loads((BENCHMARKS / 'history-2026-10-22.json').read_text())
+    record = next(row for row in registry['archives'] if row['corpus'] == path.name)
+    assert hashlib.sha256(report.read_bytes()).hexdigest() == record['report_sha256']
+    assert (json.dumps(actual, indent=2) + '\n').encode() == report.read_bytes()
+    corrupted = json.loads(path.read_text())
+    corrupted['tasks'][0]['transcripts'][next(iter(corrupted['tasks'][0]['transcripts']))][0]['stdout'] = '{}\n'
+    changed = tmp_path / path.name
+    changed.write_text(json.dumps(corrupted))
+    with pytest.raises(ValueError, match='registered corpus'):
+        module.run(changed, historical_transcript=True, **kwargs)
+
+
+def test_new_history_registry_pins_every_superseded_file_and_formatter_help():
+    manifest = json.loads((BENCHMARKS / 'history-2026-10-22.json').read_text())
+    assert len(manifest['archives']) == 7
+    for record in manifest['archives']:
+        for field, hash_field in [('corpus', 'corpus_sha256'), ('report', 'report_sha256')]:
+            assert hashlib.sha256((BENCHMARKS / record[field]).read_bytes()).hexdigest() == record[hash_field]
+    help_path = BENCHMARKS / 'help-formatter-v2.txt'
+    assert hashlib.sha256(help_path.read_bytes()).hexdigest() == manifest['formatter_v2_help_sha256']
+    historical = benchmark.run(BENCHMARKS / 'corpus-v2.json', help_file=help_path)
+    assert (json.dumps(historical, indent=2) + '\n').encode() == (BENCHMARKS / 'results-v2.json').read_bytes()
+    current = benchmark.run(BENCHMARKS / 'corpus-v3.json')
+    assert current['help_sha256'] != historical['help_sha256']
+    assert current['heldout_gate'] == 'rejected_token_regression'
+    assert current['retained'] == 'compact_json'

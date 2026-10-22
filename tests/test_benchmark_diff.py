@@ -12,7 +12,7 @@ from router_agent.benchmark_diff import execute_case, freeze_actual, run, run_ac
 from router_agent.compact import unpack
 from router_agent.snapshots import SnapshotStore
 
-CORPUS = Path(__file__).resolve().parents[1] / "benchmarks/corpus-diff-v6.json"
+CORPUS = Path(__file__).resolve().parents[1] / "benchmarks/corpus-diff-v7.json"
 
 
 def test_all_changes_task_uses_real_store_and_counts_followup_pages():

@@ -60,11 +60,11 @@ def measure_task(task, candidate, encoding, discovery_help):
             "component_tokens": tokens, "component_bytes": sizes}
 
 
-def freeze():
+def freeze(schema_version=3):
     """Refresh the synthetic formatter study, never actual CLI coverage evidence."""
     from .benchmark_diff import leaves
     corpus = json.loads((Path(__file__).resolve().parents[2] / "benchmarks/corpus-v1.json").read_text())
-    corpus['schema_version'] = 2
+    corpus['schema_version'] = schema_version
     corpus['provenance'] = 'Synthetic formatter study with full fetched_at metadata; not an actual collector or CLI task benchmark.'
     for task in corpus['tasks']:
         for step in task['steps']:
@@ -82,9 +82,9 @@ def run(corpus_path, encoding_name="o200k_base", help_file=None):
     import tiktoken
     raw = Path(corpus_path).read_bytes()
     corpus = json.loads(raw)
-    if corpus["schema_version"] not in {1, 2} or not corpus["tasks"]:
+    if corpus["schema_version"] not in {1, 2, 3} or not corpus["tasks"]:
         raise ValueError("Unsupported corpus")
-    if corpus["schema_version"] == 2 and corpus != freeze():
+    if corpus["schema_version"] in {2, 3} and corpus != freeze(corpus["schema_version"]):
         raise ValueError("Current formatter fixture differs from frozen corpus")
     if not all(task["required_facts"] and task["split"] in {"train", "heldout"} for task in corpus["tasks"]):
         raise ValueError("Every task needs frozen required facts and a split")
@@ -118,7 +118,7 @@ def run(corpus_path, encoding_name="o200k_base", help_file=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--corpus", default="benchmarks/corpus-v2.json")
+    parser.add_argument("--corpus", default="benchmarks/corpus-v3.json")
     parser.add_argument("--encoding", default="o200k_base")
     parser.add_argument("--help-file", help="Replay historical archived help, not current CLI discovery")
     parser.add_argument("--freeze", action="store_true", help="Freeze current metadata synthetic formatter study before scoring")

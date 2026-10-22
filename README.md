@@ -28,7 +28,7 @@ router-agent capabilities --expansion --limit 20
 
 These inventory commands require no router credentials or LAN access. Data and
 error responses use JSON by default; `--help` and `--version` use plain text.
-There is no `--json` flag. Local snapshot diffs also offer `--format table`.
+There is an optional `--json` compatibility flag. Local snapshot diffs also offer `--format table`.
 
 For development, install dependencies and prime the tokenizer data while network
 access is available. Keep the same cache directory for the offline test run:
@@ -105,3 +105,12 @@ regressions and describe the exact source contract and remaining hardware limits
 Do not submit household captures, personal device information or credentials.
 See [support](SUPPORT.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 Project-authored code is MIT licensed; upstream components retain their licenses.
+
+The offline [WebUI operation inventory](docs/WEBUI-COVERAGE.md) is available through
+`router-agent capabilities --webui`. Its 589 candidates and 89 unresolved branches
+are planning evidence. Three operations are implemented and 43 are partially
+implemented with offline evidence; zero have live verification. These counts
+do not establish WebUI parity. Selected WAN timing, guest capacity and radio
+settings retain explicit null, freshness and applicability limits; see the
+[source contract](docs/SOURCE-CONTRACT.md). Internal protected file custody does
+not supply a native configuration export or recovery provider.

@@ -16,7 +16,7 @@ from . import cli
 from .benchmark_batch import answer, measure
 from .benchmark_contract import FETCHED_AT
 
-CORPUS = Path(__file__).resolve().parents[2] / 'benchmarks/corpus-expansion-v1.json'
+CORPUS = Path(__file__).resolve().parents[2] / 'benchmarks/corpus-expansion-v2.json'
 KEY = b'e' * 32
 IDENTITY = {'model':'RT-AX86U', 'firmware':'3.0.0.4.388_24436-ge7c0b5e', 'device_fingerprint':'synthetic-expansion-device'}
 INSTRUCTIONS = ('Retain every selected fact, false/null distinction, identity, fetched_at receipt time, unknown source observation time, privacy statement, capability gap, error and follow-up. '
@@ -139,7 +139,7 @@ def build_corpus():
         steps=lifecycle_steps(operation)
         tasks.append({'id':operation+'_backup_inverse_followup','split':split,'kind':'blocked_lifecycle','savings_eligible':False,
                       'required_answer':deepcopy(steps),'transcripts':{'separate_reads':deepcopy(steps),'grouped_read':deepcopy(steps)}})
-    return {'schema_version':1,'fixture_fetched_at':FETCHED_AT,'instructions':INSTRUCTIONS,
+    return {'schema_version':2,'fixture_fetched_at':FETCHED_AT,'instructions':INSTRUCTIONS,
             'provenance':'Actual CLI parser/output and normalizers with injected synthetic collectors; actual operation engine and ExpansionBackend with in-memory vault and backup refusal. No router, keyring, real authority or writes.',
             'split_policy':'Fixed protected read/forwarding training and passive read/WireGuard held-out tasks before scoring; held-out never selects candidate.',
             'sampling_limit':'Independent sequential groups are not simultaneous; synthetic fixed readings do not establish live consistency or safety.',
@@ -153,10 +153,13 @@ def validate(task,steps):
         raise ValueError('Required facts, privacy, approval, gaps or error follow-ups changed')
 
 
-def run(path=CORPUS):
+def run(path=CORPUS, historical_transcript=False):
     import tiktoken
+    from .benchmark_contract import validate_historical_transcript
     raw=Path(path).read_bytes();corpus=json.loads(raw)
-    if build_corpus()!=corpus:raise ValueError('Current CLI differs from frozen expansion corpus')
+    if historical_transcript:
+        validate_historical_transcript(raw)
+    elif build_corpus()!=corpus:raise ValueError('Current CLI differs from frozen expansion corpus')
     encoding=tiktoken.get_encoding('o200k_base');rows=[]
     for task in corpus['tasks']:
         scores={}
@@ -169,7 +172,7 @@ def run(path=CORPUS):
     selected='grouped_read' if train['saved_tokens']>0 else 'separate_reads'
     heldout=next(row for row in rows if row['split']=='heldout' and row['savings_eligible'])
     gate='passed' if selected=='separate_reads' or heldout['saved_tokens']>=0 else 'rejected_token_regression'
-    return {'schema_version':1,'corpus_sha256':hashlib.sha256(raw).hexdigest(),
+    return {'schema_version':corpus['schema_version'],'corpus_sha256':hashlib.sha256(raw).hexdigest(),
             'tokenizer':{'package':'tiktoken','version':version('tiktoken'),'encoding':'o200k_base','claim':'proxy only; not Fable/model-native tokens, billing or browser savings'},
             'selected_on_training':selected,'heldout_gate':gate,'retained':selected if gate=='passed' else 'separate_reads',
             'errors_counted_but_excluded_from_savings':True,'tasks':rows}

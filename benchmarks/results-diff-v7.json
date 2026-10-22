@@ -1,0 +1,209 @@
+{
+  "schema_version": 7,
+  "corpus_sha256": "930621f9134852ce7430de677f560a722b93f04b75f8c12eeb5c361188858c49",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "proxy only; not GPT-6/GPT-6.1 tokens or billing"
+  },
+  "selected_on_training": "cli_table",
+  "heldout_gate": "passed",
+  "runtime_default": "compact_json",
+  "candidate_status": "implemented opt-in public diff --format table; full actual CLI transcript costs",
+  "browser_baseline": "unavailable; no browser savings claim",
+  "candidates": {
+    "compact_json": {
+      "tasks": [
+        {
+          "task": "all_changes_train_35",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1546,
+          "bytes": 5820,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 104,
+            "stdout": 912,
+            "stderr": 0,
+            "discovery": 502,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 239,
+            "stdout": 2838,
+            "stderr": 0,
+            "discovery": 2560,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "all_changes_heldout_27",
+          "split": "heldout",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1370,
+          "bytes": 5284,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 104,
+            "stdout": 736,
+            "stderr": 0,
+            "discovery": 502,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 239,
+            "stdout": 2302,
+            "stderr": 0,
+            "discovery": 2560,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "heldout_presence_null_arrays",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 754,
+          "bytes": 3508,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 52,
+            "stdout": 172,
+            "stderr": 0,
+            "discovery": 502,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 119,
+            "stdout": 646,
+            "stderr": 0,
+            "discovery": 2560,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 1546,
+          "bytes": 5820,
+          "calls": 2
+        },
+        "heldout": {
+          "tokens": 2124,
+          "bytes": 8792,
+          "calls": 3
+        }
+      }
+    },
+    "cli_table": {
+      "tasks": [
+        {
+          "task": "all_changes_train_35",
+          "split": "train",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1364,
+          "bytes": 5088,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 110,
+            "stdout": 724,
+            "stderr": 0,
+            "discovery": 502,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 269,
+            "stdout": 2076,
+            "stderr": 0,
+            "discovery": 2560,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "all_changes_heldout_27",
+          "split": "heldout",
+          "valid": true,
+          "calls": 2,
+          "tokens": 1209,
+          "bytes": 4744,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 110,
+            "stdout": 569,
+            "stderr": 0,
+            "discovery": 502,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 269,
+            "stdout": 1732,
+            "stderr": 0,
+            "discovery": 2560,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        },
+        {
+          "task": "heldout_presence_null_arrays",
+          "split": "heldout",
+          "valid": true,
+          "calls": 1,
+          "tokens": 757,
+          "bytes": 3523,
+          "component_tokens": {
+            "help_instructions": 0,
+            "commands": 55,
+            "stdout": 172,
+            "stderr": 0,
+            "discovery": 502,
+            "task_instructions": 28
+          },
+          "component_bytes": {
+            "help_instructions": 0,
+            "commands": 134,
+            "stdout": 646,
+            "stderr": 0,
+            "discovery": 2560,
+            "task_instructions": 183
+          },
+          "discovery_calls": 2
+        }
+      ],
+      "totals": {
+        "train": {
+          "tokens": 1364,
+          "bytes": 5088,
+          "calls": 2
+        },
+        "heldout": {
+          "tokens": 1966,
+          "bytes": 8267,
+          "calls": 3
+        }
+      }
+    }
+  },
+  "savings_vs_compact_json": {
+    "train": {
+      "tokens": 182,
+      "percent": 11.77
+    },
+    "heldout": {
+      "tokens": 158,
+      "percent": 7.44
+    }
+  }
+}

@@ -1,0 +1,29 @@
+usage: router-agent [-h] [--version]
+                    {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,approval-request,apply,verify,rollback} ...
+
+Bounded router evidence; native compatibility is unverified.
+
+positional arguments:
+  {auth,capabilities,status,get,traffic,clients,snapshot,diff,plan,plan-show,approval-request,apply,verify,rollback}
+    auth                User-operated desktop Secret Service onboarding
+    capabilities        Offline inventory; does not establish firmware support
+    status              Read identity, WAN, CPU and RAM
+    get                 Read selected named telemetry groups
+    traffic             Selected native rates for fresh aliased nodes
+    clients             Read and page aliased clients
+    snapshot            Save status or list local snapshots
+    diff                Compare two local snapshots
+    plan                Preview a native change
+    plan-show           Inspect a stored local plan without router requests
+    approval-request    Print exact scope for a separate administrator
+                        approval window
+    apply               Apply with an administrator window and human
+                        confirmation over HTTPS; a no-op sends zero writes,
+                        but performs reads
+    verify              Read current state to verify a stored plan
+    rollback            Preview a reverse plan; separate confirmation and
+                        apply are required
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit

@@ -12,7 +12,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from . import cli
-from .benchmark_contract import FETCHED_AT, fixture_contract, archive_contract, validate_registered, archival_notice
+from .benchmark_contract import FETCHED_AT, fixture_contract, archive_contract, validate_registered, archival_notice, validate_historical_transcript
 from .errors import RouterError
 
 # Bounded synthetic wire fields are normalized through current application
@@ -121,8 +121,8 @@ def validate_failure(case):
         raise ValueError('Failure comparison must explicitly deny partial-result equivalence')
 
 
-def _freeze(schema_version=7):
-    if schema_version not in {1,2,3,4,5,6,7}:
+def _freeze(schema_version=8):
+    if schema_version not in {1,2,3,4,5,6,7,8}:
         raise ValueError("Unsupported grouped-read benchmark corpus")
     # Task goals, splits, fixtures and required answers fixed before token scoring.
     tasks = [{'id': 'radio_guest_training', 'split': 'train', 'groups': ['wlan', 'guest'], 'query': 'Read selected radio and guest slot settings; preserve unknown settings, identity, source metadata, all capability gaps and cleanup warnings.\n'},
@@ -141,7 +141,7 @@ def _freeze(schema_version=7):
             'discovery': [capture(['--help']), capture(['get', '--help'])], 'tasks': tasks, 'failure_cases': [failure]}
 
 
-def freeze(schema_version=7, historical_schema=False):
+def freeze(schema_version=8, historical_schema=False):
     with archive_contract(historical_schema):
         return _freeze(schema_version)
 
@@ -154,21 +154,27 @@ def measure(steps, discovery, query, encoding):
     return {'tokens': sum(tokens.values()), 'bytes': sum(sizes.values()), 'response_calls': len(steps), 'discovery_calls': len(discovery), 'component_tokens': tokens, 'component_bytes': sizes}
 
 
-def run(path, encoding_name='o200k_base', historical_help=False, historical_schema=False):
+def run(path, encoding_name='o200k_base', historical_help=False, historical_schema=False, historical_transcript=False):
     import tiktoken
     raw = Path(path).read_bytes()
     corpus = json.loads(raw)
     if historical_schema:
         validate_registered(raw)
-    current=freeze(schema_version=corpus.get('schema_version'), historical_schema=historical_schema)
-    if historical_help:
-        if [(step['command'],step['exit_code']) for step in corpus['discovery']] != [(step['command'],step['exit_code']) for step in current['discovery']]:
-            raise ValueError('Historical discovery commands differ from current CLI')
-        # Archive help text only; responses, facts, failures and normalizers
-        # are still replayed and compared with current actual CLI execution.
-        current['discovery']=copy.deepcopy(corpus['discovery'])
-    if corpus != current:
-        raise ValueError('Current CLI behavior differs from frozen grouped-read corpus')
+    if historical_transcript:
+        validate_historical_transcript(raw)
+    if historical_schema or historical_transcript:
+        if not historical_help:
+            raise ValueError('Historical transcripts require explicit historical help')
+        # Check dated required facts and failure semantics below. Current runtime
+        # equivalence belongs exclusively to the newly versioned corpus.
+    else:
+        current = freeze(schema_version=corpus.get('schema_version'))
+        if historical_help:
+            if [(step['command'], step['exit_code']) for step in corpus['discovery']] != [(step['command'], step['exit_code']) for step in current['discovery']]:
+                raise ValueError('Historical discovery commands differ from current CLI')
+            current['discovery'] = copy.deepcopy(corpus['discovery'])
+        if corpus != current:
+            raise ValueError('Current CLI behavior differs from frozen grouped-read corpus')
     encoding = tiktoken.get_encoding(encoding_name)
     rows = []
     for task in corpus['tasks']:
@@ -197,23 +203,26 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--corpus', default=None)
     parser.add_argument('--freeze', action='store_true')
-    parser.add_argument('--historical-help', action='store_true', help='Replay archived discovery help only; current responses/facts/failures still checked')
+    parser.add_argument('--historical-help', action='store_true', help='Archive help only unless paired with an explicit dated schema/transcript contract')
     parser.add_argument('--historical-schema', action='store_true', help='Registered pre-fetched_at contract; no current response parity')
+    parser.add_argument('--historical-transcript', action='store_true', help='Pinned superseded transcript; no current CLI parity claim')
     args = parser.parse_args(argv)
+    if args.historical_transcript and (args.corpus is None or args.freeze):
+        parser.error('Historical transcript requires explicit corpus and cannot freeze')
     if args.historical_schema and (args.corpus is None or args.freeze):
         parser.error('Historical schema requires explicit corpus and cannot freeze')
     if args.freeze:
         if args.historical_help:
             parser.error('--freeze cannot be combined with historical help')
-        Path(args.corpus or 'benchmarks/corpus-batch-v7.json').write_text(json.dumps(freeze(), indent=2) + '\n')
+        Path(args.corpus or 'benchmarks/corpus-batch-v8.json').write_text(json.dumps(freeze(), indent=2) + '\n')
     else:
-        if args.historical_schema:
+        if args.historical_schema or args.historical_transcript:
             import sys
-            print(archival_notice(), file=sys.stderr)
+            print('Immutable historical transcript and archived help; dated facts and scores are checked. No current CLI response parity or current help-cost claim.' if args.historical_transcript else archival_notice(), file=sys.stderr)
         elif args.historical_help:
             import sys
             print('Historical discovery help replay; current response/fact/failure behavior is still checked.', file=sys.stderr)
-        print(json.dumps(run(args.corpus or 'benchmarks/corpus-batch-v7.json', historical_help=args.historical_help, historical_schema=args.historical_schema), indent=2))
+        print(json.dumps(run(args.corpus or 'benchmarks/corpus-batch-v8.json', historical_help=args.historical_help, historical_schema=args.historical_schema, historical_transcript=args.historical_transcript), indent=2))
 
 
 if __name__ == '__main__':

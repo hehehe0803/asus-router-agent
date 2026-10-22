@@ -60,9 +60,9 @@ def test_malformed_duplicate_and_unbounded_payloads_fail_closed(raw):
 
 def test_selected_fixed_hooks_never_request_names_keys_or_credentials():
     assert LED_STATE_HOOK == "nvram_get(led_val);"
-    assert WLAN_STATE_HOOK.count("nvram_get(") == 6
+    assert WLAN_STATE_HOOK.count("nvram_get(") == 8
     assert "nvram_get(wl0_radio);" in WLAN_STATE_HOOK and "nvram_get(wl1_radio);" in WLAN_STATE_HOOK
-    assert GUEST_STATE_HOOK.count("nvram_get(") == 30
+    assert GUEST_STATE_HOOK.count("nvram_get(") == 72
     assert "wl1.3_bss_enabled" in GUEST_STATE_HOOK
     assert "wl2" not in WLAN_STATE_HOOK + GUEST_STATE_HOOK
     for hook in (LED_STATE_HOOK, WLAN_STATE_HOOK, GUEST_STATE_HOOK, DDNS_STATE_HOOK):
@@ -78,8 +78,8 @@ def test_led_selected_state_and_unknown_are_not_inferred():
 
 def test_radio_guest_slots_are_settings_not_proof_of_actual_hardware():
     radios = normalize_wlan_state({"wl0_radio": "1", "wl1_radio": "", "wl0_ssid": "synthetic-secret"})
-    assert radios["slots"] == [{"radio_index": 0, "enabled": True, "channel_code": None, "bandwidth_code": None},
-                              {"radio_index": 1, "enabled": None, "channel_code": None, "bandwidth_code": None}]
+    assert radios["slots"] == [{"radio_index": 0, "enabled": True, "channel_code": None, "bandwidth_code": None, "hidden": None},
+                              {"radio_index": 1, "enabled": None, "channel_code": None, "bandwidth_code": None, "hidden": None}]
     guests = normalize_guest_state({"wl0.1_bss_enabled": "0", "wl1.3_bss_enabled": "1",
                                      "wl0.1_wpa_psk": "synthetic-secret"})
     assert len(guests["slots"]) == 6

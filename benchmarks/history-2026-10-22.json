@@ -1,0 +1,48 @@
+{
+  "contract": "Immutable dated transcripts and internally recomputed scores; not current CLI response parity. Superseded on 2026-10-22 by formatter-v3, clients-v8, diff-v7, batch-v8, expansion-v2 and validation-v3.",
+  "archives": [
+    {
+      "corpus": "corpus-batch-v6.json",
+      "report": "results-batch-v6.json",
+      "corpus_sha256": "c51a51cd6ce4f09a9cd1e8f2e6a395cd662142816cca96407d3c75dade16b856",
+      "report_sha256": "1e93f73a493bdda7d789fb3eed9ba3d0422e5dacd60418c27fdbe7811f3b09fc"
+    },
+    {
+      "corpus": "corpus-batch-v7.json",
+      "report": "results-batch-v7.json",
+      "corpus_sha256": "5286b9c37084b26a18d65bc1dd3d6fea1ba3e15cae91258f4aa0224a322db8d7",
+      "report_sha256": "f8fa62e58dc90e8a17940cef598271077b3f0bed58b6f00bf2f6ff737026c134"
+    },
+    {
+      "corpus": "corpus-expansion-v1.json",
+      "report": "results-expansion-v1.json",
+      "corpus_sha256": "1f5d015ffcedb71fc59c176b69ec0f240abee8968a2d3ff293b7aa6b2146073c",
+      "report_sha256": "f978a849fb0fd4077cfe25d35023e1d6cc5507d769cb12519c19936c8272a243"
+    },
+    {
+      "corpus": "corpus-validation-v2.json",
+      "report": "results-validation-v2.json",
+      "corpus_sha256": "2e9606b402ffe90966cc98bf403965237143e7aed169f41f7583922dde3d295e",
+      "report_sha256": "df54ef6169c67c4ae1a790b6e750814855595003fc9a6ca4e359030f264f25cb"
+    },
+    {
+      "corpus": "corpus-v2.json",
+      "report": "results-v2.json",
+      "corpus_sha256": "9bf7f5af8c61b28120cc49b56a2f6e689a35bd75affac1ddcc3f39831459f7b0",
+      "report_sha256": "5ae6234792a539422c7cf51eb6c09c7a8b21f820970ed131ca96f9423e5e179b"
+    },
+    {
+      "corpus": "corpus-v7-clients.json",
+      "report": "results-v7-clients.json",
+      "corpus_sha256": "07b71ebe3c823f2c29c04b15dd5d4a8fadd941d2728f846f1339953afd17bdf0",
+      "report_sha256": "f881fdf4e8d3eeca396d0c432f3a87499b3bf86c1bafafd5ca75456136837db6"
+    },
+    {
+      "corpus": "corpus-diff-v6.json",
+      "report": "results-diff-v6.json",
+      "corpus_sha256": "0c2a4c5e675ec5e4bbe1df378ba61fd9ef5b579a56dae4be1e37bce657f9b9da",
+      "report_sha256": "95010e20421bfb7b13a84982e19090abfb8c62c4c18d74774f684c9722d6dc54"
+    }
+  ],
+  "formatter_v2_help_sha256": "c84eefd8194e91a97792ad1fa112372bd2341ce75f164326abcad0c895a27908"
+}

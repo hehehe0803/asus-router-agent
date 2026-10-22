@@ -1,0 +1,299 @@
+{
+  "schema_version": 3,
+  "historical_v1": {
+    "corpus_sha256": "6f39ef3d01c6189affdff030f9ecaf10c97bafb7b45301092dfcd924d6e5e20d",
+    "report_sha256": "336c9bd2c3a6fcb580a62f95a67293e22a4a4dd3e7e3d0d0434e76a3dfa8acd1",
+    "claim": "Immutable historical synthetic evidence; not current CLI replay or migration validation."
+  },
+  "corpus_sha256": "7399d12f012818e54abae1f6c45ad052fb52d7049d259a285b3f6955288ac643",
+  "tokenizer": {
+    "package": "tiktoken",
+    "version": "0.14.0",
+    "encoding": "o200k_base",
+    "claim": "Proxy only; not Fable-native tokens, billing or equivalent-browser savings."
+  },
+  "selected_on_training": "bounded_large_pages",
+  "retained": "bounded_large_pages",
+  "heldout_gate": "passed",
+  "totals": {
+    "train": {
+      "small_pages": 20376,
+      "bounded_large_pages": 18072
+    },
+    "heldout": {
+      "small_pages": 13852,
+      "bounded_large_pages": 13740
+    }
+  },
+  "savings_percent": {
+    "train": 11.31,
+    "heldout": 0.81
+  },
+  "tasks": [
+    {
+      "task": "discovery_train",
+      "split": "train",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 9013,
+          "component_tokens": {
+            "commands": 215,
+            "stdout": 8660,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 11,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 6709,
+          "component_tokens": {
+            "commands": 103,
+            "stdout": 6468,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 3,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 2304
+    },
+    {
+      "task": "discovery_heldout",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 2657,
+          "component_tokens": {
+            "commands": 91,
+            "stdout": 2428,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 2,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 2545,
+          "component_tokens": {
+            "commands": 76,
+            "stdout": 2331,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 112
+    },
+    {
+      "task": "traffic_ethernet",
+      "split": "train",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 2435,
+          "component_tokens": {
+            "commands": 76,
+            "stdout": 2221,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 2435,
+          "component_tokens": {
+            "commands": 76,
+            "stdout": 2221,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 0
+    },
+    {
+      "task": "traffic_wifi",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 2442,
+          "component_tokens": {
+            "commands": 82,
+            "stdout": 2222,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 2442,
+          "component_tokens": {
+            "commands": 82,
+            "stdout": 2222,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 0
+    },
+    {
+      "task": "empty_speedtest",
+      "split": "train",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 2378,
+          "component_tokens": {
+            "commands": 67,
+            "stdout": 2173,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 2378,
+          "component_tokens": {
+            "commands": 67,
+            "stdout": 2173,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 1,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 0
+    },
+    {
+      "task": "unavailable_sysinfo_followup",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "savings_eligible": false,
+      "candidates": {
+        "small_pages": {
+          "tokens": 2199,
+          "component_tokens": {
+            "commands": 73,
+            "stdout": 1988,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 2,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 2199,
+          "component_tokens": {
+            "commands": 73,
+            "stdout": 1988,
+            "stderr": 0,
+            "human_input": 0,
+            "instructions": 138
+          },
+          "calls": 2,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 0
+    },
+    {
+      "task": "parental_enable_inverse",
+      "split": "train",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 6550,
+          "component_tokens": {
+            "commands": 561,
+            "stdout": 5095,
+            "stderr": 671,
+            "human_input": 85,
+            "instructions": 138
+          },
+          "calls": 10,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 6550,
+          "component_tokens": {
+            "commands": 561,
+            "stdout": 5095,
+            "stderr": 671,
+            "human_input": 85,
+            "instructions": 138
+          },
+          "calls": 10,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 0
+    },
+    {
+      "task": "parental_block_all_inverse",
+      "split": "heldout",
+      "required_answer_valid": true,
+      "savings_eligible": true,
+      "candidates": {
+        "small_pages": {
+          "tokens": 6554,
+          "component_tokens": {
+            "commands": 528,
+            "stdout": 5129,
+            "stderr": 679,
+            "human_input": 80,
+            "instructions": 138
+          },
+          "calls": 10,
+          "discovery_calls": 10
+        },
+        "bounded_large_pages": {
+          "tokens": 6554,
+          "component_tokens": {
+            "commands": 528,
+            "stdout": 5129,
+            "stderr": 679,
+            "human_input": 80,
+            "instructions": 138
+          },
+          "calls": 10,
+          "discovery_calls": 10
+        }
+      },
+      "saved_tokens": 0
+    }
+  ],
+  "limits": "Small fixed synthetic corpus. Only capability page size is optimized; unchanged traffic/read/parental costs remain charged. Synthetic authority never proves human, root-grant, transport, enforcement or live recovery behavior."
+}

@@ -108,8 +108,8 @@ def freeze():
             "discovery": discovery, "tasks": [execute_case(case) for case in cases]}
 
 
-def _freeze_actual(schema_version=6):
-    if schema_version not in {2,3,4,5,6}:
+def _freeze_actual(schema_version=7):
+    if schema_version not in {2,3,4,5,6,7}:
         raise ValueError("Unsupported actual CLI diff corpus")
     corpus = freeze()
     corpus["schema_version"] = schema_version
@@ -118,7 +118,7 @@ def _freeze_actual(schema_version=6):
     return corpus
 
 
-def freeze_actual(schema_version=6, historical_schema=False):
+def freeze_actual(schema_version=7, historical_schema=False):
     with archive_contract(historical_schema):
         return _freeze_actual(schema_version)
 
@@ -265,13 +265,13 @@ def main(argv=None):
         print("Historical format study only: archived synthetic transcripts and discovery, not current CLI behavior or current help costs.", file=sys.stderr)
         print(json.dumps(run(args.corpus, historical_format_study=True), indent=2))
     elif args.freeze:
-        Path(args.corpus or "benchmarks/corpus-diff-v6.json").write_text(json.dumps(freeze_actual(), indent=2) + "\n")
+        Path(args.corpus or "benchmarks/corpus-diff-v7.json").write_text(json.dumps(freeze_actual(), indent=2) + "\n")
     else:
         if args.historical_schema:
             print(archival_notice(), file=sys.stderr)
         elif args.historical_help:
             print("Historical discovery help replay; current JSON/table replies and required facts are still checked.", file=sys.stderr)
-        print(json.dumps(run_actual(args.corpus or "benchmarks/corpus-diff-v6.json", historical_help=args.historical_help, historical_schema=args.historical_schema), indent=2))
+        print(json.dumps(run_actual(args.corpus or "benchmarks/corpus-diff-v7.json", historical_help=args.historical_help, historical_schema=args.historical_schema), indent=2))
 
 
 if __name__ == "__main__":
